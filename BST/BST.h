@@ -64,6 +64,9 @@ public:
      */
     BST* search(int val);
 
+    /**
+     * Print this root's subtree in-order (non descending).
+     */
     void printInOrder();
 
 };
