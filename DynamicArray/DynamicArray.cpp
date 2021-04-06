@@ -2,6 +2,7 @@
 // Created by Władysław Nowak on 27/03/2021.
 //
 
+#include <iostream>
 #include "DynamicArray.h"
 
 void DynamicArray::addFront(int element) {
@@ -106,7 +107,24 @@ int DynamicArray::getSize() const {
     return this->size;
 }
 
-int DynamicArray::getAtIndex(int index) {
+int DynamicArray::get(int index) {
     if (index >= size || index < 0) return -1;
     return arrayPointer[index];
+}
+
+void DynamicArray::set(int index, int val) {
+    if (index < size) arrayPointer[index] = val;
+}
+
+void DynamicArray::print() {
+    for (int i = 0; i < size; i++){
+        std::cout<<arrayPointer[i]<<" ";
+    }
+    std::cout<<std::endl;
+}
+
+void DynamicArray::swap(int i1, int i2) {
+    int temp = get(i1);
+    set(i1, get(i2));
+    set(i2, temp);
 }

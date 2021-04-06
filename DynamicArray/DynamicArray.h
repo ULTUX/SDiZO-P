@@ -54,7 +54,26 @@ public:
      * @param index An index of this element.
      * @return Element on that index, -1 if index is wrong.
      */
-    int getAtIndex(int index);
+    int get(int index);
+    /**
+     * Replace value at index position with new value passed by a parameter.
+     * @param index Index to be replaced.
+     * @param val Replacement value.
+     */
+    void set(int index, int val);
+
+    /**
+     * Helper function used for debugging. Prints contents of array to stdout.
+     */
+    void print();
+
+    /**
+     * Swap two array elements with each other.
+     * @param i1 First element.
+     * @param i2 Second element.
+     */
+    void swap(int i1, int i2);
+
 };
 
 

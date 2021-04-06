@@ -100,7 +100,6 @@ DoublyLinkedList *DoublyLinkedList::addAtIndex(int index, int val) {
         head = newElement;
         return this;
     }
-    cout<<nodeAtIndex->getVal()<<endl;
     newElement->setPrev(nodeAtIndex->getPrev());
     newElement->setNext(nodeAtIndex);
     nodeAtIndex->getPrev()->setNext(newElement);
