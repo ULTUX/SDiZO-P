@@ -5,10 +5,10 @@
 #include "RBNode.h"
 
 Color RBNode::getColor() const {
-    return static_cast<Color>(color);
+    return color;
 }
 
-void RBNode::setColor(bool color) {
+void RBNode::setColor(Color color) {
     RBNode::color = color;
 }
 

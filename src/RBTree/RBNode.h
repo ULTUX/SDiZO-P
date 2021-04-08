@@ -9,7 +9,7 @@ enum Color {RED, BLACK};
 
 class RBNode {
 private:
-    bool color = RED;
+    Color color = RED;
     RBNode* right = nullptr;
     RBNode* left = nullptr;
     RBNode* parent = nullptr;
@@ -27,7 +27,7 @@ public:
      * Set the color of this node.
      * @param color Enum Color representing the color to be set: RED or BLACK.
      */
-    void setColor(bool color);
+    void setColor(Color color);
 
     /**
      * Get right son of this node.

@@ -55,6 +55,9 @@ private:
     bool isRightChild(RBNode* node);
 
 public:
+
+    RBNode *getRoot() const;
+
     /**
      * Constructor to create new RBTree with initial value as root.
      * @param value Initial int value.

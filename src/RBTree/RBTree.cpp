@@ -34,22 +34,39 @@ RBNode *RBTree::search(int value) {
 }
 
 void RBTree::rotateRight(RBNode *node) {
-    if (node->getLeft() != nullptr){
+    if (node != nullptr && node->getLeft() != nullptr){
         RBNode* left = node->getLeft();
+        if (node->getParent() != nullptr){
+            if (node->getParent()->getLeft() == node) node->getParent()->setLeft(left);
+            else node->getParent()->setRight(left);
+        }
         node->setLeft(left->getRight());
         left->setRight(node);
         left->setParent(node->getParent());
+        if (node == root) {
+            root = left;
+            root->setColor(BLACK);
+        }
         node->setParent(left);
     }
 }
 
 void RBTree::rotateLeft(RBNode *node) {
-    if (node->getRight() != nullptr){
+    if (node != nullptr && node->getRight() != nullptr){
         RBNode* right = node->getRight();
+        if (node->getParent() != nullptr) {
+            if (node->getParent()->getLeft() == node) node->getParent()->setLeft(right);
+            else node->getParent()->setRight(right);
+        }
         node->setRight(right->getLeft());
         right->setParent(node->getParent());
         right->setLeft(node);
+        if (node == root) {
+            root = right;
+            root->setColor(BLACK);
+        }
         node->setParent(right);
+
     }
 }
 
@@ -87,26 +104,40 @@ void RBTree::fixTree(RBNode *startNode) {
         return;
     }
     startNode->setColor(RED);
-    while (currentNode->getParent()->getColor() != BLACK){
-        RBNode* uncle = getUncle(currentNode);
-        if (uncle->getColor() == RED){
-            //Node color is red
-            currentNode->getParent()->setColor(RED);
-            uncle->setColor(RED);
-            currentNode = currentNode->getParent()->getParent();
-            currentNode->setColor(RED);
-        }
-        else if (isRightChild(currentNode)){
-            //Node color is black and is right child
-            currentNode = currentNode->getParent();
-            rotateLeft(currentNode);
 
+    while (currentNode != root && currentNode->getParent()->getColor() != BLACK){
+        RBNode* uncle = getUncle(currentNode);
+        if (uncle != nullptr && uncle->getColor() == RED){
+            //Node color is red
+            currentNode->getParent()->setColor(BLACK);
+            uncle->setColor(BLACK);
+            currentNode = currentNode->getParent()->getParent();
+            if (currentNode != root) currentNode->setColor(RED);
         }
-        //Node color is black and is left child
-        currentNode->getParent()->setColor(BLACK);
-        currentNode->getParent()->getParent()->setColor(RED);
-        rotateRight(currentNode->getParent()->getParent());
+        else if (isRightChild(currentNode->getParent())){
+            if (uncle == nullptr || uncle->getColor() == BLACK){
+                if (isRightChild(currentNode)){
+                    currentNode = currentNode->getParent();
+                    rotateRight(currentNode);
+                }
+                currentNode->getParent()->setColor(BLACK);
+                currentNode->getParent()->getParent()->setColor(RED);
+                rotateLeft(currentNode->getParent()->getParent());
+            }
+        }
+        else {
+            if (uncle == nullptr || uncle->getColor() == BLACK) {
+                if (isRightChild(currentNode)) {
+                    currentNode = currentNode->getParent();
+                    rotateLeft(currentNode);
+                }
+                currentNode->getParent()->setColor(BLACK);
+                currentNode->getParent()->getParent()->setColor(RED);
+                rotateRight(currentNode->getParent()->getParent());
+            }
+        }
     }
+
 }
 
 RBNode *RBTree::getUncle(RBNode *node) {
@@ -124,4 +155,8 @@ bool RBTree::isRightChild(RBNode *node) {
     if (node == root) return false;
     if (node->getParent()->getLeft() == node) return false;
     return true;
+}
+
+RBNode *RBTree::getRoot() const {
+    return root;
 }
