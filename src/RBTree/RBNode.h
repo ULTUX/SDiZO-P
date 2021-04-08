@@ -9,12 +9,14 @@ enum Color {RED, BLACK};
 
 class RBNode {
 private:
-    bool color;
-    RBNode* right;
-    RBNode* left;
-    RBNode* parent;
+    bool color = RED;
+    RBNode* right = nullptr;
+    RBNode* left = nullptr;
+    RBNode* parent = nullptr;
     int data;
 public:
+    RBNode(int data, Color color):data(data),color(color){};
+    explicit RBNode(int data):data(data){};
     /**
      * Get color of this node.
      * @return Enum representing color: RED or BLACK.
