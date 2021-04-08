@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('_r_b_node_8h_source.html',''); initRes
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_r_b_node.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_r_b_node.html">RBNode</a> {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">bool</span> color = RED;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    Color color = RED;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_r_b_node.html">RBNode</a>* right = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_r_b_node.html">RBNode</a>* left = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_r_b_node.html">RBNode</a>* parent = <span class="keyword">nullptr</span>;</div>
@@ -108,7 +108,7 @@ $(document).ready(function(){initNavTree('_r_b_node_8h_source.html',''); initRes
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_r_b_node.html">RBNode</a>(<span class="keywordtype">int</span> data):data(data){};</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    Color <a class="code" href="class_r_b_node.html#a9106344619d1138986c0940b82397b0f">getColor</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_r_b_node.html#ae88c5822c8e4dd782cc7930fa973f67d">setColor</a>(<span class="keywordtype">bool</span> color);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_r_b_node.html#ac05b37565a45578702c27c28702c6e44">setColor</a>(Color color);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_r_b_node.html">RBNode</a> *<a class="code" href="class_r_b_node.html#add1221b3f05dd9ec6b8c53f05216cf83">getRight</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
@@ -136,10 +136,10 @@ $(document).ready(function(){initNavTree('_r_b_node_8h_source.html',''); initRes
 <div class="ttc" id="aclass_r_b_node_html_a681463c4221ff34ba43bb59b89220429"><div class="ttname"><a href="class_r_b_node.html#a681463c4221ff34ba43bb59b89220429">RBNode::getParent</a></div><div class="ttdeci">RBNode * getParent() const</div><div class="ttdef"><b>Definition:</b> RBNode.cpp:31</div></div>
 <div class="ttc" id="aclass_r_b_node_html_a9106344619d1138986c0940b82397b0f"><div class="ttname"><a href="class_r_b_node.html#a9106344619d1138986c0940b82397b0f">RBNode::getColor</a></div><div class="ttdeci">Color getColor() const</div><div class="ttdef"><b>Definition:</b> RBNode.cpp:7</div></div>
 <div class="ttc" id="aclass_r_b_node_html_abf3e88a7bfebf9d661f15954026909d3"><div class="ttname"><a href="class_r_b_node.html#abf3e88a7bfebf9d661f15954026909d3">RBNode::setData</a></div><div class="ttdeci">void setData(int data)</div><div class="ttdef"><b>Definition:</b> RBNode.cpp:43</div></div>
+<div class="ttc" id="aclass_r_b_node_html_ac05b37565a45578702c27c28702c6e44"><div class="ttname"><a href="class_r_b_node.html#ac05b37565a45578702c27c28702c6e44">RBNode::setColor</a></div><div class="ttdeci">void setColor(Color color)</div><div class="ttdef"><b>Definition:</b> RBNode.cpp:11</div></div>
 <div class="ttc" id="aclass_r_b_node_html_acbd80daf17e338af60dd53a09a040b5e"><div class="ttname"><a href="class_r_b_node.html#acbd80daf17e338af60dd53a09a040b5e">RBNode::getLeft</a></div><div class="ttdeci">RBNode * getLeft() const</div><div class="ttdef"><b>Definition:</b> RBNode.cpp:23</div></div>
 <div class="ttc" id="aclass_r_b_node_html_add1221b3f05dd9ec6b8c53f05216cf83"><div class="ttname"><a href="class_r_b_node.html#add1221b3f05dd9ec6b8c53f05216cf83">RBNode::getRight</a></div><div class="ttdeci">RBNode * getRight() const</div><div class="ttdef"><b>Definition:</b> RBNode.cpp:15</div></div>
 <div class="ttc" id="aclass_r_b_node_html_ae535f84e43a33cf700a3e252c719c98a"><div class="ttname"><a href="class_r_b_node.html#ae535f84e43a33cf700a3e252c719c98a">RBNode::getData</a></div><div class="ttdeci">int getData() const</div><div class="ttdef"><b>Definition:</b> RBNode.cpp:39</div></div>
-<div class="ttc" id="aclass_r_b_node_html_ae88c5822c8e4dd782cc7930fa973f67d"><div class="ttname"><a href="class_r_b_node.html#ae88c5822c8e4dd782cc7930fa973f67d">RBNode::setColor</a></div><div class="ttdeci">void setColor(bool color)</div><div class="ttdef"><b>Definition:</b> RBNode.cpp:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
