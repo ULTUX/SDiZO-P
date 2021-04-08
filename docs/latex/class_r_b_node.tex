@@ -1,0 +1,134 @@
+\hypertarget{class_r_b_node}{}\doxysection{RBNode Class Reference}
+\label{class_r_b_node}\index{RBNode@{RBNode}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Color \mbox{\hyperlink{class_r_b_node_a9106344619d1138986c0940b82397b0f}{get\+Color}} () const
+\item 
+void \mbox{\hyperlink{class_r_b_node_ae88c5822c8e4dd782cc7930fa973f67d}{set\+Color}} (bool color)
+\item 
+\mbox{\hyperlink{class_r_b_node}{RBNode}} $\ast$ \mbox{\hyperlink{class_r_b_node_add1221b3f05dd9ec6b8c53f05216cf83}{get\+Right}} () const
+\item 
+void \mbox{\hyperlink{class_r_b_node_a2ab9aa19f8bc6d3bd3f4c9f52b78024a}{set\+Right}} (\mbox{\hyperlink{class_r_b_node}{RBNode}} $\ast$right)
+\item 
+\mbox{\hyperlink{class_r_b_node}{RBNode}} $\ast$ \mbox{\hyperlink{class_r_b_node_acbd80daf17e338af60dd53a09a040b5e}{get\+Left}} () const
+\item 
+void \mbox{\hyperlink{class_r_b_node_a06cf9109f051274c6581a31d998811f0}{set\+Left}} (\mbox{\hyperlink{class_r_b_node}{RBNode}} $\ast$left)
+\item 
+\mbox{\hyperlink{class_r_b_node}{RBNode}} $\ast$ \mbox{\hyperlink{class_r_b_node_a681463c4221ff34ba43bb59b89220429}{get\+Parent}} () const
+\item 
+void \mbox{\hyperlink{class_r_b_node_a51a4a4683bc62f72e09f629ad6909d32}{set\+Parent}} (\mbox{\hyperlink{class_r_b_node}{RBNode}} $\ast$parent)
+\item 
+int \mbox{\hyperlink{class_r_b_node_ae535f84e43a33cf700a3e252c719c98a}{get\+Data}} () const
+\item 
+void \mbox{\hyperlink{class_r_b_node_abf3e88a7bfebf9d661f15954026909d3}{set\+Data}} (int data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_r_b_node_a9106344619d1138986c0940b82397b0f}\label{class_r_b_node_a9106344619d1138986c0940b82397b0f}} 
+\index{RBNode@{RBNode}!getColor@{getColor}}
+\index{getColor@{getColor}!RBNode@{RBNode}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily Color RBNode\+::get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get color of this node. \begin{DoxyReturn}{Returns}
+Enum representing color\+: RED or BLACK. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_b_node_ae535f84e43a33cf700a3e252c719c98a}\label{class_r_b_node_ae535f84e43a33cf700a3e252c719c98a}} 
+\index{RBNode@{RBNode}!getData@{getData}}
+\index{getData@{getData}!RBNode@{RBNode}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily int RBNode\+::get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get data that this node is carrying. \begin{DoxyReturn}{Returns}
+Int value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_b_node_acbd80daf17e338af60dd53a09a040b5e}\label{class_r_b_node_acbd80daf17e338af60dd53a09a040b5e}} 
+\index{RBNode@{RBNode}!getLeft@{getLeft}}
+\index{getLeft@{getLeft}!RBNode@{RBNode}}
+\doxysubsubsection{\texorpdfstring{getLeft()}{getLeft()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_r_b_node}{RBNode}} $\ast$ RBNode\+::get\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get left son of this node. \begin{DoxyReturn}{Returns}
+Node representing left son. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_b_node_a681463c4221ff34ba43bb59b89220429}\label{class_r_b_node_a681463c4221ff34ba43bb59b89220429}} 
+\index{RBNode@{RBNode}!getParent@{getParent}}
+\index{getParent@{getParent}!RBNode@{RBNode}}
+\doxysubsubsection{\texorpdfstring{getParent()}{getParent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_r_b_node}{RBNode}} $\ast$ RBNode\+::get\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get this node\textquotesingle{}s parent. \begin{DoxyReturn}{Returns}
+Node representing parent of this node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_b_node_add1221b3f05dd9ec6b8c53f05216cf83}\label{class_r_b_node_add1221b3f05dd9ec6b8c53f05216cf83}} 
+\index{RBNode@{RBNode}!getRight@{getRight}}
+\index{getRight@{getRight}!RBNode@{RBNode}}
+\doxysubsubsection{\texorpdfstring{getRight()}{getRight()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_r_b_node}{RBNode}} $\ast$ RBNode\+::get\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get right son of this node. \begin{DoxyReturn}{Returns}
+Node representing right son. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_b_node_ae88c5822c8e4dd782cc7930fa973f67d}\label{class_r_b_node_ae88c5822c8e4dd782cc7930fa973f67d}} 
+\index{RBNode@{RBNode}!setColor@{setColor}}
+\index{setColor@{setColor}!RBNode@{RBNode}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily void RBNode\+::set\+Color (\begin{DoxyParamCaption}\item[{bool}]{color }\end{DoxyParamCaption})}
+
+Set the color of this node. 
+\begin{DoxyParams}{Parameters}
+{\em color} & Enum Color representing the color to be set\+: RED or BLACK. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_r_b_node_abf3e88a7bfebf9d661f15954026909d3}\label{class_r_b_node_abf3e88a7bfebf9d661f15954026909d3}} 
+\index{RBNode@{RBNode}!setData@{setData}}
+\index{setData@{setData}!RBNode@{RBNode}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}}
+{\footnotesize\ttfamily void RBNode\+::set\+Data (\begin{DoxyParamCaption}\item[{int}]{data }\end{DoxyParamCaption})}
+
+Set value of this node. 
+\begin{DoxyParams}{Parameters}
+{\em data} & Ine value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_r_b_node_a06cf9109f051274c6581a31d998811f0}\label{class_r_b_node_a06cf9109f051274c6581a31d998811f0}} 
+\index{RBNode@{RBNode}!setLeft@{setLeft}}
+\index{setLeft@{setLeft}!RBNode@{RBNode}}
+\doxysubsubsection{\texorpdfstring{setLeft()}{setLeft()}}
+{\footnotesize\ttfamily void RBNode\+::set\+Left (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_r_b_node}{RBNode}} $\ast$}]{left }\end{DoxyParamCaption})}
+
+Set left son of this node. 
+\begin{DoxyParams}{Parameters}
+{\em left} & Node to be set as this node\textquotesingle{}s left son. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_r_b_node_a51a4a4683bc62f72e09f629ad6909d32}\label{class_r_b_node_a51a4a4683bc62f72e09f629ad6909d32}} 
+\index{RBNode@{RBNode}!setParent@{setParent}}
+\index{setParent@{setParent}!RBNode@{RBNode}}
+\doxysubsubsection{\texorpdfstring{setParent()}{setParent()}}
+{\footnotesize\ttfamily void RBNode\+::set\+Parent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_r_b_node}{RBNode}} $\ast$}]{parent }\end{DoxyParamCaption})}
+
+Set parent of this node. 
+\begin{DoxyParams}{Parameters}
+{\em parent} & Node representing new parent. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_r_b_node_a2ab9aa19f8bc6d3bd3f4c9f52b78024a}\label{class_r_b_node_a2ab9aa19f8bc6d3bd3f4c9f52b78024a}} 
+\index{RBNode@{RBNode}!setRight@{setRight}}
+\index{setRight@{setRight}!RBNode@{RBNode}}
+\doxysubsubsection{\texorpdfstring{setRight()}{setRight()}}
+{\footnotesize\ttfamily void RBNode\+::set\+Right (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_r_b_node}{RBNode}} $\ast$}]{right }\end{DoxyParamCaption})}
+
+Set right son of this node. 
+\begin{DoxyParams}{Parameters}
+{\em right} & Node to be set as this node\textquotesingle{}s right son. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+RBTree/RBNode.\+h\item 
+src/\+RBTree/RBNode.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,64 @@
+\hypertarget{class_heap}{}\doxysection{Heap Class Reference}
+\label{class_heap}\index{Heap@{Heap}}
+
+
+{\ttfamily \#include $<$Heap.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_heap_a1ef3664ef3f6c471b93a16c8a0d55626}{add}} (int val)
+\item 
+int \mbox{\hyperlink{class_heap_a5a4e469500a45db64a66d1e76a79e997}{remove}} ()
+\item 
+int \mbox{\hyperlink{class_heap_aaf5436a4c28807bedc40c0014bb26ebb}{get\+Size}} ()
+\item 
+void \mbox{\hyperlink{class_heap_a3933ae859e8e767317ff2f0c31110a6c}{print\+Heap}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Max-\/heap built using dynamic array. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_heap_a1ef3664ef3f6c471b93a16c8a0d55626}\label{class_heap_a1ef3664ef3f6c471b93a16c8a0d55626}} 
+\index{Heap@{Heap}!add@{add}}
+\index{add@{add}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Heap\+::add (\begin{DoxyParamCaption}\item[{int}]{val }\end{DoxyParamCaption})}
+
+Add new element to the heap and fixes the heap going up. 
+\begin{DoxyParams}{Parameters}
+{\em val} & Element to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_heap_aaf5436a4c28807bedc40c0014bb26ebb}\label{class_heap_aaf5436a4c28807bedc40c0014bb26ebb}} 
+\index{Heap@{Heap}!getSize@{getSize}}
+\index{getSize@{getSize}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int Heap\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get current size of the heap. \begin{DoxyReturn}{Returns}
+The size as integer number. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_heap_a3933ae859e8e767317ff2f0c31110a6c}\label{class_heap_a3933ae859e8e767317ff2f0c31110a6c}} 
+\index{Heap@{Heap}!printHeap@{printHeap}}
+\index{printHeap@{printHeap}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{printHeap()}{printHeap()}}
+{\footnotesize\ttfamily void Heap\+::print\+Heap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Nicely print the heap. \mbox{\Hypertarget{class_heap_a5a4e469500a45db64a66d1e76a79e997}\label{class_heap_a5a4e469500a45db64a66d1e76a79e997}} 
+\index{Heap@{Heap}!remove@{remove}}
+\index{remove@{remove}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily int Heap\+::remove (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Remove heap\textquotesingle{}s root and return it. This function fixes the heap going down from the root. \begin{DoxyReturn}{Returns}
+Removed element. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Heap/Heap.\+h\item 
+src/\+Heap/Heap.\+cpp\end{DoxyCompactItemize}

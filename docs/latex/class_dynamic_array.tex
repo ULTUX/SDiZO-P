@@ -1,0 +1,136 @@
+\hypertarget{class_dynamic_array}{}\doxysection{Dynamic\+Array Class Reference}
+\label{class_dynamic_array}\index{DynamicArray@{DynamicArray}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_dynamic_array_a603829fe9f6775999f7258ef2a61f700}{add\+Front}} (int element)
+\item 
+void \mbox{\hyperlink{class_dynamic_array_a629cb4ce37d606464caeb43650e33eec}{add\+Back}} (int element)
+\item 
+void \mbox{\hyperlink{class_dynamic_array_a23f5a57eeb4693abe4c955ad2e01def7}{add\+At\+Index}} (int element, int index)
+\item 
+int \mbox{\hyperlink{class_dynamic_array_a76110290a0b71a5db9a9735a0c95cc19}{remove}} (int index)
+\item 
+int \mbox{\hyperlink{class_dynamic_array_af6792df8b105fc5b4d461a8868cabda6}{get\+Size}} () const
+\item 
+int \mbox{\hyperlink{class_dynamic_array_a1c36d79e4a8b01d435097ff7cffaebb2}{get}} (int index)
+\item 
+void \mbox{\hyperlink{class_dynamic_array_a993c515298c9519c82e9b5e117596be3}{set}} (int index, int val)
+\item 
+void \mbox{\hyperlink{class_dynamic_array_a217ad9e0a064a4e8a839011448ffd649}{print}} ()
+\item 
+void \mbox{\hyperlink{class_dynamic_array_af32422b7298c1a8aa47abf1220cff95c}{swap}} (int i1, int i2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dynamic_array_a23f5a57eeb4693abe4c955ad2e01def7}\label{class_dynamic_array_a23f5a57eeb4693abe4c955ad2e01def7}} 
+\index{DynamicArray@{DynamicArray}!addAtIndex@{addAtIndex}}
+\index{addAtIndex@{addAtIndex}!DynamicArray@{DynamicArray}}
+\doxysubsubsection{\texorpdfstring{addAtIndex()}{addAtIndex()}}
+{\footnotesize\ttfamily void Dynamic\+Array\+::add\+At\+Index (\begin{DoxyParamCaption}\item[{int}]{element,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+Add element at the specified index. 
+\begin{DoxyParams}{Parameters}
+{\em element} & Element to be added. \\
+\hline
+{\em index} & An index of this element. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dynamic_array_a629cb4ce37d606464caeb43650e33eec}\label{class_dynamic_array_a629cb4ce37d606464caeb43650e33eec}} 
+\index{DynamicArray@{DynamicArray}!addBack@{addBack}}
+\index{addBack@{addBack}!DynamicArray@{DynamicArray}}
+\doxysubsubsection{\texorpdfstring{addBack()}{addBack()}}
+{\footnotesize\ttfamily void Dynamic\+Array\+::add\+Back (\begin{DoxyParamCaption}\item[{int}]{element }\end{DoxyParamCaption})}
+
+Add element to back of dynamic array. 
+\begin{DoxyParams}{Parameters}
+{\em element} & Element to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dynamic_array_a603829fe9f6775999f7258ef2a61f700}\label{class_dynamic_array_a603829fe9f6775999f7258ef2a61f700}} 
+\index{DynamicArray@{DynamicArray}!addFront@{addFront}}
+\index{addFront@{addFront}!DynamicArray@{DynamicArray}}
+\doxysubsubsection{\texorpdfstring{addFront()}{addFront()}}
+{\footnotesize\ttfamily void Dynamic\+Array\+::add\+Front (\begin{DoxyParamCaption}\item[{int}]{element }\end{DoxyParamCaption})}
+
+Add new element to front of dynamic array. 
+\begin{DoxyParams}{Parameters}
+{\em element} & Element to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dynamic_array_a1c36d79e4a8b01d435097ff7cffaebb2}\label{class_dynamic_array_a1c36d79e4a8b01d435097ff7cffaebb2}} 
+\index{DynamicArray@{DynamicArray}!get@{get}}
+\index{get@{get}!DynamicArray@{DynamicArray}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily int Dynamic\+Array\+::get (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+Get element at specified index. 
+\begin{DoxyParams}{Parameters}
+{\em index} & An index of this element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Element on that index, -\/1 if index is wrong. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_dynamic_array_af6792df8b105fc5b4d461a8868cabda6}\label{class_dynamic_array_af6792df8b105fc5b4d461a8868cabda6}} 
+\index{DynamicArray@{DynamicArray}!getSize@{getSize}}
+\index{getSize@{getSize}!DynamicArray@{DynamicArray}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int Dynamic\+Array\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get current size of an array. \begin{DoxyReturn}{Returns}
+The size. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_dynamic_array_a217ad9e0a064a4e8a839011448ffd649}\label{class_dynamic_array_a217ad9e0a064a4e8a839011448ffd649}} 
+\index{DynamicArray@{DynamicArray}!print@{print}}
+\index{print@{print}!DynamicArray@{DynamicArray}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Dynamic\+Array\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Helper function used for debugging. Prints contents of array to stdout. \mbox{\Hypertarget{class_dynamic_array_a76110290a0b71a5db9a9735a0c95cc19}\label{class_dynamic_array_a76110290a0b71a5db9a9735a0c95cc19}} 
+\index{DynamicArray@{DynamicArray}!remove@{remove}}
+\index{remove@{remove}!DynamicArray@{DynamicArray}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily int Dynamic\+Array\+::remove (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+Remove element from dynamic array. 
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of this element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New size of an array. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_dynamic_array_a993c515298c9519c82e9b5e117596be3}\label{class_dynamic_array_a993c515298c9519c82e9b5e117596be3}} 
+\index{DynamicArray@{DynamicArray}!set@{set}}
+\index{set@{set}!DynamicArray@{DynamicArray}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void Dynamic\+Array\+::set (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{int}]{val }\end{DoxyParamCaption})}
+
+Replace value at index position with new value passed by a parameter. 
+\begin{DoxyParams}{Parameters}
+{\em index} & Index to be replaced. \\
+\hline
+{\em val} & Replacement value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dynamic_array_af32422b7298c1a8aa47abf1220cff95c}\label{class_dynamic_array_af32422b7298c1a8aa47abf1220cff95c}} 
+\index{DynamicArray@{DynamicArray}!swap@{swap}}
+\index{swap@{swap}!DynamicArray@{DynamicArray}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void Dynamic\+Array\+::swap (\begin{DoxyParamCaption}\item[{int}]{i1,  }\item[{int}]{i2 }\end{DoxyParamCaption})}
+
+Swap two array elements with each other. 
+\begin{DoxyParams}{Parameters}
+{\em i1} & First element. \\
+\hline
+{\em i2} & Second element. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Dynamic\+Array/Dynamic\+Array.\+h\item 
+src/\+Dynamic\+Array/Dynamic\+Array.\+cpp\end{DoxyCompactItemize}

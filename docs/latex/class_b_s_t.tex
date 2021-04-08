@@ -1,0 +1,87 @@
+\hypertarget{class_b_s_t}{}\doxysection{BST Class Reference}
+\label{class_b_s_t}\index{BST@{BST}}
+
+
+{\ttfamily \#include $<$BST.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_s_t_a4855ab1d3b2d899824cf11ac7577c794}{BST}} (int val)
+\item 
+void \mbox{\hyperlink{class_b_s_t_a485f8cb43aed2f9dfca0a567b7d84c95}{add}} (int val)
+\item 
+void \mbox{\hyperlink{class_b_s_t_ac23277c7b230dd26ea2993463e2c010a}{remove}} (int val)
+\item 
+\mbox{\hyperlink{class_b_s_t}{BST}} $\ast$ \mbox{\hyperlink{class_b_s_t_abf684e773c30e1a2ebdf0ef27ad89464}{search}} (int val)
+\item 
+void \mbox{\hyperlink{class_b_s_t_a289b4cb4fa517ca432273f831f9eb62f}{print\+In\+Order}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing every \mbox{\hyperlink{class_b_s_t}{BST}} node and the tree (every instance of this class could be a new \mbox{\hyperlink{class_b_s_t}{BST}} root). This class implements basic \mbox{\hyperlink{class_b_s_t}{BST}} operations\+: insertion, deletion and search. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_b_s_t_a4855ab1d3b2d899824cf11ac7577c794}\label{class_b_s_t_a4855ab1d3b2d899824cf11ac7577c794}} 
+\index{BST@{BST}!BST@{BST}}
+\index{BST@{BST}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{BST()}{BST()}}
+{\footnotesize\ttfamily BST\+::\+BST (\begin{DoxyParamCaption}\item[{int}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Create new node, initialize the tree with a value. 
+\begin{DoxyParams}{Parameters}
+{\em val} & Value to be added. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_b_s_t_a485f8cb43aed2f9dfca0a567b7d84c95}\label{class_b_s_t_a485f8cb43aed2f9dfca0a567b7d84c95}} 
+\index{BST@{BST}!add@{add}}
+\index{add@{add}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void BST\+::add (\begin{DoxyParamCaption}\item[{int}]{val }\end{DoxyParamCaption})}
+
+Add new element to this node\textquotesingle{}s subtree. 
+\begin{DoxyParams}{Parameters}
+{\em val} & Value to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_b_s_t_a289b4cb4fa517ca432273f831f9eb62f}\label{class_b_s_t_a289b4cb4fa517ca432273f831f9eb62f}} 
+\index{BST@{BST}!printInOrder@{printInOrder}}
+\index{printInOrder@{printInOrder}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{printInOrder()}{printInOrder()}}
+{\footnotesize\ttfamily void BST\+::print\+In\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Print this root\textquotesingle{}s subtree in-\/order (non descending). \mbox{\Hypertarget{class_b_s_t_ac23277c7b230dd26ea2993463e2c010a}\label{class_b_s_t_ac23277c7b230dd26ea2993463e2c010a}} 
+\index{BST@{BST}!remove@{remove}}
+\index{remove@{remove}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void BST\+::remove (\begin{DoxyParamCaption}\item[{int}]{val }\end{DoxyParamCaption})}
+
+Remove node with given value from this node\textquotesingle{}s subtree. 
+\begin{DoxyParams}{Parameters}
+{\em val} & Value to be removed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_b_s_t_abf684e773c30e1a2ebdf0ef27ad89464}\label{class_b_s_t_abf684e773c30e1a2ebdf0ef27ad89464}} 
+\index{BST@{BST}!search@{search}}
+\index{search@{search}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_s_t}{BST}} $\ast$ BST\+::search (\begin{DoxyParamCaption}\item[{int}]{val }\end{DoxyParamCaption})}
+
+Search and return node with given value. 
+\begin{DoxyParams}{Parameters}
+{\em val} & Value to be searched. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Node that represents this value. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+BST/BST.\+h\item 
+src/\+BST/BST.\+cpp\end{DoxyCompactItemize}
