@@ -1,0 +1,15 @@
+warning: The selected output language "polish" has not been updated
+since release 1.8.2.  As a result some sentences may appear in English.
+
+/github/workspace/src/DoublyLinkedList/DoublyLinkedList.h:13: warning: Compound DoublyLinkedList is not documented.
+/github/workspace/src/DynamicArray/DynamicArray.h:9: warning: Compound DynamicArray is not documented.
+/github/workspace/src/RBTree/RBNode.h:10: warning: Compound RBNode is not documented.
+/github/workspace/src/RBTree/RBTree.h:11: warning: Compound RBTree is not documented.
+/github/workspace/src/DoublyLinkedList/DoublyLinkedNode.h:13: warning: Member DoublyLinkedNode(int val) (function) of class DoublyLinkedNode is not documented.
+/github/workspace/src/DoublyLinkedList/DoublyLinkedNode.h:14: warning: Member setNext(DoublyLinkedNode *elementDk) (function) of class DoublyLinkedNode is not documented.
+/github/workspace/src/DoublyLinkedList/DoublyLinkedNode.h:15: warning: Member setPrev(DoublyLinkedNode *elementDk) (function) of class DoublyLinkedNode is not documented.
+/github/workspace/src/DoublyLinkedList/DoublyLinkedNode.h:16: warning: Member getNext() (function) of class DoublyLinkedNode is not documented.
+/github/workspace/src/DoublyLinkedList/DoublyLinkedNode.h:17: warning: Member getPrev() (function) of class DoublyLinkedNode is not documented.
+/github/workspace/src/DoublyLinkedList/DoublyLinkedNode.h:18: warning: Member getVal() (function) of class DoublyLinkedNode is not documented.
+/github/workspace/src/RBTree/RBNode.h:18: warning: Member RBNode(int data, Color color) (function) of class RBNode is not documented.
+/github/workspace/src/RBTree/RBNode.h:19: warning: Member RBNode(int data) (function) of class RBNode is not documented.
