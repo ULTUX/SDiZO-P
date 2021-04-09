@@ -62,7 +62,6 @@ void BST::remove(int val) {
                 this->value = nextNode->value;
                 this->right->remove(nextNode->value);
             }
-            delete this;
         }
     }
 }

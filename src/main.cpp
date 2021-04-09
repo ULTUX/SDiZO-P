@@ -11,5 +11,7 @@ int main() {
     tree.add(3);
     tree.add(4);
 
+    tree.remove(2);
+
     return 0;
 }

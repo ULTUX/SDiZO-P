@@ -52,7 +52,42 @@ private:
      * @param node Node to be checked.
      * @return True is node is right child and false if it is not.
      */
-    bool isRightChild(RBNode* node);
+    static bool isRightChild(RBNode* node);
+
+    /**
+     * Perform removal on given node.
+     * @param node Node to be deleted.
+     */
+    void remove(RBNode* node);
+
+    /**
+     * Get successor of given node.
+     * @return Return the node being successor, nullptr if there is no such node.
+     */
+    static RBNode* getNext(RBNode* node);
+
+    /**
+     * Restore RB tree properties after a node removal.
+     * This function should be called just before actual removal of this node.
+     * @param node Node to be removed.
+     */
+    void restoreDelete(RBNode* node);
+
+    /**
+     * Find and return input node's sibling.
+     * If no sibling is present - return nullptr.
+     * @param node A node to find sibling for.
+     * @return Input node's sibling.
+     */
+    static RBNode* getSibling(RBNode* node);
+
+    /**
+     * Fix double black node during deletion.
+     * @param node Node to be fixed.
+     */
+    void fixDoubleBlack(RBNode* node);
+
+
 
 public:
 

@@ -26,10 +26,52 @@ void RBTree::add(int value) {
 }
 
 void RBTree::remove(int value) {
-
+    remove(search(value));
 }
 
+void RBTree::remove(RBNode *node) {
+    if (node->getColor() == BLACK) restoreDelete(node);
+    if (node->getLeft() == nullptr && node->getRight() == nullptr){
+        if (isRightChild(node)) node->getParent()->setRight(nullptr);
+        else node->getParent()->setLeft(nullptr);
+        delete node;
+    }
+    else if (node->getLeft() == nullptr && node->getRight() != nullptr){
+        if (isRightChild(node)) node->getParent()->setRight(node->getRight());
+        else node->getParent()->setLeft(node->getRight());
+        node->getRight()->setParent(node->getParent());
+        delete node;
+    }
+    else if (node->getLeft() != nullptr && node->getRight() == nullptr){
+        if (isRightChild(node)) node->getParent()->setRight(node->getLeft());
+        else node->getParent()->setLeft(node->getLeft());
+        node->getLeft()->setParent(node->getParent());
+        delete node;
+    }
+    else {
+        RBNode* successor = getNext(node);
+        if (successor != nullptr){
+            node->setData(successor->getData());
+            remove(successor);
+        }
+    }
+}
+
+
 RBNode *RBTree::search(int value) {
+    RBNode* node = root;
+
+    while (node != nullptr && node->getData() != value){
+        if (node->getData() > value){
+            node = node->getLeft();
+        }
+        else {
+            node = node->getRight();
+        }
+    }
+
+    if (node == nullptr) return nullptr;
+    if (node->getData() == value) return node;
     return nullptr;
 }
 
@@ -152,11 +194,113 @@ RBNode *RBTree::getUncle(RBNode *node) {
 }
 
 bool RBTree::isRightChild(RBNode *node) {
-    if (node == root) return false;
+    if (node->getParent() == nullptr) return false;
     if (node->getParent()->getLeft() == node) return false;
     return true;
 }
 
 RBNode *RBTree::getRoot() const {
     return root;
+}
+
+RBNode *RBTree::getNext(RBNode *node) {
+    if (node->getRight() != nullptr){
+        RBNode* minNode = node->getRight();
+        while (minNode->getLeft() != nullptr){
+            minNode = minNode->getLeft();
+        }
+        return minNode;
+    }
+    return nullptr;
+}
+
+void RBTree::restoreDelete(RBNode *node) {
+    RBNode* onlyChild = nullptr;
+    if (node->getLeft() != nullptr) onlyChild = node->getLeft();
+    else if (node->getRight() != nullptr) onlyChild = node->getRight();
+    if (onlyChild != nullptr){
+        if (node->getColor() == RED || onlyChild->getColor() == RED) {
+            onlyChild->setColor(BLACK);
+            return;
+        }
+    }
+    if (node->getColor() == BLACK && (onlyChild == nullptr || onlyChild->getColor() == BLACK)){
+        fixDoubleBlack(node);
+    }
+}
+
+RBNode *RBTree::getSibling(RBNode *node) {
+    if (isRightChild(node)) return node->getParent()->getLeft();
+    return node->getParent()->getRight();
+}
+
+void RBTree::fixDoubleBlack(RBNode *node) {
+    if (node == root) return;
+    RBNode* sibling = getSibling(node);
+    RBNode* parent = node->getParent();
+    if (sibling == nullptr) fixDoubleBlack(node->getParent());
+    if (sibling->getColor() == BLACK){
+        RBNode* rightChildSib = sibling->getRight();
+        RBNode* leftChildSib = sibling->getLeft();
+        if ((rightChildSib != nullptr && rightChildSib->getColor() == RED)
+            || (leftChildSib != nullptr && leftChildSib->getColor() == RED)) {
+            //One of sibling's children is RED
+            RBNode* redChild = nullptr;
+            bool bothRed = (rightChildSib != nullptr && rightChildSib->getColor() == RED)
+                            && (leftChildSib != nullptr && leftChildSib->getColor() == RED);
+            if (rightChildSib != nullptr && rightChildSib->getColor() == RED) redChild = rightChildSib;
+            else redChild = leftChildSib;
+            if (!isRightChild(sibling)){
+                //Left - x case
+                if (redChild == leftChildSib || bothRed){
+                    //Left Left case
+                    leftChildSib->setColor(sibling->getColor());
+                    rotateRight(node->getParent());
+                }
+                else if (redChild == rightChildSib){
+                    //Left Right case
+                    leftChildSib->setColor(parent->getColor());
+                    rotateLeft(sibling);
+                    rotateRight(node->getParent());
+                }
+            }
+            else {
+                // Right - x case
+                if (redChild == rightChildSib || bothRed){
+                    //Right Right case
+                    rightChildSib->setColor(sibling->getColor());
+                    rotateLeft(node->getParent());
+                    sibling->setColor(RED);
+                }
+                else if (redChild == leftChildSib) {
+                    //Right Left case
+                    leftChildSib->setColor(parent->getColor());
+                    rotateRight(sibling);
+                    rotateLeft(node->getParent());
+                }
+            }
+        }
+        else {
+            //BOTH children are BLACK
+            sibling->setColor(RED);
+            if (node->getParent()->getColor() == BLACK) fixDoubleBlack(node->getParent());
+            else node->getParent()->setColor(BLACK);
+        }
+    }
+    else if (sibling != nullptr && sibling->getColor() == RED) {
+        if (!isRightChild(sibling)){
+            //left case
+            sibling->getParent()->setColor(RED);
+            rotateRight(sibling->getParent());
+            sibling->setColor(BLACK);
+            fixDoubleBlack(node);
+        }
+        else {
+            //right case
+            sibling->getParent()->setColor(RED);
+            rotateLeft(sibling->getParent());
+            sibling->setColor(BLACK);
+            fixDoubleBlack(node);
+        }
+    }
 }
