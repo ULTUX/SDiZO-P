@@ -85,6 +85,8 @@ $(document).ready(function(){initNavTree('class_dynamic_array.html',''); initRes
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pri-methods">Metody prywatne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
 <a href="class_dynamic_array-members.html">Lista wszystkich składowych</a>  </div>
   <div class="headertitle">
 <div class="title">Dokumentacja klasy DynamicArray</div>  </div>
@@ -111,6 +113,18 @@ Metody publiczne</h2></td></tr>
 <tr class="separator:a217ad9e0a064a4e8a839011448ffd649"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af32422b7298c1a8aa47abf1220cff95c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_array.html#af32422b7298c1a8aa47abf1220cff95c">swap</a> (int i1, int i2)</td></tr>
 <tr class="separator:af32422b7298c1a8aa47abf1220cff95c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Metody prywatne</h2></td></tr>
+<tr class="memitem:aba4cecef3453f072a9431e9b89e03a35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_array.html#aba4cecef3453f072a9431e9b89e03a35">initArray</a> (int element)</td></tr>
+<tr class="separator:aba4cecef3453f072a9431e9b89e03a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:afb6fb50fa2f3c75d6c57376158b9da8e"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_array.html#afb6fb50fa2f3c75d6c57376158b9da8e">arrayPointer</a></td></tr>
+<tr class="separator:afb6fb50fa2f3c75d6c57376158b9da8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e4ec7493fe71831245e37d2ed90cfd6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_array.html#a9e4ec7493fe71831245e37d2ed90cfd6">size</a> = 0</td></tr>
+<tr class="separator:a9e4ec7493fe71831245e37d2ed90cfd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Dokumentacja funkcji składowych</h2>
 <a id="a23f5a57eeb4693abe4c955ad2e01def7"></a>
@@ -239,6 +253,38 @@ Metody publiczne</h2></td></tr>
 
 </div>
 </div>
+<a id="aba4cecef3453f072a9431e9b89e03a35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba4cecef3453f072a9431e9b89e03a35">&#9670;&nbsp;</a></span>initArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DynamicArray::initArray </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>element</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initialize new array with an element. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">element</td><td>Element to be added to new array. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a217ad9e0a064a4e8a839011448ffd649"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a217ad9e0a064a4e8a839011448ffd649">&#9670;&nbsp;</a></span>print()</h2>
 
@@ -349,6 +395,53 @@ Metody publiczne</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a id="afb6fb50fa2f3c75d6c57376158b9da8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb6fb50fa2f3c75d6c57376158b9da8e">&#9670;&nbsp;</a></span>arrayPointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* DynamicArray::arrayPointer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Pointer to an array. </p>
+
+</div>
+</div>
+<a id="a9e4ec7493fe71831245e37d2ed90cfd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e4ec7493fe71831245e37d2ed90cfd6">&#9670;&nbsp;</a></span>size</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DynamicArray::size = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Current size of an array. </p>
 
 </div>
 </div>

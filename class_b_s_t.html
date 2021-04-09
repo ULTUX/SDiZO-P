@@ -85,6 +85,8 @@ $(document).ready(function(){initNavTree('class_b_s_t.html',''); initResizable()
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pri-methods">Metody prywatne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
 <a href="class_b_s_t-members.html">Lista wszystkich składowych</a>  </div>
   <div class="headertitle">
 <div class="title">Dokumentacja klasy BST</div>  </div>
@@ -105,6 +107,22 @@ Metody publiczne</h2></td></tr>
 <tr class="separator:abf684e773c30e1a2ebdf0ef27ad89464"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a289b4cb4fa517ca432273f831f9eb62f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a289b4cb4fa517ca432273f831f9eb62f">printInOrder</a> ()</td></tr>
 <tr class="separator:a289b4cb4fa517ca432273f831f9eb62f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Metody prywatne</h2></td></tr>
+<tr class="memitem:a8f05f7571dd7b136b93dbb79900ea7a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_b_s_t.html">BST</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a8f05f7571dd7b136b93dbb79900ea7a8">getNext</a> ()</td></tr>
+<tr class="separator:a8f05f7571dd7b136b93dbb79900ea7a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd51d5321c52ce04425c0d8f9d235764"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_b_s_t.html">BST</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#acd51d5321c52ce04425c0d8f9d235764">getMin</a> ()</td></tr>
+<tr class="separator:acd51d5321c52ce04425c0d8f9d235764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:a960cff69baa2b94d3f29890c5eb3a33b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a960cff69baa2b94d3f29890c5eb3a33b">value</a></td></tr>
+<tr class="separator:a960cff69baa2b94d3f29890c5eb3a33b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dc8995eac57d83f70d77761aa029f2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_b_s_t.html">BST</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a8dc8995eac57d83f70d77761aa029f2c">left</a></td></tr>
+<tr class="separator:a8dc8995eac57d83f70d77761aa029f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49e8a6ec97a4c6b0a74114098cbff90f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_b_s_t.html">BST</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a49e8a6ec97a4c6b0a74114098cbff90f">right</a></td></tr>
+<tr class="separator:a49e8a6ec97a4c6b0a74114098cbff90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p>Class representing every <a class="el" href="class_b_s_t.html">BST</a> node and the tree (every instance of this class could be a new <a class="el" href="class_b_s_t.html">BST</a> root). This class implements basic <a class="el" href="class_b_s_t.html">BST</a> operations: insertion, deletion and search. </p>
@@ -163,6 +181,58 @@ Metody publiczne</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="acd51d5321c52ce04425c0d8f9d235764"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd51d5321c52ce04425c0d8f9d235764">&#9670;&nbsp;</a></span>getMin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_b_s_t.html">BST</a> * BST::getMin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get node with min value in this node's subtree. </p><dl class="section return"><dt>Zwraca</dt><dd>Pointer to this node. </dd></dl>
+
+</div>
+</div>
+<a id="a8f05f7571dd7b136b93dbb79900ea7a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f05f7571dd7b136b93dbb79900ea7a8">&#9670;&nbsp;</a></span>getNext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_b_s_t.html">BST</a> * BST::getNext </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get lowest value higher than root. </p><dl class="section return"><dt>Zwraca</dt><dd>Pointer to this node. </dd></dl>
 
 </div>
 </div>
@@ -230,6 +300,76 @@ Metody publiczne</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Zwraca</dt><dd>Node that represents this value. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a id="a8dc8995eac57d83f70d77761aa029f2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dc8995eac57d83f70d77761aa029f2c">&#9670;&nbsp;</a></span>left</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_b_s_t.html">BST</a>* BST::left</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Left son of this node. </p>
+
+</div>
+</div>
+<a id="a49e8a6ec97a4c6b0a74114098cbff90f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49e8a6ec97a4c6b0a74114098cbff90f">&#9670;&nbsp;</a></span>right</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_b_s_t.html">BST</a>* BST::right</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Right son of this node. </p>
+
+</div>
+</div>
+<a id="a960cff69baa2b94d3f29890c5eb3a33b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a960cff69baa2b94d3f29890c5eb3a33b">&#9670;&nbsp;</a></span>value</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BST::value</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Value of this node. </p>
 
 </div>
 </div>

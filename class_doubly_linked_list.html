@@ -85,6 +85,8 @@ $(document).ready(function(){initNavTree('class_doubly_linked_list.html',''); in
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pri-methods">Metody prywatne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
 <a href="class_doubly_linked_list-members.html">Lista wszystkich składowych</a>  </div>
   <div class="headertitle">
 <div class="title">Dokumentacja klasy DoublyLinkedList</div>  </div>
@@ -107,6 +109,18 @@ Metody publiczne</h2></td></tr>
 <tr class="separator:a4d0207a5b3fab9271129d8c9b91d71a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32e50ea0e12ae0c7efa0b8bf0b748acc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doubly_linked_list.html#a32e50ea0e12ae0c7efa0b8bf0b748acc">getSize</a> ()</td></tr>
 <tr class="separator:a32e50ea0e12ae0c7efa0b8bf0b748acc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Metody prywatne</h2></td></tr>
+<tr class="memitem:ad68a5bf664da47c3320f11d8c5314fbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_doubly_linked_node.html">DoublyLinkedNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doubly_linked_list.html#ad68a5bf664da47c3320f11d8c5314fbc">getLastElement</a> ()</td></tr>
+<tr class="separator:ad68a5bf664da47c3320f11d8c5314fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae864bc782a72aaccb8942f381975e556"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_doubly_linked_node.html">DoublyLinkedNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doubly_linked_list.html#ae864bc782a72aaccb8942f381975e556">getNodeAt</a> (int i)</td></tr>
+<tr class="separator:ae864bc782a72aaccb8942f381975e556"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:a48d6daed9b29716381d5a518dc7945f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_doubly_linked_node.html">DoublyLinkedNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doubly_linked_list.html#a48d6daed9b29716381d5a518dc7945f0">head</a> = nullptr</td></tr>
+<tr class="separator:a48d6daed9b29716381d5a518dc7945f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Dokumentacja funkcji składowych</h2>
 <a id="a84947152d5b4afc96a6723d4d397c7a2"></a>
@@ -220,6 +234,65 @@ Metody publiczne</h2></td></tr>
 
 </div>
 </div>
+<a id="ad68a5bf664da47c3320f11d8c5314fbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad68a5bf664da47c3320f11d8c5314fbc">&#9670;&nbsp;</a></span>getLastElement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_doubly_linked_node.html">DoublyLinkedNode</a> * DoublyLinkedList::getLastElement </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get last element in the list. </p><dl class="section return"><dt>Zwraca</dt><dd>The element. </dd></dl>
+
+</div>
+</div>
+<a id="ae864bc782a72aaccb8942f381975e556"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae864bc782a72aaccb8942f381975e556">&#9670;&nbsp;</a></span>getNodeAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_doubly_linked_node.html">DoublyLinkedNode</a> * DoublyLinkedList::getNodeAt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get address of a node located at index. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>Index of this node. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>The node located at this index. </dd></dl>
+
+</div>
+</div>
 <a id="a32e50ea0e12ae0c7efa0b8bf0b748acc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a32e50ea0e12ae0c7efa0b8bf0b748acc">&#9670;&nbsp;</a></span>getSize()</h2>
 
@@ -285,6 +358,30 @@ Metody publiczne</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Zwraca</dt><dd>Instance of this list. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a id="a48d6daed9b29716381d5a518dc7945f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48d6daed9b29716381d5a518dc7945f0">&#9670;&nbsp;</a></span>head</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_doubly_linked_node.html">DoublyLinkedNode</a>* DoublyLinkedList::head = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>First element of this list. </p>
 
 </div>
 </div>

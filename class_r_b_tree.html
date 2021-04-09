@@ -85,6 +85,9 @@ $(document).ready(function(){initNavTree('class_r_b_tree.html',''); initResizabl
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pri-methods">Metody prywatne</a> &#124;
+<a href="#pri-static-methods">Statyczne metody prywatne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
 <a href="class_r_b_tree-members.html">Lista wszystkich składowych</a>  </div>
   <div class="headertitle">
 <div class="title">Dokumentacja klasy RBTree</div>  </div>
@@ -106,6 +109,39 @@ Metody publiczne</h2></td></tr>
 <tr class="separator:a004958415e254e8a7b96590fd78060cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c96412c09df8cba9b76c44586e896d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_r_b_node.html">RBNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#a1c96412c09df8cba9b76c44586e896d3">search</a> (int value)</td></tr>
 <tr class="separator:a1c96412c09df8cba9b76c44586e896d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Metody prywatne</h2></td></tr>
+<tr class="memitem:ab640a2a29ca4b5b932a4f16f7ec3051d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#ab640a2a29ca4b5b932a4f16f7ec3051d">rotateLeft</a> (<a class="el" href="class_r_b_node.html">RBNode</a> *node)</td></tr>
+<tr class="separator:ab640a2a29ca4b5b932a4f16f7ec3051d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5aba59c82cae550cade16ae66c3b7db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#ad5aba59c82cae550cade16ae66c3b7db">rotateRight</a> (<a class="el" href="class_r_b_node.html">RBNode</a> *node)</td></tr>
+<tr class="separator:ad5aba59c82cae550cade16ae66c3b7db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbf4d34e4be050cb6b069ed2630c1291"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#acbf4d34e4be050cb6b069ed2630c1291">insertNode</a> (<a class="el" href="class_r_b_node.html">RBNode</a> *node)</td></tr>
+<tr class="separator:acbf4d34e4be050cb6b069ed2630c1291"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e3cd1a2d9fadd0cce890046494cb208"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#a2e3cd1a2d9fadd0cce890046494cb208">fixTree</a> (<a class="el" href="class_r_b_node.html">RBNode</a> *startNode)</td></tr>
+<tr class="separator:a2e3cd1a2d9fadd0cce890046494cb208"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a973fa7be1022beb69174bf0c688dd571"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_r_b_node.html">RBNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#a973fa7be1022beb69174bf0c688dd571">getUncle</a> (<a class="el" href="class_r_b_node.html">RBNode</a> *node)</td></tr>
+<tr class="separator:a973fa7be1022beb69174bf0c688dd571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a211472385012fb8203521d3602b1f2c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#a211472385012fb8203521d3602b1f2c3">remove</a> (<a class="el" href="class_r_b_node.html">RBNode</a> *node)</td></tr>
+<tr class="separator:a211472385012fb8203521d3602b1f2c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0531e89de0537d6f65d53583c1364319"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#a0531e89de0537d6f65d53583c1364319">restoreDelete</a> (<a class="el" href="class_r_b_node.html">RBNode</a> *node)</td></tr>
+<tr class="separator:a0531e89de0537d6f65d53583c1364319"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa49c1467defca746738a7f67309000d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#aa49c1467defca746738a7f67309000d6">fixDoubleBlack</a> (<a class="el" href="class_r_b_node.html">RBNode</a> *node)</td></tr>
+<tr class="separator:aa49c1467defca746738a7f67309000d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Statyczne metody prywatne</h2></td></tr>
+<tr class="memitem:a65901f993afe74d268036466ddd4ac1e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#a65901f993afe74d268036466ddd4ac1e">isRightChild</a> (<a class="el" href="class_r_b_node.html">RBNode</a> *node)</td></tr>
+<tr class="separator:a65901f993afe74d268036466ddd4ac1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac98dfe76ca73c45752c836585198eac2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_r_b_node.html">RBNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#ac98dfe76ca73c45752c836585198eac2">getNext</a> (<a class="el" href="class_r_b_node.html">RBNode</a> *node)</td></tr>
+<tr class="separator:ac98dfe76ca73c45752c836585198eac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a672f4b3427aeb3ad868bbf26729f10a4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_r_b_node.html">RBNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#a672f4b3427aeb3ad868bbf26729f10a4">getSibling</a> (<a class="el" href="class_r_b_node.html">RBNode</a> *node)</td></tr>
+<tr class="separator:a672f4b3427aeb3ad868bbf26729f10a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:a259103b092340c5b64aabff1d9bc644c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_r_b_node.html">RBNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#a259103b092340c5b64aabff1d9bc644c">root</a></td></tr>
+<tr class="separator:a259103b092340c5b64aabff1d9bc644c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a id="a87a3769a8a837ee53b32d520900fca17"></a>
@@ -197,8 +233,230 @@ Metody publiczne</h2></td></tr>
 
 </div>
 </div>
+<a id="aa49c1467defca746738a7f67309000d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa49c1467defca746738a7f67309000d6">&#9670;&nbsp;</a></span>fixDoubleBlack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RBTree::fixDoubleBlack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_r_b_node.html">RBNode</a> *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Fix double black node during deletion. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>Node to be fixed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2e3cd1a2d9fadd0cce890046494cb208"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e3cd1a2d9fadd0cce890046494cb208">&#9670;&nbsp;</a></span>fixTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RBTree::fixTree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_r_b_node.html">RBNode</a> *&#160;</td>
+          <td class="paramname"><em>startNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Fix tree starting with given node. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startNode</td><td>Node to start fixing from. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac98dfe76ca73c45752c836585198eac2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac98dfe76ca73c45752c836585198eac2">&#9670;&nbsp;</a></span>getNext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_r_b_node.html">RBNode</a> * RBTree::getNext </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_r_b_node.html">RBNode</a> *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get successor of given node. </p><dl class="section return"><dt>Zwraca</dt><dd>Return the node being successor, nullptr if there is no such node. </dd></dl>
+
+</div>
+</div>
+<a id="a672f4b3427aeb3ad868bbf26729f10a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a672f4b3427aeb3ad868bbf26729f10a4">&#9670;&nbsp;</a></span>getSibling()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_r_b_node.html">RBNode</a> * RBTree::getSibling </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_r_b_node.html">RBNode</a> *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Find and return input node's sibling. If no sibling is present - return nullptr. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>A node to find sibling for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Input node's sibling. </dd></dl>
+
+</div>
+</div>
+<a id="a973fa7be1022beb69174bf0c688dd571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a973fa7be1022beb69174bf0c688dd571">&#9670;&nbsp;</a></span>getUncle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_r_b_node.html">RBNode</a> * RBTree::getUncle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_r_b_node.html">RBNode</a> *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Find and return parent's sibling. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>Starting node; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Node being starting node's uncle. Return nullptr if uncle does not exist. </dd></dl>
+
+</div>
+</div>
+<a id="acbf4d34e4be050cb6b069ed2630c1291"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbf4d34e4be050cb6b069ed2630c1291">&#9670;&nbsp;</a></span>insertNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RBTree::insertNode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_r_b_node.html">RBNode</a> *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Insert node according to <a class="el" href="class_b_s_t.html">BST</a> insert algorithm. This function just inerts new node to the tree but does NOT fix RB tree. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>Node to be inserted. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a65901f993afe74d268036466ddd4ac1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65901f993afe74d268036466ddd4ac1e">&#9670;&nbsp;</a></span>isRightChild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RBTree::isRightChild </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_r_b_node.html">RBNode</a> *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check whether this node is right child of its parent. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>Node to be checked. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>True is node is right child and false if it is not. </dd></dl>
+
+</div>
+</div>
 <a id="a004958415e254e8a7b96590fd78060cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a004958415e254e8a7b96590fd78060cb">&#9670;&nbsp;</a></span>remove()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a004958415e254e8a7b96590fd78060cb">&#9670;&nbsp;</a></span>remove() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -215,6 +473,134 @@ Metody publiczne</h2></td></tr>
 <p>Remove node with specified value from this tree. </p><dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td>Value to be removed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a211472385012fb8203521d3602b1f2c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a211472385012fb8203521d3602b1f2c3">&#9670;&nbsp;</a></span>remove() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RBTree::remove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_r_b_node.html">RBNode</a> *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Perform removal on given node. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>Node to be deleted. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0531e89de0537d6f65d53583c1364319"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0531e89de0537d6f65d53583c1364319">&#9670;&nbsp;</a></span>restoreDelete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RBTree::restoreDelete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_r_b_node.html">RBNode</a> *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Restore RB tree properties after a node removal. This function should be called just before actual removal of this node. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>Node to be removed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab640a2a29ca4b5b932a4f16f7ec3051d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab640a2a29ca4b5b932a4f16f7ec3051d">&#9670;&nbsp;</a></span>rotateLeft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RBTree::rotateLeft </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_r_b_node.html">RBNode</a> *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Perform left rotation on this node. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>Node to rotate. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad5aba59c82cae550cade16ae66c3b7db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5aba59c82cae550cade16ae66c3b7db">&#9670;&nbsp;</a></span>rotateRight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RBTree::rotateRight </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_r_b_node.html">RBNode</a> *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Perform right rotation on this node. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>Node to rotate. </td></tr>
   </table>
   </dd>
 </dl>
@@ -243,6 +629,30 @@ Metody publiczne</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Zwraca</dt><dd>Instance of a node that is carrying this value. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a id="a259103b092340c5b64aabff1d9bc644c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a259103b092340c5b64aabff1d9bc644c">&#9670;&nbsp;</a></span>root</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_r_b_node.html">RBNode</a>* RBTree::root</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Node representing root of this tree. </p>
 
 </div>
 </div>

@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['indexof_16',['indexOf',['../class_doubly_linked_list.html#ae24e053b8cacc34a458adb348b0c9e08',1,'DoublyLinkedList']]]
+  ['head_25',['head',['../class_doubly_linked_list.html#a48d6daed9b29716381d5a518dc7945f0',1,'DoublyLinkedList']]],
+  ['heap_26',['Heap',['../class_heap.html',1,'']]],
+  ['heapifydown_27',['heapifyDown',['../class_heap.html#a1e77b23e735d8ef87753ae6ca2e11a39',1,'Heap']]],
+  ['heapifyup_28',['heapifyUp',['../class_heap.html#a692cce19ba18f8e709358d335bbd5691',1,'Heap']]]
 ];

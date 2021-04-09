@@ -85,6 +85,8 @@ $(document).ready(function(){initNavTree('class_heap.html',''); initResizable();
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pri-methods">Metody prywatne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
 <a href="class_heap-members.html">Lista wszystkich składowych</a>  </div>
   <div class="headertitle">
 <div class="title">Dokumentacja klasy Heap</div>  </div>
@@ -103,6 +105,18 @@ Metody publiczne</h2></td></tr>
 <tr class="separator:aaf5436a4c28807bedc40c0014bb26ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3933ae859e8e767317ff2f0c31110a6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heap.html#a3933ae859e8e767317ff2f0c31110a6c">printHeap</a> ()</td></tr>
 <tr class="separator:a3933ae859e8e767317ff2f0c31110a6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Metody prywatne</h2></td></tr>
+<tr class="memitem:a692cce19ba18f8e709358d335bbd5691"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heap.html#a692cce19ba18f8e709358d335bbd5691">heapifyUp</a> (int index)</td></tr>
+<tr class="separator:a692cce19ba18f8e709358d335bbd5691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e77b23e735d8ef87753ae6ca2e11a39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heap.html#a1e77b23e735d8ef87753ae6ca2e11a39">heapifyDown</a> (int index)</td></tr>
+<tr class="separator:a1e77b23e735d8ef87753ae6ca2e11a39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:a57a4922a9e6db136232b39c11d0928b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dynamic_array.html">DynamicArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heap.html#a57a4922a9e6db136232b39c11d0928b2">array</a></td></tr>
+<tr class="separator:a57a4922a9e6db136232b39c11d0928b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p>Max-heap built using dynamic array. </p>
@@ -149,6 +163,70 @@ Metody publiczne</h2></td></tr>
 
 </div>
 </div>
+<a id="a1e77b23e735d8ef87753ae6ca2e11a39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e77b23e735d8ef87753ae6ca2e11a39">&#9670;&nbsp;</a></span>heapifyDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Heap::heapifyDown </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Fix the heap going down from given index. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Index to start fixing the heap from. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a692cce19ba18f8e709358d335bbd5691"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a692cce19ba18f8e709358d335bbd5691">&#9670;&nbsp;</a></span>heapifyUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Heap::heapifyUp </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Fix the heap going up from given index. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Index of first element to be fixed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a3933ae859e8e767317ff2f0c31110a6c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3933ae859e8e767317ff2f0c31110a6c">&#9670;&nbsp;</a></span>printHeap()</h2>
 
@@ -182,6 +260,30 @@ Metody publiczne</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Remove heap's root and return it. This function fixes the heap going down from the root. </p><dl class="section return"><dt>Zwraca</dt><dd>Removed element. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a id="a57a4922a9e6db136232b39c11d0928b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57a4922a9e6db136232b39c11d0928b2">&#9670;&nbsp;</a></span>array</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_dynamic_array.html">DynamicArray</a> Heap::array</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instance of array which stores all heap data. </p>
 
 </div>
 </div>

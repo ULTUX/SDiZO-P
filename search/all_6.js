@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['print_17',['print',['../class_dynamic_array.html#a217ad9e0a064a4e8a839011448ffd649',1,'DynamicArray']]],
-  ['printheap_18',['printHeap',['../class_heap.html#a3933ae859e8e767317ff2f0c31110a6c',1,'Heap']]],
-  ['printinorder_19',['printInOrder',['../class_b_s_t.html#a289b4cb4fa517ca432273f831f9eb62f',1,'BST']]]
+  ['indexof_29',['indexOf',['../class_doubly_linked_list.html#ae24e053b8cacc34a458adb348b0c9e08',1,'DoublyLinkedList']]],
+  ['initarray_30',['initArray',['../class_dynamic_array.html#aba4cecef3453f072a9431e9b89e03a35',1,'DynamicArray']]],
+  ['insertnode_31',['insertNode',['../class_r_b_tree.html#acbf4d34e4be050cb6b069ed2630c1291',1,'RBTree']]],
+  ['isrightchild_32',['isRightChild',['../class_r_b_tree.html#a65901f993afe74d268036466ddd4ac1e',1,'RBTree']]]
 ];
