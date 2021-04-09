@@ -14,5 +14,5 @@ Autor: _Władysław Nowak_
     * Drzewo czerwono-czarne
 - Mierzenie wpływu ilości wprowadzonych danych na czas wykonania programu
 ## Dokumentacja
-Kompletna dokumentacja wygenerowana na podstawie komentarzy w kodzie znajduje się pod [**tym adresem**](https://ultux.github.io/SDiZO-P/html/).  
+Kompletna dokumentacja wygenerowana na podstawie komentarzy w kodzie znajduje się pod [**tym adresem**](https://ultux.github.io/SDiZO-P/).  
 W kodzie znajdują sie dodatkowe komentarze dotyczące logiki implementowanych algorytmów
