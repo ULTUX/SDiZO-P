@@ -111,29 +111,40 @@ $(document).ready(function(){initNavTree('_r_b_tree_8h_source.html',''); initRes
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="class_r_b_node.html">RBNode</a>* getUncle(<a class="code" href="class_r_b_node.html">RBNode</a>* node);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">bool</span> isRightChild(<a class="code" href="class_r_b_node.html">RBNode</a>* node);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> isRightChild(<a class="code" href="class_r_b_node.html">RBNode</a>* node);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="class_r_b_node.html">RBNode</a> *getRoot() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_r_b_tree.html#a87a3769a8a837ee53b32d520900fca17">RBTree</a>(<span class="keywordtype">int</span> value);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_r_b_tree.html#a87a3769a8a837ee53b32d520900fca17">RBTree</a>(<a class="code" href="class_r_b_node.html">RBNode</a>* node);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_r_b_tree.html#a6362c9bdd215186669c825f92875fdb3">add</a>(<span class="keywordtype">int</span> value);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_r_b_tree.html#a004958415e254e8a7b96590fd78060cb">remove</a>(<span class="keywordtype">int</span> value);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="class_r_b_node.html">RBNode</a>* <a class="code" href="class_r_b_tree.html#a1c96412c09df8cba9b76c44586e896d3">search</a>(<span class="keywordtype">int</span> value);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> remove(<a class="code" href="class_r_b_node.html">RBNode</a>* node);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_r_b_node.html">RBNode</a>* getNext(<a class="code" href="class_r_b_node.html">RBNode</a>* node);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> restoreDelete(<a class="code" href="class_r_b_node.html">RBNode</a>* node);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_r_b_node.html">RBNode</a>* getSibling(<a class="code" href="class_r_b_node.html">RBNode</a>* node);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> fixDoubleBlack(<a class="code" href="class_r_b_node.html">RBNode</a>* node);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//SDIZO1_RBTREE_H</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="class_r_b_node.html">RBNode</a> *getRoot() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_r_b_tree.html#a87a3769a8a837ee53b32d520900fca17">RBTree</a>(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_r_b_tree.html#a87a3769a8a837ee53b32d520900fca17">RBTree</a>(<a class="code" href="class_r_b_node.html">RBNode</a>* node);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_r_b_tree.html#a6362c9bdd215186669c825f92875fdb3">add</a>(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">void</span> remove(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="class_r_b_node.html">RBNode</a>* <a class="code" href="class_r_b_tree.html#a1c96412c09df8cba9b76c44586e896d3">search</a>(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;};</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//SDIZO1_RBTREE_H</span></div>
 <div class="ttc" id="aclass_r_b_node_html"><div class="ttname"><a href="class_r_b_node.html">RBNode</a></div><div class="ttdef"><b>Definition:</b> RBNode.h:10</div></div>
 <div class="ttc" id="aclass_r_b_tree_html"><div class="ttname"><a href="class_r_b_tree.html">RBTree</a></div><div class="ttdef"><b>Definition:</b> RBTree.h:11</div></div>
-<div class="ttc" id="aclass_r_b_tree_html_a004958415e254e8a7b96590fd78060cb"><div class="ttname"><a href="class_r_b_tree.html#a004958415e254e8a7b96590fd78060cb">RBTree::remove</a></div><div class="ttdeci">void remove(int value)</div><div class="ttdef"><b>Definition:</b> RBTree.cpp:28</div></div>
-<div class="ttc" id="aclass_r_b_tree_html_a1c96412c09df8cba9b76c44586e896d3"><div class="ttname"><a href="class_r_b_tree.html#a1c96412c09df8cba9b76c44586e896d3">RBTree::search</a></div><div class="ttdeci">RBNode * search(int value)</div><div class="ttdef"><b>Definition:</b> RBTree.cpp:32</div></div>
+<div class="ttc" id="aclass_r_b_tree_html_a1c96412c09df8cba9b76c44586e896d3"><div class="ttname"><a href="class_r_b_tree.html#a1c96412c09df8cba9b76c44586e896d3">RBTree::search</a></div><div class="ttdeci">RBNode * search(int value)</div><div class="ttdef"><b>Definition:</b> RBTree.cpp:61</div></div>
 <div class="ttc" id="aclass_r_b_tree_html_a6362c9bdd215186669c825f92875fdb3"><div class="ttname"><a href="class_r_b_tree.html#a6362c9bdd215186669c825f92875fdb3">RBTree::add</a></div><div class="ttdeci">void add(int value)</div><div class="ttdef"><b>Definition:</b> RBTree.cpp:15</div></div>
 <div class="ttc" id="aclass_r_b_tree_html_a87a3769a8a837ee53b32d520900fca17"><div class="ttname"><a href="class_r_b_tree.html#a87a3769a8a837ee53b32d520900fca17">RBTree::RBTree</a></div><div class="ttdeci">RBTree(int value)</div><div class="ttdef"><b>Definition:</b> RBTree.cpp:7</div></div>
 </div><!-- fragment --></div><!-- contents -->
