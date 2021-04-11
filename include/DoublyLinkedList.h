@@ -5,8 +5,8 @@
 #ifndef SDIZO1_DOUBLYLINKEDLIST_H
 #define SDIZO1_DOUBLYLINKEDLIST_H
 
-#include "DoublyLinkedNode.h"
 #include <iostream>
+#include "../src/DataStructures/helper_classes/DoublyLinkedNode.h"
 
 using namespace std;
 

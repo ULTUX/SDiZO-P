@@ -4,7 +4,7 @@
 
 #ifndef SDIZO1_HEAP_H
 #define SDIZO1_HEAP_H
-#include "../DynamicArray/DynamicArray.h"
+#include "DynamicArray.h"
 
 /**
  * Max-heap built using dynamic array.

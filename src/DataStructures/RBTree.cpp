@@ -2,7 +2,8 @@
 // Created by Władysław Nowak on 08/04/2021.
 //
 
-#include "RBTree.h"
+
+#include "../../include/RBTree.h"
 
 RBTree::RBTree(int value) {
     this->root = new RBNode(value, BLACK);

@@ -2,8 +2,8 @@
 // Created by Władysław Nowak on 29/03/2021.
 //
 
-#include "DoublyLinkedList.h"
 
+#include "../../include/DoublyLinkedList.h"
 
 DoublyLinkedList *DoublyLinkedList::removeElement(int val) {
     DoublyLinkedNode* curr = head;

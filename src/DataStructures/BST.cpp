@@ -3,8 +3,7 @@
 //
 
 #include <iostream>
-#include "BST.h"
-#include "../DynamicArray/DynamicArray.h"
+#include "../../include/BST.h"
 
 
 void BST::add(int val) {

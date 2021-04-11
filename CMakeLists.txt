@@ -3,4 +3,4 @@ project(SDiZO1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(SDiZO1 src/main.cpp src/DynamicArray/DynamicArray.cpp src/DynamicArray/DynamicArray.h src/DoublyLinkedList/DoublyLinkedList.cpp src/DoublyLinkedList/DoublyLinkedList.h src/DoublyLinkedList/DoublyLinkedNode.cpp src/DoublyLinkedList/DoublyLinkedNode.h src/Heap/Heap.cpp src/Heap/Heap.h src/BST/BST.cpp src/BST/BST.h src/RBTree/RBNode.cpp src/RBTree/RBNode.h src/RBTree/RBTree.cpp src/RBTree/RBTree.h)
+add_executable(SDiZO1 src/main.cpp src/DataStructures/DynamicArray.cpp include/DynamicArray.h src/DataStructures/DoublyLinkedList.cpp include/DoublyLinkedList.h src/DataStructures/helper-classes/DoublyLinkedNode.cpp src/DataStructures/helper-classes/DoublyLinkedNode.h src/DataStructures/Heap.cpp include/Heap.h src/DataStructures/BST.cpp include/BST.h src/DataStructures/helper-classes/RBNode.cpp src/DataStructures/helper-classes/RBNode.h src/DataStructures/RBTree.cpp include/RBTree.h src/FileReader/FileReader.cpp src/FileReader/FileReader.h)

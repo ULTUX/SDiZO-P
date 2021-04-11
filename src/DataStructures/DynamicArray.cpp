@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include "DynamicArray.h"
+#include "../../include/DynamicArray.h"
 
 void DynamicArray::addFront(int element) {
     if (size == 0) {

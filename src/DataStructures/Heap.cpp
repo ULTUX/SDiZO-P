@@ -3,8 +3,8 @@
 //
 
 #include <iostream>
-#include "Heap.h"
 #include "cmath"
+#include "../../include/Heap.h"
 
 //TODO: remove print func
 void Heap::add(int val) {
