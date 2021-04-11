@@ -15,9 +15,9 @@
 #include <cstdlib>
 
 /**
- * This class helps reading int data from files and pushing this data into data structures. \
- * Data should be delimited with spaces or other white characters. \
- * First value in this file should be representing amount of values stored in this file. \
+ * This class helps reading int data from files and pushing this data into data structures.
+ * Data should be delimited with spaces or other white characters.
+ * First value in this file should be representing amount of values stored in this file.
  * Supported file structures:
  * - BST
  * - DoublyLinkedList
