@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['array_107',['array',['../class_heap.html#a57a4922a9e6db136232b39c11d0928b2',1,'Heap']]],
-  ['arraypointer_108',['arrayPointer',['../class_dynamic_array.html#afb6fb50fa2f3c75d6c57376158b9da8e',1,'DynamicArray']]]
+  ['filename_45',['fileName',['../class_file_reader.html#aeb11aacada88ccff9d8883f8888b384a',1,'FileReader']]]
 ];

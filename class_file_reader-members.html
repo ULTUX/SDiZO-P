@@ -64,7 +64,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('class_dynamic_array.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('class_file_reader.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -84,24 +84,23 @@ $(document).ready(function(){initNavTree('class_dynamic_array.html',''); initRes
 
 <div class="header">
   <div class="headertitle">
-<div class="title">DynamicArray Lista składowych</div>  </div>
+<div class="title">FileReader Lista składowych</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>To jest kompletna lista składowych dla <a class="el" href="class_dynamic_array.html">DynamicArray</a>, uwzględniająca wszystkie dziedziczone składowe.</p>
+<p>To jest kompletna lista składowych dla <a class="el" href="class_file_reader.html">FileReader</a>, uwzględniająca wszystkie dziedziczone składowe.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_dynamic_array.html#a23f5a57eeb4693abe4c955ad2e01def7">addAtIndex</a>(int element, int index)</td><td class="entry"><a class="el" href="class_dynamic_array.html">DynamicArray</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_dynamic_array.html#a629cb4ce37d606464caeb43650e33eec">addBack</a>(int element)</td><td class="entry"><a class="el" href="class_dynamic_array.html">DynamicArray</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_dynamic_array.html#a603829fe9f6775999f7258ef2a61f700">addFront</a>(int element)</td><td class="entry"><a class="el" href="class_dynamic_array.html">DynamicArray</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_dynamic_array.html#afb6fb50fa2f3c75d6c57376158b9da8e">arrayPointer</a></td><td class="entry"><a class="el" href="class_dynamic_array.html">DynamicArray</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_dynamic_array.html#a1c36d79e4a8b01d435097ff7cffaebb2">get</a>(int index)</td><td class="entry"><a class="el" href="class_dynamic_array.html">DynamicArray</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_dynamic_array.html#af6792df8b105fc5b4d461a8868cabda6">getSize</a>() const</td><td class="entry"><a class="el" href="class_dynamic_array.html">DynamicArray</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_dynamic_array.html#aba4cecef3453f072a9431e9b89e03a35">initArray</a>(int element)</td><td class="entry"><a class="el" href="class_dynamic_array.html">DynamicArray</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_dynamic_array.html#a217ad9e0a064a4e8a839011448ffd649">print</a>()</td><td class="entry"><a class="el" href="class_dynamic_array.html">DynamicArray</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_dynamic_array.html#a76110290a0b71a5db9a9735a0c95cc19">remove</a>(int index)</td><td class="entry"><a class="el" href="class_dynamic_array.html">DynamicArray</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_dynamic_array.html#a993c515298c9519c82e9b5e117596be3">set</a>(int index, int val)</td><td class="entry"><a class="el" href="class_dynamic_array.html">DynamicArray</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_dynamic_array.html#a9e4ec7493fe71831245e37d2ed90cfd6">size</a></td><td class="entry"><a class="el" href="class_dynamic_array.html">DynamicArray</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_dynamic_array.html#af32422b7298c1a8aa47abf1220cff95c">swap</a>(int i1, int i2)</td><td class="entry"><a class="el" href="class_dynamic_array.html">DynamicArray</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_file_reader.html#aeb11aacada88ccff9d8883f8888b384a">fileName</a></td><td class="entry"><a class="el" href="class_file_reader.html">FileReader</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_file_reader.html#a4ff56fe7ddb4697eb47bcc09346b137a">FileReader</a>(std::string fileName)</td><td class="entry"><a class="el" href="class_file_reader.html">FileReader</a></td><td class="entry"><span class="mlabel">explicit</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_file_reader.html#a9eadccc08b92f36e28bc3324426eb815">getStructureSize</a>() const</td><td class="entry"><a class="el" href="class_file_reader.html">FileReader</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_file_reader.html#a12478caa0a3edb31d4b365313fb63acd">input</a></td><td class="entry"><a class="el" href="class_file_reader.html">FileReader</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_file_reader.html#a9177d4bed35585a5545cb3658791d940">readNextVal</a>()</td><td class="entry"><a class="el" href="class_file_reader.html">FileReader</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_file_reader.html#add8e1102ae959d838878e6d8bea1818a">readToBST</a>(BST *dest)</td><td class="entry"><a class="el" href="class_file_reader.html">FileReader</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_file_reader.html#ad99a1f31d71e72dd92c2ed50fb91ecf6">readToDoublyLinkedList</a>(DoublyLinkedList *dest)</td><td class="entry"><a class="el" href="class_file_reader.html">FileReader</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_file_reader.html#ad941125606e3ecc5c3337551174044a8">readToDynamicArray</a>(DynamicArray *dest)</td><td class="entry"><a class="el" href="class_file_reader.html">FileReader</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_file_reader.html#a4c79ace65a94ca784b0824c909277fce">readToHeap</a>(Heap *dest)</td><td class="entry"><a class="el" href="class_file_reader.html">FileReader</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_file_reader.html#acce97b9379c4914f67d1c04629ba8c1c">readToRBTree</a>(RBTree *dest)</td><td class="entry"><a class="el" href="class_file_reader.html">FileReader</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_file_reader.html#aae29b045c2f6b7ce7625b2ac6ceda665">structureSize</a></td><td class="entry"><a class="el" href="class_file_reader.html">FileReader</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
