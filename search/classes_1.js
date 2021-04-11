@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['filereader_25',['FileReader',['../class_file_reader.html',1,'']]]
+  ['doublylinkedlist_69',['DoublyLinkedList',['../class_doubly_linked_list.html',1,'']]],
+  ['doublylinkednode_70',['DoublyLinkedNode',['../class_doubly_linked_node.html',1,'']]],
+  ['dynamicarray_71',['DynamicArray',['../class_dynamic_array.html',1,'']]]
 ];

@@ -1,10 +1,17 @@
 var searchData=
 [
-  ['rbnode_10',['RBNode',['../class_r_b_node.html',1,'']]],
-  ['readnextval_11',['readNextVal',['../class_file_reader.html#a9177d4bed35585a5545cb3658791d940',1,'FileReader']]],
-  ['readtobst_12',['readToBST',['../class_file_reader.html#add8e1102ae959d838878e6d8bea1818a',1,'FileReader']]],
-  ['readtodoublylinkedlist_13',['readToDoublyLinkedList',['../class_file_reader.html#ad99a1f31d71e72dd92c2ed50fb91ecf6',1,'FileReader']]],
-  ['readtodynamicarray_14',['readToDynamicArray',['../class_file_reader.html#ad941125606e3ecc5c3337551174044a8',1,'FileReader']]],
-  ['readtoheap_15',['readToHeap',['../class_file_reader.html#a4c79ace65a94ca784b0824c909277fce',1,'FileReader']]],
-  ['readtorbtree_16',['readToRBTree',['../class_file_reader.html#acce97b9379c4914f67d1c04629ba8c1c',1,'FileReader']]]
+  ['get_14',['get',['../class_dynamic_array.html#a1c36d79e4a8b01d435097ff7cffaebb2',1,'DynamicArray::get()'],['../class_doubly_linked_list.html#a4d0207a5b3fab9271129d8c9b91d71a2',1,'DoublyLinkedList::get()']]],
+  ['getcolor_15',['getColor',['../class_r_b_node.html#a9106344619d1138986c0940b82397b0f',1,'RBNode']]],
+  ['getdata_16',['getData',['../class_r_b_node.html#ae535f84e43a33cf700a3e252c719c98a',1,'RBNode']]],
+  ['getlastelement_17',['getLastElement',['../class_doubly_linked_list.html#ad68a5bf664da47c3320f11d8c5314fbc',1,'DoublyLinkedList']]],
+  ['getleft_18',['getLeft',['../class_r_b_node.html#acbd80daf17e338af60dd53a09a040b5e',1,'RBNode']]],
+  ['getmin_19',['getMin',['../class_b_s_t.html#acd51d5321c52ce04425c0d8f9d235764',1,'BST']]],
+  ['getnext_20',['getNext',['../class_b_s_t.html#a8f05f7571dd7b136b93dbb79900ea7a8',1,'BST::getNext()'],['../class_r_b_tree.html#ac98dfe76ca73c45752c836585198eac2',1,'RBTree::getNext()']]],
+  ['getnodeat_21',['getNodeAt',['../class_doubly_linked_list.html#ae864bc782a72aaccb8942f381975e556',1,'DoublyLinkedList']]],
+  ['getparent_22',['getParent',['../class_r_b_node.html#a681463c4221ff34ba43bb59b89220429',1,'RBNode']]],
+  ['getright_23',['getRight',['../class_r_b_node.html#add1221b3f05dd9ec6b8c53f05216cf83',1,'RBNode']]],
+  ['getsibling_24',['getSibling',['../class_r_b_tree.html#a672f4b3427aeb3ad868bbf26729f10a4',1,'RBTree']]],
+  ['getsize_25',['getSize',['../class_doubly_linked_list.html#a32e50ea0e12ae0c7efa0b8bf0b748acc',1,'DoublyLinkedList::getSize()'],['../class_dynamic_array.html#af6792df8b105fc5b4d461a8868cabda6',1,'DynamicArray::getSize()'],['../class_heap.html#aaf5436a4c28807bedc40c0014bb26ebb',1,'Heap::getSize()']]],
+  ['getstructuresize_26',['getStructureSize',['../class_file_reader.html#a9eadccc08b92f36e28bc3324426eb815',1,'FileReader']]],
+  ['getuncle_27',['getUncle',['../class_r_b_tree.html#a973fa7be1022beb69174bf0c688dd571',1,'RBTree']]]
 ];

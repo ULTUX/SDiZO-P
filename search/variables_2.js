@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['structuresize_47',['structureSize',['../class_file_reader.html#aae29b045c2f6b7ce7625b2ac6ceda665',1,'FileReader']]]
+  ['head_130',['head',['../class_doubly_linked_list.html#a48d6daed9b29716381d5a518dc7945f0',1,'DoublyLinkedList']]]
 ];

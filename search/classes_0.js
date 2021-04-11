@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['doublylinkednode_24',['DoublyLinkedNode',['../class_doubly_linked_node.html',1,'']]]
+  ['bst_68',['BST',['../class_b_s_t.html',1,'']]]
 ];
