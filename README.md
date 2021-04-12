@@ -1,6 +1,7 @@
 # SDiZO Zadanie projektowe nr. 1
 Temat: _Badanie efektywności operacji dodawania, usuwania oraz wyszukiwania elementów w różnych strukturach danych_  
 Autor: _Władysław Nowak_
+
 ## Informacje
 - Użyte środowisko automatycznego budowania: _CMake_
 - Użyte IDE: _CLion_
