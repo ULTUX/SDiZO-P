@@ -5,6 +5,7 @@ Autor: _Władysław Nowak_
 - Użyte środowisko automatycznego budowania: _CMake_
 - Użyte IDE: _CLion_
 - Dokumentacja generowana przy użyciu: _Doxygen_
+
 ## Fukcje programu
 - Implementacja podstawowych struktur danych:
     * Tablica dynamiczna
