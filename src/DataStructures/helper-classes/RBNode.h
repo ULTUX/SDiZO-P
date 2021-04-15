@@ -9,14 +9,38 @@ enum Color {RED, BLACK};
 
 class RBNode {
 private:
+    /**
+     * Color of this node.
+     */
     Color color = RED;
+
+    /**
+     * Right son of this node.
+     */
     RBNode* right = nullptr;
+
+    /**
+     * Left son of this node.
+     */
     RBNode* left = nullptr;
+
+    /**
+     * This node's parent.
+     */
     RBNode* parent = nullptr;
+
+    /**
+     * Value carried by this node.
+     */
     int data;
 public:
+    /**
+     * Create new node with initial color and data.
+     * @param data Value for this node to have.
+     * @param color Initial color.
+     */
     RBNode(int data, Color color):data(data),color(color){};
-    explicit RBNode(int data):data(data){};
+
     /**
      * Get color of this node.
      * @return Enum representing color: RED or BLACK.
