@@ -5,19 +5,24 @@
 #ifndef SDIZO1_FILEREADER_H
 #define SDIZO1_FILEREADER_H
 
-#include "../../include/BST.h"
-#include "../../include/DoublyLinkedList.h"
-#include "../../include/DynamicArray.h"
-#include "../../include/Heap.h"
-#include "../../include/RBTree.h"
+#include "BST.h"
+#include "DoublyLinkedList.h"
+#include "DynamicArray.h"
+#include "Heap.h"
+#include "RBTree.h"
 #include <fstream>
 #include <iostream>
 #include <cstdlib>
 
+enum PushType {
+    FRONT,
+    BACK
+};
+
 /**
- * This class helps reading int data from files and pushing this data into data structures.
- * Data should be delimited with spaces or other white characters.
- * First value in this file should be representing amount of values stored in this file.
+ * This class helps reading int data from files and pushing this data into data structures. \n
+ * Data should be delimited with spaces or other white characters. \n
+ * First value in this file should be representing amount of values stored in this file. \n
  * Supported file structures:
  * - BST
  * - DoublyLinkedList
@@ -67,13 +72,13 @@ public:
      * Read data stored in this file into DoublyLinkedList.
      * @param dest Pointer to destination list.
      */
-    void readToDoublyLinkedList(DoublyLinkedList* dest);
+    void readToDoublyLinkedList(DoublyLinkedList* dest, PushType type);
 
     /**
      * Read data stored in this file into DynamicArray.
      * @param dest Pointer to destination array.
      */
-    void readToDynamicArray(DynamicArray* dest);
+    void readToDynamicArray(DynamicArray* dest, PushType type);
 
     /**
      * Read data stored in this file into Heap.

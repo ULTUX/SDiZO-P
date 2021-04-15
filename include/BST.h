@@ -1,71 +1,46 @@
 //
-// Created by Władysław Nowak on 06/04/2021.
+// Created by bulio on 15.04.2021.
 //
 
 #ifndef SDIZO1_BST_H
 #define SDIZO1_BST_H
 
+#include "../DataStructures/helper-classes/BSTNode.h"
+
 /**
- * Class representing every BST node and the tree (every instance of this class could be a new BST root).
- * This class implements basic BST operations: insertion, deletion and search.
+ * Facade class built over BSTNode class.
+ * This class should be used for creating BST structures.
  */
 class BST {
 private:
-
     /**
-     * Value of this node.
+     * Instance of BSTNode being root of this tree.
      */
-    int value;
-
-    /**
-     * Left son of this node.
-     */
-    BST* left;
-
-    /**
-     * Right son of this node.
-     */
-    BST* right;
-
-    /**
-     * Get lowest value higher than root.
-     * @return Pointer to this node.
-     */
-    BST* getNext();
-
-    /**
-     * Get node with min value in this node's subtree.
-     * @return Pointer to this node.
-     */
-    BST* getMin();
+    BSTNode* root = nullptr;
 public:
     /**
-     * Create new node, initialize the tree with a value.
-     * @param val Value to be added.
-     */
-    explicit BST(int val);
-
-    /**
-     * Add new element to this node's subtree.
+     * Push new value to the tree.
+     * It calls add method on BSTNode being root of this tree.
      * @param val Value to be added.
      */
     void add(int val);
-
     /**
-     * Remove node with given value from this node's subtree.
+     * Remove value from the tree.
+     * It calls remove method on BSTNode being root of this tree.
      * @param val Value to be removed.
      */
     void remove(int val);
 
     /**
-     * Search and return node with given value.
-     * @param val Value to be searched.
-     * @return Node that represents this value.
+     * Search fo value in the tree.
+     * It calls search method on the root of this tree.
+     * @param val Value to be found.
+     * @return Instance of BSTNode storing this value, nullptr if value does not exist.
      */
-    BST* search(int val);
+    BSTNode* search(int val);
 
     /**
-     * Print this root's subtree in-order (non descending).
+     * Calls printInOrder on the root.
      */
     void printInOrder();
 

@@ -28,7 +28,7 @@ private:
     void rotateRight(RBNode *node);
 
     /**
-     * Insert node according to BST insert algorithm.
+     * Insert node according to BSTNode insert algorithm.
      * This function just inerts new node to the tree but does NOT fix RB tree.
      * @param node Node to be inserted.
      */
