@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['next_47',['next',['../class_doubly_linked_node.html#a05acac029823a005305722e51912106c',1,'DoublyLinkedNode']]]
+  ['multiplier_48',['multiplier',['../class_benchmark.html#a30e26684d995b30a9c6859e27f5da75f',1,'Benchmark']]]
 ];

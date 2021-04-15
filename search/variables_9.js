@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['right_176',['right',['../class_b_s_t_node.html#a864a3c35fef3f0ea7bc9b2fd04c985ed',1,'BSTNode::right()'],['../class_r_b_node.html#af82826872827c548a5713eb84f264767',1,'RBNode::right()']]],
-  ['root_177',['root',['../class_b_s_t.html#abc7f42eb746e16489298763934fd8340',1,'BST::root()'],['../class_r_b_tree.html#a259103b092340c5b64aabff1d9bc644c',1,'RBTree::root()']]]
+  ['parent_179',['parent',['../class_b_s_t_node.html#af6cb9fc87ac585f848c741fc03f15064',1,'BSTNode::parent()'],['../class_r_b_node.html#a131e0d1a4f73d55e6b5ad282c6846612',1,'RBNode::parent()']]],
+  ['prev_180',['prev',['../class_doubly_linked_node.html#ae86a4534da87140d317809f69f9c72ce',1,'DoublyLinkedNode']]]
 ];

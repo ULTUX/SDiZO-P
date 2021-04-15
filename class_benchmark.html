@@ -97,8 +97,8 @@ $(document).ready(function(){initNavTree('class_benchmark.html',''); initResizab
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
-<tr class="memitem:a4b318ca960a6e2146f01b0f94eedabc6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_benchmark.html#a4b318ca960a6e2146f01b0f94eedabc6">Benchmark</a> (BenchmarkType type, bool <a class="el" href="class_benchmark.html#a716e1b7e05bcf095552379db231a888f">writeToFile</a>)</td></tr>
-<tr class="separator:a4b318ca960a6e2146f01b0f94eedabc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bcae3e1e61262e045b9e8acef9ab08c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_benchmark.html#a3bcae3e1e61262e045b9e8acef9ab08c">Benchmark</a> (BenchmarkType type, bool <a class="el" href="class_benchmark.html#a716e1b7e05bcf095552379db231a888f">writeToFile</a>, int <a class="el" href="class_benchmark.html#afb670128b3e2842409d3c352160b2d53">initialSize</a>, int <a class="el" href="class_benchmark.html#a2263963b831d6c515ea5d24477f37e1e">step</a>, int <a class="el" href="class_benchmark.html#a30e26684d995b30a9c6859e27f5da75f">multiplier</a>)</td></tr>
+<tr class="separator:a3bcae3e1e61262e045b9e8acef9ab08c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Metody prywatne</h2></td></tr>
@@ -112,6 +112,12 @@ Metody prywatne</h2></td></tr>
 <tr class="separator:a2da452f104b2d9b70416c2bf8dddad37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8522890eaed4116217601d6d4c5cf8ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_benchmark.html#a8522890eaed4116217601d6d4c5cf8ab">testRBTree</a> ()</td></tr>
 <tr class="separator:a8522890eaed4116217601d6d4c5cf8ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9a32d3349d09768889db0894f010975"><td class="memItemLeft" align="right" valign="top"><a id="ab9a32d3349d09768889db0894f010975"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>startTimer</b> ()</td></tr>
+<tr class="separator:ab9a32d3349d09768889db0894f010975"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa73195db4b0ed25cfa218d2a225fbf00"><td class="memItemLeft" align="right" valign="top"><a id="aa73195db4b0ed25cfa218d2a225fbf00"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>stopTimer</b> ()</td></tr>
+<tr class="separator:aa73195db4b0ed25cfa218d2a225fbf00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Atrybuty prywatne</h2></td></tr>
@@ -133,14 +139,23 @@ Atrybuty prywatne</h2></td></tr>
 <tr class="memitem:ad67e151d0e81d5bc0a7acc3b00712c66"><td class="memItemLeft" align="right" valign="top"><a id="ad67e151d0e81d5bc0a7acc3b00712c66"></a>
 BenchmarkType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td></tr>
 <tr class="separator:ad67e151d0e81d5bc0a7acc3b00712c66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab27e5599c0c65ba8d9c2f01a2725881f"><td class="memItemLeft" align="right" valign="top"><a id="ab27e5599c0c65ba8d9c2f01a2725881f"></a>
+LARGE_INTEGER *&#160;</td><td class="memItemRight" valign="bottom"><b>performanceCounter</b></td></tr>
+<tr class="separator:ab27e5599c0c65ba8d9c2f01a2725881f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb670128b3e2842409d3c352160b2d53"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_benchmark.html#afb670128b3e2842409d3c352160b2d53">initialSize</a></td></tr>
+<tr class="separator:afb670128b3e2842409d3c352160b2d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2263963b831d6c515ea5d24477f37e1e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_benchmark.html#a2263963b831d6c515ea5d24477f37e1e">step</a></td></tr>
+<tr class="separator:a2263963b831d6c515ea5d24477f37e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30e26684d995b30a9c6859e27f5da75f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_benchmark.html#a30e26684d995b30a9c6859e27f5da75f">multiplier</a></td></tr>
+<tr class="separator:a30e26684d995b30a9c6859e27f5da75f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a716e1b7e05bcf095552379db231a888f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_benchmark.html#a716e1b7e05bcf095552379db231a888f">writeToFile</a></td></tr>
 <tr class="separator:a716e1b7e05bcf095552379db231a888f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p><a class="el" href="class_benchmark.html">Benchmark</a> given data structure and write output to stdout and csv file. </p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
-<a id="a4b318ca960a6e2146f01b0f94eedabc6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b318ca960a6e2146f01b0f94eedabc6">&#9670;&nbsp;</a></span>Benchmark()</h2>
+<a id="a3bcae3e1e61262e045b9e8acef9ab08c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bcae3e1e61262e045b9e8acef9ab08c">&#9670;&nbsp;</a></span>Benchmark()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -158,7 +173,25 @@ BenchmarkType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>writeToFile</em>&#160;</td>
+          <td class="paramname"><em>writeToFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>initialSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>step</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>multiplier</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -314,6 +347,75 @@ BenchmarkType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td
 </div>
 </div>
 <h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a id="afb670128b3e2842409d3c352160b2d53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb670128b3e2842409d3c352160b2d53">&#9670;&nbsp;</a></span>initialSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Benchmark::initialSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initial size to start tests from. </p>
+
+</div>
+</div>
+<a id="a30e26684d995b30a9c6859e27f5da75f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30e26684d995b30a9c6859e27f5da75f">&#9670;&nbsp;</a></span>multiplier</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Benchmark::multiplier</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Multiplier to multiply size by every iteration. </p>
+
+</div>
+</div>
+<a id="a2263963b831d6c515ea5d24477f37e1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2263963b831d6c515ea5d24477f37e1e">&#9670;&nbsp;</a></span>step</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Benchmark::step</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Step to increment size by every iteration. </p>
+
+</div>
+</div>
 <a id="a716e1b7e05bcf095552379db231a888f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a716e1b7e05bcf095552379db231a888f">&#9670;&nbsp;</a></span>writeToFile</h2>
 

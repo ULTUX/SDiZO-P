@@ -1,6 +1,7 @@
 var class_b_s_t =
 [
     [ "BST", "class_b_s_t.html#a4855ab1d3b2d899824cf11ac7577c794", null ],
+    [ "BST", "class_b_s_t.html#abc17123a0367c3b8ad0382eeb3ad3178", null ],
     [ "add", "class_b_s_t.html#a485f8cb43aed2f9dfca0a567b7d84c95", null ],
     [ "fixDSW", "class_b_s_t.html#aa0fd754d65cb96588d87c4db6c21db4d", null ],
     [ "getRoot", "class_b_s_t.html#a94b42c7cc07f271f1c61f02ea1d5ca13", null ],
