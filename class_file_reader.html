@@ -101,10 +101,10 @@ Metody publiczne</h2></td></tr>
 <tr class="separator:a4ff56fe7ddb4697eb47bcc09346b137a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add8e1102ae959d838878e6d8bea1818a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_reader.html#add8e1102ae959d838878e6d8bea1818a">readToBST</a> (<a class="el" href="class_b_s_t.html">BST</a> *dest)</td></tr>
 <tr class="separator:add8e1102ae959d838878e6d8bea1818a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad99a1f31d71e72dd92c2ed50fb91ecf6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_reader.html#ad99a1f31d71e72dd92c2ed50fb91ecf6">readToDoublyLinkedList</a> (<a class="el" href="class_doubly_linked_list.html">DoublyLinkedList</a> *dest)</td></tr>
-<tr class="separator:ad99a1f31d71e72dd92c2ed50fb91ecf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad941125606e3ecc5c3337551174044a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_reader.html#ad941125606e3ecc5c3337551174044a8">readToDynamicArray</a> (<a class="el" href="class_dynamic_array.html">DynamicArray</a> *dest)</td></tr>
-<tr class="separator:ad941125606e3ecc5c3337551174044a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2567ba84d79ac6e70bffe53b43821b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_reader.html#ac2567ba84d79ac6e70bffe53b43821b9">readToDoublyLinkedList</a> (<a class="el" href="class_doubly_linked_list.html">DoublyLinkedList</a> *dest, PushType type)</td></tr>
+<tr class="separator:ac2567ba84d79ac6e70bffe53b43821b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83321d2c03a78f3dbd1d101f82059f02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_reader.html#a83321d2c03a78f3dbd1d101f82059f02">readToDynamicArray</a> (<a class="el" href="class_dynamic_array.html">DynamicArray</a> *dest, PushType type)</td></tr>
+<tr class="separator:a83321d2c03a78f3dbd1d101f82059f02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c79ace65a94ca784b0824c909277fce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_reader.html#a4c79ace65a94ca784b0824c909277fce">readToHeap</a> (<a class="el" href="class_heap.html">Heap</a> *dest)</td></tr>
 <tr class="separator:a4c79ace65a94ca784b0824c909277fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acce97b9379c4914f67d1c04629ba8c1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_reader.html#acce97b9379c4914f67d1c04629ba8c1c">readToRBTree</a> (<a class="el" href="class_r_b_tree.html">RBTree</a> *dest)</td></tr>
@@ -127,7 +127,10 @@ Atrybuty prywatne</h2></td></tr>
 <tr class="separator:aae29b045c2f6b7ce7625b2ac6ceda665"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
-<div class="textblock"><p>This class helps reading int data from files and pushing this data into data structures. Data should be delimited with spaces or other white characters. First value in this file should be representing amount of values stored in this file. Supported file structures:</p><ul>
+<div class="textblock"><p>This class helps reading int data from files and pushing this data into data structures. <br  />
+Data should be delimited with spaces or other white characters. <br  />
+First value in this file should be representing amount of values stored in this file. <br  />
+Supported file structures:</p><ul>
 <li><a class="el" href="class_b_s_t.html">BST</a></li>
 <li><a class="el" href="class_doubly_linked_list.html">DoublyLinkedList</a></li>
 <li><a class="el" href="class_dynamic_array.html">DynamicArray</a></li>
@@ -236,8 +239,8 @@ Atrybuty prywatne</h2></td></tr>
 
 </div>
 </div>
-<a id="ad99a1f31d71e72dd92c2ed50fb91ecf6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad99a1f31d71e72dd92c2ed50fb91ecf6">&#9670;&nbsp;</a></span>readToDoublyLinkedList()</h2>
+<a id="ac2567ba84d79ac6e70bffe53b43821b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2567ba84d79ac6e70bffe53b43821b9">&#9670;&nbsp;</a></span>readToDoublyLinkedList()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -246,8 +249,18 @@ Atrybuty prywatne</h2></td></tr>
           <td class="memname">void FileReader::readToDoublyLinkedList </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_doubly_linked_list.html">DoublyLinkedList</a> *&#160;</td>
-          <td class="paramname"><em>dest</em></td><td>)</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">PushType&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -260,8 +273,8 @@ Atrybuty prywatne</h2></td></tr>
 
 </div>
 </div>
-<a id="ad941125606e3ecc5c3337551174044a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad941125606e3ecc5c3337551174044a8">&#9670;&nbsp;</a></span>readToDynamicArray()</h2>
+<a id="a83321d2c03a78f3dbd1d101f82059f02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83321d2c03a78f3dbd1d101f82059f02">&#9670;&nbsp;</a></span>readToDynamicArray()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -270,8 +283,18 @@ Atrybuty prywatne</h2></td></tr>
           <td class="memname">void FileReader::readToDynamicArray </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_dynamic_array.html">DynamicArray</a> *&#160;</td>
-          <td class="paramname"><em>dest</em></td><td>)</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">PushType&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -403,8 +426,8 @@ Atrybuty prywatne</h2></td></tr>
 </div>
 </div>
 <hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
-<li>src/FileReader/<a class="el" href="_file_reader_8h_source.html">FileReader.h</a></li>
-<li>src/FileReader/FileReader.cpp</li>
+<li>src/IO/<a class="el" href="_file_reader_8h_source.html">FileReader.h</a></li>
+<li>src/IO/FileReader.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

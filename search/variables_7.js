@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['value_137',['value',['../class_b_s_t.html#a960cff69baa2b94d3f29890c5eb3a33b',1,'BST']]]
+  ['value_143',['value',['../class_b_s_t_node.html#acc0ca92f11ff71e978f111c6d81a81e5',1,'BSTNode']]]
 ];

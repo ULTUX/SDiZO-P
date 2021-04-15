@@ -88,50 +88,37 @@ $(document).ready(function(){initNavTree('_b_s_t_8h_source.html',''); initResiza
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Created by Władysław Nowak on 06/04/2021.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Created by bulio on 15.04.2021.</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef SDIZO1_BST_H</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define SDIZO1_BST_H</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_b_s_t.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_b_s_t.html">BST</a> {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_b_s_t.html#a960cff69baa2b94d3f29890c5eb3a33b">   18</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_b_s_t.html#a960cff69baa2b94d3f29890c5eb3a33b">value</a>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_b_s_t.html#a8dc8995eac57d83f70d77761aa029f2c">   23</a></span>&#160;    <a class="code" href="class_b_s_t.html">BST</a>* <a class="code" href="class_b_s_t.html#a8dc8995eac57d83f70d77761aa029f2c">left</a>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_b_s_t.html#a49e8a6ec97a4c6b0a74114098cbff90f">   28</a></span>&#160;    <a class="code" href="class_b_s_t.html">BST</a>* <a class="code" href="class_b_s_t.html#a49e8a6ec97a4c6b0a74114098cbff90f">right</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_b_s_t.html">BST</a>* <a class="code" href="class_b_s_t.html#a8f05f7571dd7b136b93dbb79900ea7a8">getNext</a>();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_b_s_t.html">BST</a>* <a class="code" href="class_b_s_t.html#acd51d5321c52ce04425c0d8f9d235764">getMin</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_b_s_t.html#a4855ab1d3b2d899824cf11ac7577c794">BST</a>(<span class="keywordtype">int</span> val);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../src/DataStructures/helper-classes/BSTNode.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_b_s_t.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_b_s_t.html">BST</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_b_s_t.html#abc7f42eb746e16489298763934fd8340">   20</a></span>&#160;    <a class="code" href="class_b_s_t_node.html">BSTNode</a>* <a class="code" href="class_b_s_t.html#abc7f42eb746e16489298763934fd8340">root</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_b_s_t.html#a485f8cb43aed2f9dfca0a567b7d84c95">add</a>(<span class="keywordtype">int</span> val);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_b_s_t.html#ac23277c7b230dd26ea2993463e2c010a">remove</a>(<span class="keywordtype">int</span> val);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_b_s_t_node.html">BSTNode</a>* <a class="code" href="class_b_s_t.html#affc1fc58de56446758ff69a1f965942d">search</a>(<span class="keywordtype">int</span> val);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_b_s_t.html#a289b4cb4fa517ca432273f831f9eb62f">printInOrder</a>();</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_b_s_t.html#a485f8cb43aed2f9dfca0a567b7d84c95">add</a>(<span class="keywordtype">int</span> val);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_b_s_t.html#ac23277c7b230dd26ea2993463e2c010a">remove</a>(<span class="keywordtype">int</span> val);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="class_b_s_t.html">BST</a>* <a class="code" href="class_b_s_t.html#abf684e773c30e1a2ebdf0ef27ad89464">search</a>(<span class="keywordtype">int</span> val);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_b_s_t.html#a289b4cb4fa517ca432273f831f9eb62f">printInOrder</a>();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//SDIZO1_BST_H</span></div>
-<div class="ttc" id="aclass_b_s_t_html"><div class="ttname"><a href="class_b_s_t.html">BST</a></div><div class="ttdef"><b>Definition:</b> BST.h:12</div></div>
-<div class="ttc" id="aclass_b_s_t_html_a289b4cb4fa517ca432273f831f9eb62f"><div class="ttname"><a href="class_b_s_t.html#a289b4cb4fa517ca432273f831f9eb62f">BST::printInOrder</a></div><div class="ttdeci">void printInOrder()</div><div class="ttdef"><b>Definition:</b> BST.cpp:88</div></div>
-<div class="ttc" id="aclass_b_s_t_html_a4855ab1d3b2d899824cf11ac7577c794"><div class="ttname"><a href="class_b_s_t.html#a4855ab1d3b2d899824cf11ac7577c794">BST::BST</a></div><div class="ttdeci">BST(int val)</div><div class="ttdef"><b>Definition:</b> BST.cpp:20</div></div>
-<div class="ttc" id="aclass_b_s_t_html_a485f8cb43aed2f9dfca0a567b7d84c95"><div class="ttname"><a href="class_b_s_t.html#a485f8cb43aed2f9dfca0a567b7d84c95">BST::add</a></div><div class="ttdeci">void add(int val)</div><div class="ttdef"><b>Definition:</b> BST.cpp:9</div></div>
-<div class="ttc" id="aclass_b_s_t_html_a49e8a6ec97a4c6b0a74114098cbff90f"><div class="ttname"><a href="class_b_s_t.html#a49e8a6ec97a4c6b0a74114098cbff90f">BST::right</a></div><div class="ttdeci">BST * right</div><div class="ttdef"><b>Definition:</b> BST.h:28</div></div>
-<div class="ttc" id="aclass_b_s_t_html_a8dc8995eac57d83f70d77761aa029f2c"><div class="ttname"><a href="class_b_s_t.html#a8dc8995eac57d83f70d77761aa029f2c">BST::left</a></div><div class="ttdeci">BST * left</div><div class="ttdef"><b>Definition:</b> BST.h:23</div></div>
-<div class="ttc" id="aclass_b_s_t_html_a8f05f7571dd7b136b93dbb79900ea7a8"><div class="ttname"><a href="class_b_s_t.html#a8f05f7571dd7b136b93dbb79900ea7a8">BST::getNext</a></div><div class="ttdeci">BST * getNext()</div><div class="ttdef"><b>Definition:</b> BST.cpp:76</div></div>
-<div class="ttc" id="aclass_b_s_t_html_a960cff69baa2b94d3f29890c5eb3a33b"><div class="ttname"><a href="class_b_s_t.html#a960cff69baa2b94d3f29890c5eb3a33b">BST::value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> BST.h:18</div></div>
-<div class="ttc" id="aclass_b_s_t_html_abf684e773c30e1a2ebdf0ef27ad89464"><div class="ttname"><a href="class_b_s_t.html#abf684e773c30e1a2ebdf0ef27ad89464">BST::search</a></div><div class="ttdeci">BST * search(int val)</div><div class="ttdef"><b>Definition:</b> BST.cpp:68</div></div>
-<div class="ttc" id="aclass_b_s_t_html_ac23277c7b230dd26ea2993463e2c010a"><div class="ttname"><a href="class_b_s_t.html#ac23277c7b230dd26ea2993463e2c010a">BST::remove</a></div><div class="ttdeci">void remove(int val)</div><div class="ttdef"><b>Definition:</b> BST.cpp:22</div></div>
-<div class="ttc" id="aclass_b_s_t_html_acd51d5321c52ce04425c0d8f9d235764"><div class="ttname"><a href="class_b_s_t.html#acd51d5321c52ce04425c0d8f9d235764">BST::getMin</a></div><div class="ttdeci">BST * getMin()</div><div class="ttdef"><b>Definition:</b> BST.cpp:83</div></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//SDIZO1_BST_H</span></div>
+<div class="ttc" id="aclass_b_s_t_html"><div class="ttname"><a href="class_b_s_t.html">BST</a></div><div class="ttdef"><b>Definition:</b> BST.h:15</div></div>
+<div class="ttc" id="aclass_b_s_t_html_a289b4cb4fa517ca432273f831f9eb62f"><div class="ttname"><a href="class_b_s_t.html#a289b4cb4fa517ca432273f831f9eb62f">BST::printInOrder</a></div><div class="ttdeci">void printInOrder()</div><div class="ttdef"><b>Definition:</b> BST.cpp:26</div></div>
+<div class="ttc" id="aclass_b_s_t_html_a485f8cb43aed2f9dfca0a567b7d84c95"><div class="ttname"><a href="class_b_s_t.html#a485f8cb43aed2f9dfca0a567b7d84c95">BST::add</a></div><div class="ttdeci">void add(int val)</div><div class="ttdef"><b>Definition:</b> BST.cpp:7</div></div>
+<div class="ttc" id="aclass_b_s_t_html_abc7f42eb746e16489298763934fd8340"><div class="ttname"><a href="class_b_s_t.html#abc7f42eb746e16489298763934fd8340">BST::root</a></div><div class="ttdeci">BSTNode * root</div><div class="ttdef"><b>Definition:</b> BST.h:20</div></div>
+<div class="ttc" id="aclass_b_s_t_html_ac23277c7b230dd26ea2993463e2c010a"><div class="ttname"><a href="class_b_s_t.html#ac23277c7b230dd26ea2993463e2c010a">BST::remove</a></div><div class="ttdeci">void remove(int val)</div><div class="ttdef"><b>Definition:</b> BST.cpp:16</div></div>
+<div class="ttc" id="aclass_b_s_t_html_affc1fc58de56446758ff69a1f965942d"><div class="ttname"><a href="class_b_s_t.html#affc1fc58de56446758ff69a1f965942d">BST::search</a></div><div class="ttdeci">BSTNode * search(int val)</div><div class="ttdef"><b>Definition:</b> BST.cpp:21</div></div>
+<div class="ttc" id="aclass_b_s_t_node_html"><div class="ttname"><a href="class_b_s_t_node.html">BSTNode</a></div><div class="ttdef"><b>Definition:</b> BSTNode.h:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
