@@ -2,7 +2,7 @@
 // Created by Wladyslaw Nowak on 11/04/2021.
 //
 
-#include "../include/FileReader.h"
+#include "FileReader.h"
 
 void FileReader::readToBST(BST *dest) {
     for (int i = 0; i < structureSize; i++){

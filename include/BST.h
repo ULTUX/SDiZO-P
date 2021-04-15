@@ -5,7 +5,8 @@
 #ifndef SDIZO1_BST_H
 #define SDIZO1_BST_H
 
-#include "../DataStructures/helper-classes/BSTNode.h"
+
+#include "../src/DataStructures/helper-classes/BSTNode.h"
 
 /**
  * Facade class built over BSTNode class.

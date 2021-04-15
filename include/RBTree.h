@@ -6,7 +6,7 @@
 #define SDIZO1_RBTREE_H
 
 
-#include "../src/DataStructures/helper_classes/RBNode.h"
+#include "../src/DataStructures/helper-classes/RBNode.h"
 
 class RBTree {
 private:

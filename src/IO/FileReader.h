@@ -5,11 +5,11 @@
 #ifndef SDIZO1_FILEREADER_H
 #define SDIZO1_FILEREADER_H
 
-#include "BST.h"
-#include "DoublyLinkedList.h"
-#include "DynamicArray.h"
-#include "Heap.h"
-#include "RBTree.h"
+#include "../../include/BST.h"
+#include "../../include/DoublyLinkedList.h"
+#include "../../include/DynamicArray.h"
+#include "../../include/Heap.h"
+#include "../../include/RBTree.h"
 #include <fstream>
 #include <iostream>
 #include <cstdlib>
