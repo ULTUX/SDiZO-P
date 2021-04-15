@@ -9,11 +9,17 @@
 void BSTNode::add(int val) {
     if (this->value > val){
         if (this->left != nullptr) this->left->add(val);
-        else this->left = new BSTNode(val);
+        else {
+            this->left = new BSTNode(val);
+            this->left->setParent(this);
+        }
     }
     else {
         if (this->right != nullptr) this->right->add(val);
-        else this->right = new BSTNode(val);
+        else {
+            this->right = new BSTNode(val);
+            this->right->setParent(this);
+        }
     }
 }
 
@@ -44,6 +50,8 @@ void BSTNode::remove(int val) {
             this->value = oldNode->value;
             this->right = oldNode->right;
             this->left = oldNode->left;
+            this-> left->setParent(this);
+            this->right->setParent(this);
             delete oldNode;
             return;
         }
@@ -52,6 +60,8 @@ void BSTNode::remove(int val) {
             this->value = oldNode->value;
             this->left = oldNode->left;
             this->right = oldNode->right;
+            this-> left->setParent(this);
+            this->right->setParent(this);
             delete oldNode;
             return;
         }
@@ -60,6 +70,7 @@ void BSTNode::remove(int val) {
             if (nextNode != nullptr){
                 this->value = nextNode->value;
                 this->right->remove(nextNode->value);
+
             }
         }
     }
@@ -89,5 +100,30 @@ void BSTNode::printInOrder() {
     if (this->left != nullptr) this->left->printInOrder();
     std::cout<<this->value<<" ";
     if (this->right != nullptr) this->right->printInOrder();
+}
+
+BSTNode *BSTNode::getParent() const {
+    return parent;
+}
+
+void BSTNode::setParent(BSTNode *parent) {
+    BSTNode::parent = parent;
+}
+
+
+BSTNode *BSTNode::getLeft() const {
+    return left;
+}
+
+BSTNode *BSTNode::getRight() const {
+    return right;
+}
+
+void BSTNode::setLeft(BSTNode *left) {
+    BSTNode::left = left;
+}
+
+void BSTNode::setRight(BSTNode *right) {
+    BSTNode::right = right;
 }
 

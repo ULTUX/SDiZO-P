@@ -1,5 +1,5 @@
 //
-// Created by Władysław Nowak on 06/04/2021.
+// Created by Wladyslaw Nowak on 06/04/2021.
 //
 
 #ifndef SDIZO1_BSTNODE_H
@@ -20,12 +20,17 @@ private:
     /**
      * Left son of this node.
      */
-    BSTNode* left;
+    BSTNode* left = nullptr;
 
     /**
      * Right son of this node.
      */
-    BSTNode* right;
+    BSTNode* right = nullptr;
+
+    /**
+     * This node's parent.
+     */
+    BSTNode* parent = nullptr;
 
     /**
      * Get lowest value higher than root.
@@ -38,7 +43,21 @@ private:
      * @return Pointer to this node.
      */
     BSTNode* getMin();
+
 public:
+
+    /**
+     * Get this node's parent.
+     * @return Node being parent of this node.
+     */
+    BSTNode *getParent() const;
+
+    /**
+     * Set parent of this node.
+     * @param parent New parent of this node.
+     */
+    void setParent(BSTNode *parent);
+
     /**
      * Create new node, initialize the tree with a value.
      * @param val Value to be added.
@@ -68,6 +87,30 @@ public:
      * Print this root's subtree in-order (non descending).
      */
     void printInOrder();
+
+    /**
+     * Get this node's left son.
+     * @return Node being left son.
+     */
+    BSTNode *getLeft() const;
+
+    /**
+     * Get this node's right son.
+     * @return Node being right son.
+     */
+    BSTNode *getRight() const;
+
+    /**
+     * Set this node's left son.
+     * @param left Node to become this node's left son.
+     */
+    void setLeft(BSTNode *left);
+
+    /**
+     * Set this node's right son.
+     * @param left Node to become this node's right son.
+     */
+    void setRight(BSTNode *right);
 
 };
 

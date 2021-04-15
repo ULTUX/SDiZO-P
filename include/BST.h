@@ -1,5 +1,5 @@
 //
-// Created by bulio on 15.04.2021.
+// Created by Wladyslaw Nowak on 15.04.2021.
 //
 
 #ifndef SDIZO1_BST_H
@@ -18,7 +18,32 @@ private:
      * Instance of BSTNode being root of this tree.
      */
     BSTNode* root = nullptr;
+
+    /**
+     * This tree's size.
+     */
+    int size = 0;
+
+
+
 public:
+    /**
+     * Perform left rotation on this node.
+     * @param node Node to rotate.
+     */
+    void rotateLeft(BSTNode *node);
+
+    /**
+     * Perform right rotation on this node.
+     * @param node Node to rotate.
+     */
+    void rotateRight(BSTNode *node);
+
+    /**
+     * Create BST with initial root's value.
+     * @param val Initial value.
+     */
+    BST(int val);
     /**
      * Push new value to the tree.
      * It calls add method on BSTNode being root of this tree.
@@ -45,6 +70,16 @@ public:
      */
     void printInOrder();
 
+    /**
+     * Get root of this BST.
+     * @return Node being root.
+     */
+    BSTNode *getRoot() const;
+
+    /**
+     * Fix tree with DSW algorithm.
+     */
+    void fixDSW();
 };
 
 

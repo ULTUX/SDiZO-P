@@ -4,7 +4,7 @@
 
 #include "Benchmark.h"
 
-Benchmark::Benchmark(BenchmarkType type):type(type){
+Benchmark::Benchmark(BenchmarkType type, bool writeToFile):type(type),writeToFile(writeToFile){
     cout<<"Starting benchmark..."<<endl;
     switch (type) {
         case BST_T: testBST();

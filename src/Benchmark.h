@@ -18,6 +18,10 @@ enum BenchmarkType {
     Heap_T,
     RBTree_T
 };
+
+/**
+ * Benchmark given data structure and write output to stdout and csv file.
+ */
 class Benchmark {
 private:
     BST* bst;
@@ -26,18 +30,47 @@ private:
     Heap* heap;
     RBTree* rbTree;
     BenchmarkType type;
-public:
-    explicit Benchmark(BenchmarkType type);
 
+    /**
+     * Perform Red Black Tree benchmark.
+     * This method is called automatically by the constructor.
+     */
     void testBST();
-
+    /**
+     * Perform Red Black Tree benchmark.
+     * This method is called automatically by the constructor.
+     */
     void testDoublyLinkedList();
-
+    /**
+     * Perform Red Black Tree benchmark.
+     * This method is called automatically by the constructor.
+     */
     void testDynamicArray();
-
+    /**
+     * Perform Red Black Tree benchmark.
+     * This method is called automatically by the constructor.
+     */
     void testHeap();
 
+    /**
+     * Perform Red Black Tree benchmark.
+     * This method is called automatically by the constructor.
+     */
     void testRBTree();
+
+    /**
+     * Should produce output to csv file.
+     */
+    bool writeToFile;
+
+public:
+    /**
+     * Begin benchmarking. Perform all possible tests depending on specified data structure type.
+     * @param type Which data structure should be tested.
+     * @param writeToFile Should benchmark produce output to csv file.
+     */
+    explicit Benchmark(BenchmarkType type, bool writeToFile);
+
 };
 
 
