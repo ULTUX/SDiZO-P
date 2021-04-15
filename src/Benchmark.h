@@ -11,6 +11,8 @@
 #include "../include/DynamicArray.h"
 #include "../include/Heap.h"
 #include "../include/RBTree.h"
+#include <windows.h>
+
 enum BenchmarkType {
     BST_T,
     DoublyLinkedList_T,
@@ -30,6 +32,22 @@ private:
     Heap* heap;
     RBTree* rbTree;
     BenchmarkType type;
+    LARGE_INTEGER* performanceCounter;
+
+    /**
+     * Initial size to start tests from.
+     */
+    int initialSize;
+
+    /**
+     * Step to increment size by every iteration.
+     */
+    int step;
+
+    /**
+     * Multiplier to multiply size by every iteration.
+     */
+    int multiplier;
 
     /**
      * Perform Red Black Tree benchmark.
@@ -63,13 +81,17 @@ private:
      */
     bool writeToFile;
 
+    void startTimer();
+
+    double stopTimer();
+
 public:
     /**
      * Begin benchmarking. Perform all possible tests depending on specified data structure type.
      * @param type Which data structure should be tested.
      * @param writeToFile Should benchmark produce output to csv file.
      */
-    explicit Benchmark(BenchmarkType type, bool writeToFile);
+    explicit Benchmark(BenchmarkType type, bool writeToFile, int initialSize, int step, int multiplier);
 
 };
 

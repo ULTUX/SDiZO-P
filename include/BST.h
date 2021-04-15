@@ -45,6 +45,10 @@ public:
      */
     BST(int val);
     /**
+     * Initialize BST without any initial values.
+     */
+    BST(){};
+    /**
      * Push new value to the tree.
      * It calls add method on BSTNode being root of this tree.
      * @param val Value to be added.
