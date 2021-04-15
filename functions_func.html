@@ -108,6 +108,12 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 
 
 <h3><a id="index_b"></a>- b -</h3><ul>
+<li>Benchmark()
+: <a class="el" href="class_benchmark.html#a4b318ca960a6e2146f01b0f94eedabc6">Benchmark</a>
+</li>
+<li>BST()
+: <a class="el" href="class_b_s_t.html#a4855ab1d3b2d899824cf11ac7577c794">BST</a>
+</li>
 <li>BSTNode()
 : <a class="el" href="class_b_s_t_node.html#a463831997591f2ced299f9313ec3cf41">BSTNode</a>
 </li>
@@ -127,6 +133,9 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 </li>
 <li>fixDoubleBlack()
 : <a class="el" href="class_r_b_tree.html#aa49c1467defca746738a7f67309000d6">RBTree</a>
+</li>
+<li>fixDSW()
+: <a class="el" href="class_b_s_t.html#aa0fd754d65cb96588d87c4db6c21db4d">BST</a>
 </li>
 <li>fixTree()
 : <a class="el" href="class_r_b_tree.html#a2e3cd1a2d9fadd0cce890046494cb208">RBTree</a>
@@ -149,7 +158,8 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="class_doubly_linked_list.html#ad68a5bf664da47c3320f11d8c5314fbc">DoublyLinkedList</a>
 </li>
 <li>getLeft()
-: <a class="el" href="class_r_b_node.html#acbd80daf17e338af60dd53a09a040b5e">RBNode</a>
+: <a class="el" href="class_b_s_t_node.html#ab72bdb2eb1f41ed9cdf258fc0cb77e1b">BSTNode</a>
+, <a class="el" href="class_r_b_node.html#acbd80daf17e338af60dd53a09a040b5e">RBNode</a>
 </li>
 <li>getMin()
 : <a class="el" href="class_b_s_t_node.html#ae0876c9db153d2df07d2b2801589ab17">BSTNode</a>
@@ -163,13 +173,18 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="class_doubly_linked_list.html#ae864bc782a72aaccb8942f381975e556">DoublyLinkedList</a>
 </li>
 <li>getParent()
-: <a class="el" href="class_r_b_node.html#a681463c4221ff34ba43bb59b89220429">RBNode</a>
+: <a class="el" href="class_b_s_t_node.html#a8e7076edf3de0a4971baa19cb38bcf1d">BSTNode</a>
+, <a class="el" href="class_r_b_node.html#a681463c4221ff34ba43bb59b89220429">RBNode</a>
 </li>
 <li>getPrev()
 : <a class="el" href="class_doubly_linked_node.html#a855b5f64d5c1553ec592059af3057cec">DoublyLinkedNode</a>
 </li>
 <li>getRight()
-: <a class="el" href="class_r_b_node.html#add1221b3f05dd9ec6b8c53f05216cf83">RBNode</a>
+: <a class="el" href="class_b_s_t_node.html#a5e2867fb18661719b9753b3093257503">BSTNode</a>
+, <a class="el" href="class_r_b_node.html#add1221b3f05dd9ec6b8c53f05216cf83">RBNode</a>
+</li>
+<li>getRoot()
+: <a class="el" href="class_b_s_t.html#a94b42c7cc07f271f1c61f02ea1d5ca13">BST</a>
 </li>
 <li>getSibling()
 : <a class="el" href="class_r_b_tree.html#a672f4b3427aeb3ad868bbf26729f10a4">RBTree</a>
@@ -270,10 +285,12 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="class_r_b_tree.html#a0531e89de0537d6f65d53583c1364319">RBTree</a>
 </li>
 <li>rotateLeft()
-: <a class="el" href="class_r_b_tree.html#ab640a2a29ca4b5b932a4f16f7ec3051d">RBTree</a>
+: <a class="el" href="class_b_s_t.html#aa6c0f438c13c706fe261ce57fa2cf7b2">BST</a>
+, <a class="el" href="class_r_b_tree.html#ab640a2a29ca4b5b932a4f16f7ec3051d">RBTree</a>
 </li>
 <li>rotateRight()
-: <a class="el" href="class_r_b_tree.html#ad5aba59c82cae550cade16ae66c3b7db">RBTree</a>
+: <a class="el" href="class_b_s_t.html#afca1bc3432a9d9a62f1616c6862c2a3d">BST</a>
+, <a class="el" href="class_r_b_tree.html#ad5aba59c82cae550cade16ae66c3b7db">RBTree</a>
 </li>
 </ul>
 
@@ -294,22 +311,44 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="class_r_b_node.html#abf3e88a7bfebf9d661f15954026909d3">RBNode</a>
 </li>
 <li>setLeft()
-: <a class="el" href="class_r_b_node.html#a06cf9109f051274c6581a31d998811f0">RBNode</a>
+: <a class="el" href="class_b_s_t_node.html#a5e70fbfb0f82d5e9f47bd937a802fc9b">BSTNode</a>
+, <a class="el" href="class_r_b_node.html#a06cf9109f051274c6581a31d998811f0">RBNode</a>
 </li>
 <li>setNext()
 : <a class="el" href="class_doubly_linked_node.html#aa74818d4bc6a94ae5b32e093ce832b91">DoublyLinkedNode</a>
 </li>
 <li>setParent()
-: <a class="el" href="class_r_b_node.html#a51a4a4683bc62f72e09f629ad6909d32">RBNode</a>
+: <a class="el" href="class_b_s_t_node.html#aaf2728c833312a3a7ff2f685581cce50">BSTNode</a>
+, <a class="el" href="class_r_b_node.html#a51a4a4683bc62f72e09f629ad6909d32">RBNode</a>
 </li>
 <li>setPrev()
 : <a class="el" href="class_doubly_linked_node.html#a49f21622a5159c5c21d3160d64030646">DoublyLinkedNode</a>
 </li>
 <li>setRight()
-: <a class="el" href="class_r_b_node.html#a2ab9aa19f8bc6d3bd3f4c9f52b78024a">RBNode</a>
+: <a class="el" href="class_b_s_t_node.html#adc009f1b95093c3e1032a76370e2ba5f">BSTNode</a>
+, <a class="el" href="class_r_b_node.html#a2ab9aa19f8bc6d3bd3f4c9f52b78024a">RBNode</a>
 </li>
 <li>swap()
 : <a class="el" href="class_dynamic_array.html#af32422b7298c1a8aa47abf1220cff95c">DynamicArray</a>
+</li>
+</ul>
+
+
+<h3><a id="index_t"></a>- t -</h3><ul>
+<li>testBST()
+: <a class="el" href="class_benchmark.html#abfb823db425f6f610d4e1b46fa1f5575">Benchmark</a>
+</li>
+<li>testDoublyLinkedList()
+: <a class="el" href="class_benchmark.html#a3bd7a789232c2f5a679871af6c72aef4">Benchmark</a>
+</li>
+<li>testDynamicArray()
+: <a class="el" href="class_benchmark.html#a7018cb87732be0de586fa017068d4a0c">Benchmark</a>
+</li>
+<li>testHeap()
+: <a class="el" href="class_benchmark.html#a2da452f104b2d9b70416c2bf8dddad37">Benchmark</a>
+</li>
+<li>testRBTree()
+: <a class="el" href="class_benchmark.html#a8522890eaed4116217601d6d4c5cf8ab">Benchmark</a>
 </li>
 </ul>
 </div><!-- contents -->

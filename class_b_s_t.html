@@ -96,6 +96,12 @@ $(document).ready(function(){initNavTree('class_b_s_t.html',''); initResizable()
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
+<tr class="memitem:aa6c0f438c13c706fe261ce57fa2cf7b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#aa6c0f438c13c706fe261ce57fa2cf7b2">rotateLeft</a> (<a class="el" href="class_b_s_t_node.html">BSTNode</a> *node)</td></tr>
+<tr class="separator:aa6c0f438c13c706fe261ce57fa2cf7b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afca1bc3432a9d9a62f1616c6862c2a3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#afca1bc3432a9d9a62f1616c6862c2a3d">rotateRight</a> (<a class="el" href="class_b_s_t_node.html">BSTNode</a> *node)</td></tr>
+<tr class="separator:afca1bc3432a9d9a62f1616c6862c2a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4855ab1d3b2d899824cf11ac7577c794"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a4855ab1d3b2d899824cf11ac7577c794">BST</a> (int val)</td></tr>
+<tr class="separator:a4855ab1d3b2d899824cf11ac7577c794"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a485f8cb43aed2f9dfca0a567b7d84c95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a485f8cb43aed2f9dfca0a567b7d84c95">add</a> (int val)</td></tr>
 <tr class="separator:a485f8cb43aed2f9dfca0a567b7d84c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac23277c7b230dd26ea2993463e2c010a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#ac23277c7b230dd26ea2993463e2c010a">remove</a> (int val)</td></tr>
@@ -104,15 +110,46 @@ Metody publiczne</h2></td></tr>
 <tr class="separator:affc1fc58de56446758ff69a1f965942d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a289b4cb4fa517ca432273f831f9eb62f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a289b4cb4fa517ca432273f831f9eb62f">printInOrder</a> ()</td></tr>
 <tr class="separator:a289b4cb4fa517ca432273f831f9eb62f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94b42c7cc07f271f1c61f02ea1d5ca13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_b_s_t_node.html">BSTNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a94b42c7cc07f271f1c61f02ea1d5ca13">getRoot</a> () const</td></tr>
+<tr class="separator:a94b42c7cc07f271f1c61f02ea1d5ca13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0fd754d65cb96588d87c4db6c21db4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#aa0fd754d65cb96588d87c4db6c21db4d">fixDSW</a> ()</td></tr>
+<tr class="separator:aa0fd754d65cb96588d87c4db6c21db4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Atrybuty prywatne</h2></td></tr>
 <tr class="memitem:abc7f42eb746e16489298763934fd8340"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_b_s_t_node.html">BSTNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#abc7f42eb746e16489298763934fd8340">root</a> = nullptr</td></tr>
 <tr class="separator:abc7f42eb746e16489298763934fd8340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07080573844039dc3e417a30877414a2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a07080573844039dc3e417a30877414a2">size</a> = 0</td></tr>
+<tr class="separator:a07080573844039dc3e417a30877414a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p>Facade class built over <a class="el" href="class_b_s_t_node.html">BSTNode</a> class. This class should be used for creating <a class="el" href="class_b_s_t.html">BST</a> structures. </p>
-</div><h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+</div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a id="a4855ab1d3b2d899824cf11ac7577c794"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4855ab1d3b2d899824cf11ac7577c794">&#9670;&nbsp;</a></span>BST()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BST::BST </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create <a class="el" href="class_b_s_t.html">BST</a> with initial root's value. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>Initial value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
 <a id="a485f8cb43aed2f9dfca0a567b7d84c95"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a485f8cb43aed2f9dfca0a567b7d84c95">&#9670;&nbsp;</a></span>add()</h2>
 
@@ -134,6 +171,42 @@ Atrybuty prywatne</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="aa0fd754d65cb96588d87c4db6c21db4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0fd754d65cb96588d87c4db6c21db4d">&#9670;&nbsp;</a></span>fixDSW()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BST::fixDSW </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Fix tree with DSW algorithm. </p>
+
+</div>
+</div>
+<a id="a94b42c7cc07f271f1c61f02ea1d5ca13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94b42c7cc07f271f1c61f02ea1d5ca13">&#9670;&nbsp;</a></span>getRoot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_b_s_t_node.html">BSTNode</a> * BST::getRoot </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get root of this <a class="el" href="class_b_s_t.html">BST</a>. </p><dl class="section return"><dt>Zwraca</dt><dd>Node being root. </dd></dl>
 
 </div>
 </div>
@@ -173,6 +246,54 @@ Atrybuty prywatne</h2></td></tr>
 <p>Remove value from the tree. It calls remove method on <a class="el" href="class_b_s_t_node.html">BSTNode</a> being root of this tree. </p><dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
     <tr><td class="paramname">val</td><td>Value to be removed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa6c0f438c13c706fe261ce57fa2cf7b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6c0f438c13c706fe261ce57fa2cf7b2">&#9670;&nbsp;</a></span>rotateLeft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BST::rotateLeft </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_b_s_t_node.html">BSTNode</a> *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Perform left rotation on this node. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>Node to rotate. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afca1bc3432a9d9a62f1616c6862c2a3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afca1bc3432a9d9a62f1616c6862c2a3d">&#9670;&nbsp;</a></span>rotateRight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BST::rotateRight </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_b_s_t_node.html">BSTNode</a> *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Perform right rotation on this node. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>Node to rotate. </td></tr>
   </table>
   </dd>
 </dl>
@@ -225,6 +346,29 @@ Atrybuty prywatne</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Instance of <a class="el" href="class_b_s_t_node.html">BSTNode</a> being root of this tree. </p>
+
+</div>
+</div>
+<a id="a07080573844039dc3e417a30877414a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07080573844039dc3e417a30877414a2">&#9670;&nbsp;</a></span>size</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BST::size = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This tree's size. </p>
 
 </div>
 </div>
