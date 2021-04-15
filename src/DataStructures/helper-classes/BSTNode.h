@@ -33,12 +33,6 @@ private:
     BSTNode* parent = nullptr;
 
     /**
-     * Get lowest value higher than root.
-     * @return Pointer to this node.
-     */
-    BSTNode* getNext();
-
-    /**
      * Get node with min value in this node's subtree.
      * @return Pointer to this node.
      */
@@ -70,11 +64,6 @@ public:
      */
     void add(int val);
 
-    /**
-     * Remove node with given value from this node's subtree.
-     * @param val Value to be removed.
-     */
-    void remove(int val);
 
     /**
      * Search and return node with given value.
@@ -112,6 +101,17 @@ public:
      */
     void setRight(BSTNode *right);
 
+    int getValue() const;
+
+    void setValue(int value);
+
+    bool isRightChild();
+
+/**
+ * Get lowest value higher than root.
+ * @return Pointer to this node.
+ */
+BSTNode* getNext();
 };
 
 

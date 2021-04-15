@@ -54,9 +54,9 @@ public:
      * @param val Value to be added.
      */
     void add(int val);
+
     /**
-     * Remove value from the tree.
-     * It calls remove method on BSTNode being root of this tree.
+     * Remove node with given value from this node's subtree.
      * @param val Value to be removed.
      */
     void remove(int val);
@@ -84,6 +84,8 @@ public:
      * Fix tree with DSW algorithm.
      */
     void fixDSW();
+
+    void remove(int val, BSTNode *node);
 };
 
 

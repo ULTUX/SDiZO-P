@@ -14,13 +14,13 @@ private:
     const string fileName;
     const int dataSize;
     const int columnWidth;
-    DynamicArray* data;
+    double** data;
     string * headers;
     ofstream stream;
-public:
-    CSVWriter(string fileName, int dataSize, int columnWidth, string* headers, DynamicArray* data);
-
     void writeData();
+public:
+    CSVWriter(string fileName, int dataSize, int columnWidth, string* headers, double** data);
+
 };
 
 

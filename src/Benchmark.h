@@ -12,6 +12,11 @@
 #include "../include/Heap.h"
 #include "../include/RBTree.h"
 #include <windows.h>
+#include <functional>
+#include <cstdlib>
+#include <ctime>
+#include <algorithm>
+#include <random>
 
 enum BenchmarkType {
     BST_T,
@@ -33,6 +38,13 @@ private:
     RBTree* rbTree;
     BenchmarkType type;
     LARGE_INTEGER* performanceCounter;
+    mt19937 randNumGen;
+    uniform_int_distribution<int> numberDistribution;
+
+    /**
+     * Amount of times the tests should be run - then the values are averaged.
+     */
+    int testNumber;
 
     /**
      * Initial size to start tests from.
@@ -48,6 +60,16 @@ private:
      * Multiplier to multiply size by every iteration.
      */
     int multiplier;
+
+    /**
+     * Max size to be reached.
+     */
+     int maxSize;
+
+     /**
+      * Expected iteration number.
+      */
+     int iterationNumber;
 
     /**
      * Perform Red Black Tree benchmark.
@@ -76,14 +98,22 @@ private:
      */
     void testRBTree();
 
+    void generatePopulation(int* dataSet, int size);
+
     /**
      * Should produce output to csv file.
      */
-    bool writeToFile;
+    bool isWriteToFile;
 
     void startTimer();
 
     double stopTimer();
+
+    void calcIterationNumber();
+
+    void writeToFile(string testName, double *data, int *size);
+
+    int getNextRandom();
 
 public:
     /**
@@ -91,7 +121,8 @@ public:
      * @param type Which data structure should be tested.
      * @param writeToFile Should benchmark produce output to csv file.
      */
-    explicit Benchmark(BenchmarkType type, bool writeToFile, int initialSize, int step, int multiplier);
+    explicit Benchmark(BenchmarkType type, bool writeToFile,
+                       int initialSize, int step, int multiplier, int testNumber, int maxSize);
 
 };
 

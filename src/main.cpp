@@ -2,8 +2,7 @@
 #include "IO/CSVWriter.h"
 #include "Benchmark.h"
 
-using namespace std;
-
 int main() {
+    Benchmark bench(RBTree_T, true, 2, 50, 1.0, 1, 10000);
     return 0;
 }

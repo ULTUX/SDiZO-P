@@ -18,8 +18,66 @@ void BST::add(int val) {
 
 void BST::remove(int val) {
     if (this->root == nullptr) return;
-    size--;
-    this->root->remove(val);
+    if (size == 1) {
+        delete root;
+        size = 0;
+        root = nullptr;
+    }
+    else {
+        size--;
+        remove(val, root);
+    }
+
+}
+
+void BST::remove(int val, BSTNode* node){
+    if (node->getValue() > val){
+        if (node->getLeft() != nullptr) {
+            remove(val, node->getLeft());
+        }
+    }
+    else if (node->getValue() < val) {
+        if (node->getRight() != nullptr) {
+            remove(val, node->getRight());
+        }
+    }
+    else {
+        if (node->getLeft() == nullptr & node->getRight() == nullptr) {
+            if (node->isRightChild()) node->getParent()->setRight(nullptr);
+            else node->getParent()->setLeft(nullptr);
+            delete node;
+            return;
+        }
+        else if (node->getRight() == nullptr){
+            BSTNode* oldNode = node->getLeft();
+            if (node == root) root = oldNode;
+            if (node->getParent() != nullptr) {
+                oldNode->setParent(node->getParent());
+                if (node->isRightChild()) oldNode->getParent()->setRight(oldNode);
+                else oldNode->getParent()->setLeft(oldNode);
+            }
+            delete node;
+            return;
+        }
+        else if (node->getLeft() == nullptr){
+            BSTNode* oldNode = node->getRight();
+            if (node == root) root = oldNode;
+            if (node->getParent() != nullptr) {
+                oldNode->setParent(node->getParent());
+                if (node->isRightChild()) oldNode->getParent()->setRight(oldNode);
+                else oldNode->getParent()->setLeft(oldNode);
+            }
+            delete node;
+            return;
+        }
+        else {
+            BSTNode* nextNode = node->getNext();
+            if (nextNode != nullptr){
+                node->setValue(nextNode->getValue());
+                remove(nextNode->getValue(), node->getRight());
+            }
+        }
+    }
 }
 
 BSTNode *BST::search(int val) {

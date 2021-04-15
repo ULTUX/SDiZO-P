@@ -13,26 +13,9 @@ private:
     /**
      * Node representing root of this tree.
      */
-    RBNode *root;
+    RBNode *root = nullptr;
 
-    /**
-     * Perform left rotation on this node.
-     * @param node Node to rotate.
-     */
-    void rotateLeft(RBNode *node);
 
-    /**
-     * Perform right rotation on this node.
-     * @param node Node to rotate.
-     */
-    void rotateRight(RBNode *node);
-
-    /**
-     * Insert node according to BSTNode insert algorithm.
-     * This function just inerts new node to the tree but does NOT fix RB tree.
-     * @param node Node to be inserted.
-     */
-    void insertNode(RBNode* node);
 
     /**
      * Fix tree starting with given node.
@@ -87,7 +70,12 @@ private:
      */
     void fixDoubleBlack(RBNode* node);
 
-
+    /**
+     * Insert node according to BSTNode insert algorithm.
+     * This function just inerts new node to the tree but does NOT fix RB tree.
+     * @param node Node to be inserted.
+     */
+    void BSTInsert(RBNode *node, RBNode *startingNode);
 
 public:
 
@@ -98,6 +86,8 @@ public:
      * @param value Initial int value.
      */
     explicit RBTree(int value);
+
+    RBTree(){};
 
     /**
      * Create new instance of this class with initial node as root.
@@ -123,6 +113,18 @@ public:
      * @return Instance of a node that is carrying this value.
      */
     RBNode* search(int value);
+    /**
+     * Perform left rotation on this node.
+     * @param node Node to rotate.
+     */
+    void rotateLeft(RBNode *node);
+
+    /**
+     * Perform right rotation on this node.
+     * @param node Node to rotate.
+     */
+    void rotateRight(RBNode *node);
+
 };
 
 

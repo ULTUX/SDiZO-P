@@ -25,55 +25,9 @@ void BSTNode::add(int val) {
 
 BSTNode::BSTNode(int val): value(val), left(nullptr), right(nullptr){};
 
-void BSTNode::remove(int val) {
-    if (this->value > val){
-        if (this->left != nullptr) {
-            if (this->left->value == val && this->left->left == nullptr && this->left->right == nullptr){
-                delete this->left;
-                this->left = nullptr;
-            }
-            else this->left->remove(val);
-        }
-    }
-    else if (this->value < val) {
-        if (this->right != nullptr) {
-            if (this->right->value == val && this->right->left == nullptr && this->right->right == nullptr){
-                delete this->right;
-                this->right = nullptr;
-            }
-            else this->right->remove(val);
-        }
-    }
-    else {
-        if (this->right == nullptr){
-            BSTNode* oldNode = this->left;
-            this->value = oldNode->value;
-            this->right = oldNode->right;
-            this->left = oldNode->left;
-            this-> left->setParent(this);
-            this->right->setParent(this);
-            delete oldNode;
-            return;
-        }
-        else if (this->left == nullptr){
-            BSTNode* oldNode = this->right;
-            this->value = oldNode->value;
-            this->left = oldNode->left;
-            this->right = oldNode->right;
-            this-> left->setParent(this);
-            this->right->setParent(this);
-            delete oldNode;
-            return;
-        }
-        else {
-            BSTNode* nextNode = getNext();
-            if (nextNode != nullptr){
-                this->value = nextNode->value;
-                this->right->remove(nextNode->value);
 
-            }
-        }
-    }
+int BSTNode::getValue() const {
+    return value;
 }
 
 BSTNode *BSTNode::search(int val) {
@@ -107,7 +61,7 @@ BSTNode *BSTNode::getParent() const {
 }
 
 void BSTNode::setParent(BSTNode *parent) {
-    BSTNode::parent = parent;
+    this->parent = parent;
 }
 
 
@@ -125,5 +79,15 @@ void BSTNode::setLeft(BSTNode *left) {
 
 void BSTNode::setRight(BSTNode *right) {
     BSTNode::right = right;
+}
+
+void BSTNode::setValue(int value) {
+    BSTNode::value = value;
+}
+
+bool BSTNode::isRightChild() {
+    if (this->getParent() == nullptr) return false;
+    if (this->getParent()->getLeft() == this) return false;
+    return true;
 }
 
