@@ -7,6 +7,7 @@ var class_b_s_t =
     [ "getRoot", "class_b_s_t.html#a94b42c7cc07f271f1c61f02ea1d5ca13", null ],
     [ "printInOrder", "class_b_s_t.html#a289b4cb4fa517ca432273f831f9eb62f", null ],
     [ "remove", "class_b_s_t.html#ac23277c7b230dd26ea2993463e2c010a", null ],
+    [ "remove", "class_b_s_t.html#a5107be2a7935e13567b2cc5172e608e5", null ],
     [ "rotateLeft", "class_b_s_t.html#aa6c0f438c13c706fe261ce57fa2cf7b2", null ],
     [ "rotateRight", "class_b_s_t.html#afca1bc3432a9d9a62f1616c6862c2a3d", null ],
     [ "search", "class_b_s_t.html#affc1fc58de56446758ff69a1f965942d", null ],
