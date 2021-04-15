@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['right_139',['right',['../class_b_s_t_node.html#a864a3c35fef3f0ea7bc9b2fd04c985ed',1,'BSTNode']]],
-  ['root_140',['root',['../class_b_s_t.html#abc7f42eb746e16489298763934fd8340',1,'BST::root()'],['../class_r_b_tree.html#a259103b092340c5b64aabff1d9bc644c',1,'RBTree::root()']]]
+  ['input_154',['input',['../class_file_reader.html#a12478caa0a3edb31d4b365313fb63acd',1,'FileReader']]]
 ];

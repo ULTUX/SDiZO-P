@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['filename_135',['fileName',['../class_file_reader.html#aeb11aacada88ccff9d8883f8888b384a',1,'FileReader']]]
+  ['color_150',['color',['../class_r_b_node.html#a0877ab978b0055833f3a5266491f1f2e',1,'RBNode']]]
 ];

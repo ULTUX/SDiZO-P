@@ -1,7 +1,6 @@
 var class_r_b_node =
 [
     [ "RBNode", "class_r_b_node.html#a75c1ab54ecbe21f7d421596eedf3f834", null ],
-    [ "RBNode", "class_r_b_node.html#adbbd26bfa2434d0ab2d8cd17a77921dd", null ],
     [ "getColor", "class_r_b_node.html#a9106344619d1138986c0940b82397b0f", null ],
     [ "getData", "class_r_b_node.html#ae535f84e43a33cf700a3e252c719c98a", null ],
     [ "getLeft", "class_r_b_node.html#acbd80daf17e338af60dd53a09a040b5e", null ],

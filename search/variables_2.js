@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['head_136',['head',['../class_doubly_linked_list.html#a48d6daed9b29716381d5a518dc7945f0',1,'DoublyLinkedList']]]
+  ['data_151',['data',['../class_r_b_node.html#a2028890965e94283429ea2256b2987f6',1,'RBNode']]]
 ];

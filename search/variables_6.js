@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['size_141',['size',['../class_dynamic_array.html#a9e4ec7493fe71831245e37d2ed90cfd6',1,'DynamicArray']]],
-  ['structuresize_142',['structureSize',['../class_file_reader.html#aae29b045c2f6b7ce7625b2ac6ceda665',1,'FileReader']]]
+  ['left_155',['left',['../class_b_s_t_node.html#ad3749f519572d82177ea184efe84beb2',1,'BSTNode::left()'],['../class_r_b_node.html#a3345545f8a1678010bca11b5f7153a4a',1,'RBNode::left()']]]
 ];
