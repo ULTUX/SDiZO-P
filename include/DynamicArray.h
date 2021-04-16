@@ -15,13 +15,31 @@ private:
     /**
      * Current size of an array.
      */
-    int size = 0;
+    int size = 1;
+
+    /**
+     * Current amount of elements in the array
+     */
+    int numElements = 0;
     /**
      * Initialize new array with an element.
      * @param element Element to be added to new array.
      */
-    void initArray(int element);
+    void initArray();
+
+    /**
+     * Allocate twice as much space as before.
+     */
+    void extend();
+
+    /**
+     * Deallocate unused space.
+     * This function makes array twice as short as before.
+     */
+    void collapse();
 public:
+
+    DynamicArray();
     /**
      * Add new element to front of dynamic array.
      * @param element Element to be added.

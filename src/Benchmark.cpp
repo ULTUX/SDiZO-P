@@ -398,32 +398,32 @@ void Benchmark::testRBTree() {
     double resultsArray[iterationNumber];
     //Adding benchmark
     int size = initialSize;
-//    for (int i = 0; i < iterationNumber; i++) {
-//        double avg = 0;
-//        int* randomSet = new int[size+1];
-//        for (int j = 0; j < testNumber; j++) {
-//            RBTree* rbTree = new RBTree();
-//            generatePopulation(randomSet, size+1, numberDistribution);
-//            for (int k = 0; k < size; k++) {
-//                rbTree->add(randomSet[k]);
-//            }
-//            startTimer();
-//            rbTree->add(randomSet[size]);
-//            avg += stopTimer();
-//            delete rbTree;
-//        }
-//        delete[] randomSet;
-//        avg /= testNumber;
-//        sizeArray[i] = size;
-//        resultsArray[i] = avg;
-//        size *= multiplier;
-//        size += step;
-//        cout << "RB tree insertion: Done " << i << " out of " << iterationNumber << " size: " << size << " took "
-//             << resultsArray[i] << "us." << endl;
-//    }
-//    if (isWriteToFile) {
-//        writeToFile("RB_TREE_ADD", resultsArray, sizeArray);
-//    }
+    for (int i = 0; i < iterationNumber; i++) {
+        double avg = 0;
+        int* randomSet = new int[size+1];
+        for (int j = 0; j < testNumber; j++) {
+            RBTree* rbTree = new RBTree();
+            generatePopulation(randomSet, size+1, numberDistribution);
+            for (int k = 0; k < size; k++) {
+                rbTree->add(randomSet[k]);
+            }
+            startTimer();
+            rbTree->add(randomSet[size]);
+            avg += stopTimer();
+            delete rbTree;
+        }
+        delete[] randomSet;
+        avg /= testNumber;
+        sizeArray[i] = size;
+        resultsArray[i] = avg;
+        size *= multiplier;
+        size += step;
+        cout << "RB tree insertion: Done " << i << " out of " << iterationNumber << " size: " << size << " took "
+             << resultsArray[i] << "us." << endl;
+    }
+    if (isWriteToFile) {
+        writeToFile("RB_TREE_ADD", resultsArray, sizeArray);
+    }
 
 
     //removing
@@ -454,7 +454,7 @@ void Benchmark::testRBTree() {
              << resultsArray[i] << "us." << endl;
     }
     if (isWriteToFile) {
-        writeToFile("RB_TREE_ADD", resultsArray, sizeArray);
+        writeToFile("RB_TREE_REMOVE", resultsArray, sizeArray);
     }
 
     //searching
@@ -488,7 +488,7 @@ void Benchmark::testRBTree() {
              << resultsArray[i] << "us." << endl;
     }
     if (isWriteToFile) {
-        writeToFile("RB_TREE_ADD", resultsArray, sizeArray);
+        writeToFile("RB_TREE_SEARCH", resultsArray, sizeArray);
     }
 }
 

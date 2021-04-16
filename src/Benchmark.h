@@ -151,7 +151,7 @@ private:
 
 public:
     /**
-     * Begin benchmarking. Perform all possible tests depending on specified data structure type.
+     * Begin benchmarking. Perform all selected tests depending on specified data structure type.
      * @param type Which data structure should be tested.
      * @param writeToFile Should benchmark produce output to csv file.
      */
