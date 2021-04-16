@@ -1,5 +1,6 @@
 var class_dynamic_array =
 [
+    [ "~DynamicArray", "class_dynamic_array.html#aebf8ac62282dc5c9e2800c1f13ab68ec", null ],
     [ "addAtIndex", "class_dynamic_array.html#a23f5a57eeb4693abe4c955ad2e01def7", null ],
     [ "addBack", "class_dynamic_array.html#a629cb4ce37d606464caeb43650e33eec", null ],
     [ "addFront", "class_dynamic_array.html#a603829fe9f6775999f7258ef2a61f700", null ],

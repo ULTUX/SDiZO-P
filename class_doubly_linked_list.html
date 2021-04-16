@@ -109,6 +109,8 @@ Metody publiczne</h2></td></tr>
 <tr class="separator:a4d0207a5b3fab9271129d8c9b91d71a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32e50ea0e12ae0c7efa0b8bf0b748acc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doubly_linked_list.html#a32e50ea0e12ae0c7efa0b8bf0b748acc">getSize</a> ()</td></tr>
 <tr class="separator:a32e50ea0e12ae0c7efa0b8bf0b748acc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe3231c8ee3dd956b5261c4148102967"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doubly_linked_list.html#abe3231c8ee3dd956b5261c4148102967">~DoublyLinkedList</a> ()</td></tr>
+<tr class="separator:abe3231c8ee3dd956b5261c4148102967"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Metody prywatne</h2></td></tr>
@@ -116,12 +118,33 @@ Metody prywatne</h2></td></tr>
 <tr class="separator:ad68a5bf664da47c3320f11d8c5314fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae864bc782a72aaccb8942f381975e556"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_doubly_linked_node.html">DoublyLinkedNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doubly_linked_list.html#ae864bc782a72aaccb8942f381975e556">getNodeAt</a> (int i)</td></tr>
 <tr class="separator:ae864bc782a72aaccb8942f381975e556"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a269f5561a7705e5f7e93bdda72b4602a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doubly_linked_list.html#a269f5561a7705e5f7e93bdda72b4602a">hardDelete</a> (<a class="el" href="class_doubly_linked_node.html">DoublyLinkedNode</a> *node)</td></tr>
+<tr class="separator:a269f5561a7705e5f7e93bdda72b4602a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Atrybuty prywatne</h2></td></tr>
 <tr class="memitem:a48d6daed9b29716381d5a518dc7945f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_doubly_linked_node.html">DoublyLinkedNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doubly_linked_list.html#a48d6daed9b29716381d5a518dc7945f0">head</a> = nullptr</td></tr>
 <tr class="separator:a48d6daed9b29716381d5a518dc7945f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a id="abe3231c8ee3dd956b5261c4148102967"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe3231c8ee3dd956b5261c4148102967">&#9670;&nbsp;</a></span>~DoublyLinkedList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DoublyLinkedList::~DoublyLinkedList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Unallocate all space taken up by this object. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Dokumentacja funkcji składowych</h2>
 <a id="a84947152d5b4afc96a6723d4d397c7a2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a84947152d5b4afc96a6723d4d397c7a2">&#9670;&nbsp;</a></span>addAtIndex()</h2>
@@ -308,6 +331,38 @@ Atrybuty prywatne</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Get size of this list. </p><dl class="section return"><dt>Zwraca</dt><dd>The size in integer. </dd></dl>
+
+</div>
+</div>
+<a id="a269f5561a7705e5f7e93bdda72b4602a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a269f5561a7705e5f7e93bdda72b4602a">&#9670;&nbsp;</a></span>hardDelete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DoublyLinkedList::hardDelete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_doubly_linked_node.html">DoublyLinkedNode</a> *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Delete all nodes starting from this one. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>Node to start deletion from. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

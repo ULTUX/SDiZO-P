@@ -112,9 +112,9 @@ Metody prywatne</h2></td></tr>
 <tr class="separator:a2da452f104b2d9b70416c2bf8dddad37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8522890eaed4116217601d6d4c5cf8ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_benchmark.html#a8522890eaed4116217601d6d4c5cf8ab">testRBTree</a> ()</td></tr>
 <tr class="separator:a8522890eaed4116217601d6d4c5cf8ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2adfef25df1e1883c0c94b898a861bfd"><td class="memItemLeft" align="right" valign="top"><a id="a2adfef25df1e1883c0c94b898a861bfd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>generatePopulation</b> (int *dataSet, int size)</td></tr>
-<tr class="separator:a2adfef25df1e1883c0c94b898a861bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a266b498e75d29a2a7e8f305d113d479f"><td class="memItemLeft" align="right" valign="top"><a id="a266b498e75d29a2a7e8f305d113d479f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>generatePopulation</b> (int *dataSet, int size, uniform_int_distribution&lt; int &gt; dist)</td></tr>
+<tr class="separator:a266b498e75d29a2a7e8f305d113d479f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9a32d3349d09768889db0894f010975"><td class="memItemLeft" align="right" valign="top"><a id="ab9a32d3349d09768889db0894f010975"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>startTimer</b> ()</td></tr>
 <tr class="separator:ab9a32d3349d09768889db0894f010975"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,30 +124,18 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>stopTimer</b> ()</t
 <tr class="memitem:a45b8e490388f8f7576efd654a4f09ac5"><td class="memItemLeft" align="right" valign="top"><a id="a45b8e490388f8f7576efd654a4f09ac5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>calcIterationNumber</b> ()</td></tr>
 <tr class="separator:a45b8e490388f8f7576efd654a4f09ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15e223407b210e3a43ab1c649cef0c6a"><td class="memItemLeft" align="right" valign="top"><a id="a15e223407b210e3a43ab1c649cef0c6a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>writeToFile</b> (string testName, double *data, int *size)</td></tr>
-<tr class="separator:a15e223407b210e3a43ab1c649cef0c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9535713e1f86d2e687eb0b513cbfdee4"><td class="memItemLeft" align="right" valign="top"><a id="a9535713e1f86d2e687eb0b513cbfdee4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getNextRandom</b> ()</td></tr>
-<tr class="separator:a9535713e1f86d2e687eb0b513cbfdee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc448072c320dbb0af14ca96a81b2e86"><td class="memItemLeft" align="right" valign="top"><a id="abc448072c320dbb0af14ca96a81b2e86"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>writeToFile</b> (string testName, double *data, int *size) const</td></tr>
+<tr class="separator:abc448072c320dbb0af14ca96a81b2e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a071cd8da5930c68c9ff5a3261769d2bc"><td class="memItemLeft" align="right" valign="top"><a id="a071cd8da5930c68c9ff5a3261769d2bc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getNextRandom</b> (uniform_int_distribution&lt; int &gt; &amp;dist)</td></tr>
+<tr class="separator:a071cd8da5930c68c9ff5a3261769d2bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cec8e273a69a70d01813421abd51d70"><td class="memItemLeft" align="right" valign="top"><a id="a1cec8e273a69a70d01813421abd51d70"></a>
+uniform_int_distribution&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getRandomInRange</b> (int a, int b)</td></tr>
+<tr class="separator:a1cec8e273a69a70d01813421abd51d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Atrybuty prywatne</h2></td></tr>
-<tr class="memitem:a8e690f7b40a451e1fceda1150274b25c"><td class="memItemLeft" align="right" valign="top"><a id="a8e690f7b40a451e1fceda1150274b25c"></a>
-<a class="el" href="class_b_s_t.html">BST</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>bst</b></td></tr>
-<tr class="separator:a8e690f7b40a451e1fceda1150274b25c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61189135b841814a7653e8a6b00fd2d2"><td class="memItemLeft" align="right" valign="top"><a id="a61189135b841814a7653e8a6b00fd2d2"></a>
-<a class="el" href="class_doubly_linked_list.html">DoublyLinkedList</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>doublyLinkedList</b></td></tr>
-<tr class="separator:a61189135b841814a7653e8a6b00fd2d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5184d6a97a42df864969d6dde754b1b"><td class="memItemLeft" align="right" valign="top"><a id="ac5184d6a97a42df864969d6dde754b1b"></a>
-<a class="el" href="class_dynamic_array.html">DynamicArray</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>dynamicArray</b></td></tr>
-<tr class="separator:ac5184d6a97a42df864969d6dde754b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82fe1ecc25a6a636dcdf35657c7f10a7"><td class="memItemLeft" align="right" valign="top"><a id="a82fe1ecc25a6a636dcdf35657c7f10a7"></a>
-<a class="el" href="class_heap.html">Heap</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>heap</b></td></tr>
-<tr class="separator:a82fe1ecc25a6a636dcdf35657c7f10a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af08aad29794ba08bb1541b1587677eec"><td class="memItemLeft" align="right" valign="top"><a id="af08aad29794ba08bb1541b1587677eec"></a>
-<a class="el" href="class_r_b_tree.html">RBTree</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>rbTree</b></td></tr>
-<tr class="separator:af08aad29794ba08bb1541b1587677eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad67e151d0e81d5bc0a7acc3b00712c66"><td class="memItemLeft" align="right" valign="top"><a id="ad67e151d0e81d5bc0a7acc3b00712c66"></a>
 BenchmarkType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td></tr>
 <tr class="separator:ad67e151d0e81d5bc0a7acc3b00712c66"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,7 +158,7 @@ uniform_int_distribution&lt; int &gt;&#160;</td><td class="memItemRight" valign=
 <tr class="separator:a30e26684d995b30a9c6859e27f5da75f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01244b7e475d396823e0a370d15cc08f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_benchmark.html#a01244b7e475d396823e0a370d15cc08f">maxSize</a></td></tr>
 <tr class="separator:a01244b7e475d396823e0a370d15cc08f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fc4c450b5df91e2729d9e39b38fa303"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_benchmark.html#a4fc4c450b5df91e2729d9e39b38fa303">iterationNumber</a></td></tr>
+<tr class="memitem:a4fc4c450b5df91e2729d9e39b38fa303"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_benchmark.html#a4fc4c450b5df91e2729d9e39b38fa303">iterationNumber</a> {}</td></tr>
 <tr class="separator:a4fc4c450b5df91e2729d9e39b38fa303"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af811297cfc087ea806e73fbebd975139"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_benchmark.html#af811297cfc087ea806e73fbebd975139">isWriteToFile</a></td></tr>
 <tr class="separator:af811297cfc087ea806e73fbebd975139"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -439,7 +427,7 @@ uniform_int_distribution&lt; int &gt;&#160;</td><td class="memItemRight" valign=
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int Benchmark::iterationNumber</td>
+          <td class="memname">int Benchmark::iterationNumber {}</td>
         </tr>
       </table>
   </td>

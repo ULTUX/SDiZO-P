@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['maxsize_50',['maxSize',['../class_benchmark.html#a01244b7e475d396823e0a370d15cc08f',1,'Benchmark']]],
-  ['multiplier_51',['multiplier',['../class_benchmark.html#a30e26684d995b30a9c6859e27f5da75f',1,'Benchmark']]]
+  ['maxsize_51',['maxSize',['../class_benchmark.html#a01244b7e475d396823e0a370d15cc08f',1,'Benchmark']]],
+  ['multiplier_52',['multiplier',['../class_benchmark.html#a30e26684d995b30a9c6859e27f5da75f',1,'Benchmark']]]
 ];
