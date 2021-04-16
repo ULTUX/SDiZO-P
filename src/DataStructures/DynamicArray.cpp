@@ -128,3 +128,7 @@ void DynamicArray::swap(int i1, int i2) {
     set(i1, get(i2));
     set(i2, temp);
 }
+
+DynamicArray::~DynamicArray() {
+    delete arrayPointer;
+}

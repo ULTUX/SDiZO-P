@@ -63,6 +63,10 @@ public:
      */
     int getSize();
 
+    /**
+     * Unallocate all space taken up by this object.
+     */
+    ~DoublyLinkedList();
 
 private:
     /**
@@ -81,6 +85,12 @@ private:
       * @return The node located at this index.
       */
      DoublyLinkedNode* getNodeAt(int i);
+
+     /**
+      * Delete all nodes starting from this one.
+      * @param node Node to start deletion from.
+      */
+     void hardDelete(DoublyLinkedNode* node);
 
 };
 

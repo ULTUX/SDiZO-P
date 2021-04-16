@@ -4,7 +4,7 @@
 
 
 #include "../../include/RBTree.h"
-
+#include <iostream>
 RBTree::RBTree(int value) {
     this->root = new RBNode(value, BLACK);
 }
@@ -104,7 +104,6 @@ void RBTree::rotateRight(RBNode *node) {
         left->setRight(node);
         if (node == root) {
             root = left;
-            root->setColor(BLACK);
         }
         node->setParent(left);
     }
@@ -131,7 +130,6 @@ void RBTree::rotateLeft(RBNode *node) {
         right->setLeft(node);
         if (node == root) {
             root = right;
-            root->setColor(BLACK);
         }
         node->setParent(right);
 
@@ -161,7 +159,7 @@ void RBTree::fixTree(RBNode *startNode) {
         startNode->setColor(BLACK);
         return;
     }
-    startNode->setColor(RED);
+//    currentNode->setColor(RED);
 
     while (currentNode != root && currentNode->getColor() != BLACK && currentNode->getParent()->getColor() == RED){
         RBNode* parent = currentNode->getParent();
@@ -190,7 +188,7 @@ void RBTree::fixTree(RBNode *startNode) {
         }
         else {
             RBNode* uncle = getUncle(currentNode);
-            if (uncle!= nullptr && uncle->getColor() == RED){
+            if (uncle != nullptr && uncle->getColor() == RED){
                 gParent->setColor(RED);
                 parent->setColor(BLACK);
                 uncle->setColor(BLACK);
@@ -334,4 +332,15 @@ void RBTree::fixDoubleBlack(RBNode *node) {
             fixDoubleBlack(node);
         }
     }
+}
+
+RBTree::~RBTree() {
+    hardDelete(root);
+}
+
+void RBTree::hardDelete(RBNode *node) {
+    if (node == nullptr) return;
+    hardDelete(node->getLeft());
+    hardDelete(node->getRight());
+    delete node;
 }

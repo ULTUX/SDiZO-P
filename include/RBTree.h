@@ -16,6 +16,12 @@ private:
     RBNode *root = nullptr;
 
 
+    /**
+     * Function used during deconstruction.
+     * It deletes given and all sub-nodes.
+     * @param node Node to start deleting from.
+     */
+    void hardDelete(RBNode* node);
 
     /**
      * Fix tree starting with given node.
@@ -80,6 +86,8 @@ private:
 public:
 
     RBNode *getRoot() const;
+
+    ~RBTree();
 
     /**
      * Constructor to create new RBTree with initial value as root.

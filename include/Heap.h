@@ -33,11 +33,18 @@ public:
      * Nicely print the heap.
      */
     void printHeap();
+
+    Heap();
+
+    /**
+     * Unallocate all space taken up by this object.
+     */
+    ~Heap();
 private:
     /**
      * Instance of array which stores all heap data.
      */
-    DynamicArray array;
+    DynamicArray * array;
 
     /**
      * Fix the heap going up from given index.
@@ -50,6 +57,7 @@ private:
      * @param index Index to start fixing the heap from.
      */
     void heapifyDown(int index);
+
 };
 
 

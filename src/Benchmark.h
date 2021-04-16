@@ -31,11 +31,6 @@ enum BenchmarkType {
  */
 class Benchmark {
 private:
-    BST* bst;
-    DoublyLinkedList* doublyLinkedList;
-    DynamicArray* dynamicArray;
-    Heap* heap;
-    RBTree* rbTree;
     BenchmarkType type;
     LARGE_INTEGER* performanceCounter;
     mt19937 randNumGen;
@@ -69,7 +64,7 @@ private:
      /**
       * Expected iteration number.
       */
-     int iterationNumber;
+     int iterationNumber{};
 
     /**
      * Perform Red Black Tree benchmark.
@@ -98,7 +93,7 @@ private:
      */
     void testRBTree();
 
-    void generatePopulation(int* dataSet, int size);
+    void generatePopulation(int* dataSet, int size, uniform_int_distribution<int> dist);
 
     /**
      * Should produce output to csv file.
@@ -111,9 +106,11 @@ private:
 
     void calcIterationNumber();
 
-    void writeToFile(string testName, double *data, int *size);
+    void writeToFile(string testName, double *data, int *size) const;
 
-    int getNextRandom();
+    int getNextRandom(uniform_int_distribution<int>& dist);
+
+    uniform_int_distribution<int> getRandomInRange(int a, int b);
 
 public:
     /**

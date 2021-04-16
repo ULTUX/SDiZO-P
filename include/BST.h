@@ -24,7 +24,7 @@ private:
      */
     int size = 0;
 
-
+    void hardDelete(BSTNode* node);
 
 public:
     /**
@@ -48,6 +48,8 @@ public:
      * Initialize BST without any initial values.
      */
     BST(){};
+
+    ~BST();
     /**
      * Push new value to the tree.
      * It calls add method on BSTNode being root of this tree.

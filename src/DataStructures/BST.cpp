@@ -160,3 +160,14 @@ void BST::fixDSW() {
         }
     }
 }
+
+BST::~BST() {
+    hardDelete(root);
+}
+
+void BST::hardDelete(BSTNode* node) {
+    if (node == nullptr) return;
+    hardDelete(node->getLeft());
+    hardDelete(node->getRight());
+    delete node;
+}

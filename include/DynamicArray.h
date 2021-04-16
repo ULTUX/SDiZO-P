@@ -74,6 +74,11 @@ public:
      */
     void swap(int i1, int i2);
 
+    /**
+     * Unallocate all space taken up by this object.
+     */
+    ~DynamicArray();
+
 };
 
 

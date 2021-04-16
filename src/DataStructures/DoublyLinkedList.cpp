@@ -119,3 +119,13 @@ DoublyLinkedNode *DoublyLinkedList::getNodeAt(int i) {
     }
     return nullptr;
 }
+
+DoublyLinkedList::~DoublyLinkedList() {
+    hardDelete(head);
+}
+
+void DoublyLinkedList::hardDelete(DoublyLinkedNode *node) {
+    if (node == nullptr) return;
+    hardDelete(node->getNext());
+    delete node;
+}
