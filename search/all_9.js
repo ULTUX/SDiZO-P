@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['left_55',['left',['../class_b_s_t_node.html#ad3749f519572d82177ea184efe84beb2',1,'BSTNode::left()'],['../class_r_b_node.html#a3345545f8a1678010bca11b5f7153a4a',1,'RBNode::left()']]]
+  ['maxsize_54',['maxSize',['../class_benchmark.html#a01244b7e475d396823e0a370d15cc08f',1,'Benchmark']]],
+  ['multiplier_55',['multiplier',['../class_benchmark.html#a30e26684d995b30a9c6859e27f5da75f',1,'Benchmark']]]
 ];
