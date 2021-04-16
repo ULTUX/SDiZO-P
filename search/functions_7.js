@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['indexof_153',['indexOf',['../class_doubly_linked_list.html#ae24e053b8cacc34a458adb348b0c9e08',1,'DoublyLinkedList']]],
-  ['initarray_154',['initArray',['../class_dynamic_array.html#aba4cecef3453f072a9431e9b89e03a35',1,'DynamicArray']]],
-  ['isrightchild_155',['isRightChild',['../class_r_b_tree.html#a65901f993afe74d268036466ddd4ac1e',1,'RBTree']]]
+  ['harddelete_155',['hardDelete',['../class_doubly_linked_list.html#a269f5561a7705e5f7e93bdda72b4602a',1,'DoublyLinkedList::hardDelete()'],['../class_r_b_tree.html#a3150266bdcd08b7da5ad795d838b580c',1,'RBTree::hardDelete()']]],
+  ['heapifydown_156',['heapifyDown',['../class_heap.html#a1e77b23e735d8ef87753ae6ca2e11a39',1,'Heap']]],
+  ['heapifyup_157',['heapifyUp',['../class_heap.html#a692cce19ba18f8e709358d335bbd5691',1,'Heap']]]
 ];
