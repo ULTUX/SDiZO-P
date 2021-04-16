@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['_7edoublylinkedlist_176',['~DoublyLinkedList',['../class_doubly_linked_list.html#abe3231c8ee3dd956b5261c4148102967',1,'DoublyLinkedList']]],
-  ['_7edynamicarray_177',['~DynamicArray',['../class_dynamic_array.html#aebf8ac62282dc5c9e2800c1f13ab68ec',1,'DynamicArray']]],
-  ['_7eheap_178',['~Heap',['../class_heap.html#a734051272cbd0945d3916a1a89707ba2',1,'Heap']]]
+  ['testbst_184',['testBST',['../class_benchmark.html#abfb823db425f6f610d4e1b46fa1f5575',1,'Benchmark']]],
+  ['testdoublylinkedlist_185',['testDoublyLinkedList',['../class_benchmark.html#a3bd7a789232c2f5a679871af6c72aef4',1,'Benchmark']]],
+  ['testdynamicarray_186',['testDynamicArray',['../class_benchmark.html#a7018cb87732be0de586fa017068d4a0c',1,'Benchmark']]],
+  ['testheap_187',['testHeap',['../class_benchmark.html#a2da452f104b2d9b70416c2bf8dddad37',1,'Benchmark']]],
+  ['testrbtree_188',['testRBTree',['../class_benchmark.html#a8522890eaed4116217601d6d4c5cf8ab',1,'Benchmark']]]
 ];

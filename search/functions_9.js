@@ -1,13 +1,16 @@
 var searchData=
 [
-  ['search_161',['search',['../class_b_s_t_node.html#a6846f617ad131370daa27df58400d570',1,'BSTNode::search()'],['../class_b_s_t.html#affc1fc58de56446758ff69a1f965942d',1,'BST::search()'],['../class_r_b_tree.html#a1c96412c09df8cba9b76c44586e896d3',1,'RBTree::search()']]],
-  ['set_162',['set',['../class_dynamic_array.html#a993c515298c9519c82e9b5e117596be3',1,'DynamicArray']]],
-  ['setcolor_163',['setColor',['../class_r_b_node.html#ac05b37565a45578702c27c28702c6e44',1,'RBNode']]],
-  ['setdata_164',['setData',['../class_r_b_node.html#abf3e88a7bfebf9d661f15954026909d3',1,'RBNode']]],
-  ['setleft_165',['setLeft',['../class_b_s_t_node.html#a5e70fbfb0f82d5e9f47bd937a802fc9b',1,'BSTNode::setLeft()'],['../class_r_b_node.html#a06cf9109f051274c6581a31d998811f0',1,'RBNode::setLeft()']]],
-  ['setnext_166',['setNext',['../class_doubly_linked_node.html#aa74818d4bc6a94ae5b32e093ce832b91',1,'DoublyLinkedNode']]],
-  ['setparent_167',['setParent',['../class_b_s_t_node.html#aaf2728c833312a3a7ff2f685581cce50',1,'BSTNode::setParent()'],['../class_r_b_node.html#a51a4a4683bc62f72e09f629ad6909d32',1,'RBNode::setParent()']]],
-  ['setprev_168',['setPrev',['../class_doubly_linked_node.html#a49f21622a5159c5c21d3160d64030646',1,'DoublyLinkedNode']]],
-  ['setright_169',['setRight',['../class_b_s_t_node.html#adc009f1b95093c3e1032a76370e2ba5f',1,'BSTNode::setRight()'],['../class_r_b_node.html#a2ab9aa19f8bc6d3bd3f4c9f52b78024a',1,'RBNode::setRight()']]],
-  ['swap_170',['swap',['../class_dynamic_array.html#af32422b7298c1a8aa47abf1220cff95c',1,'DynamicArray']]]
+  ['rbnode_159',['RBNode',['../class_r_b_node.html#a75c1ab54ecbe21f7d421596eedf3f834',1,'RBNode']]],
+  ['rbtree_160',['RBTree',['../class_r_b_tree.html#a87a3769a8a837ee53b32d520900fca17',1,'RBTree::RBTree(int value)'],['../class_r_b_tree.html#a10e9dd3a005296cf410973054d886190',1,'RBTree::RBTree(RBNode *node)']]],
+  ['readnextval_161',['readNextVal',['../class_file_reader.html#a9177d4bed35585a5545cb3658791d940',1,'FileReader']]],
+  ['readtobst_162',['readToBST',['../class_file_reader.html#add8e1102ae959d838878e6d8bea1818a',1,'FileReader']]],
+  ['readtodoublylinkedlist_163',['readToDoublyLinkedList',['../class_file_reader.html#ac2567ba84d79ac6e70bffe53b43821b9',1,'FileReader']]],
+  ['readtodynamicarray_164',['readToDynamicArray',['../class_file_reader.html#a83321d2c03a78f3dbd1d101f82059f02',1,'FileReader']]],
+  ['readtoheap_165',['readToHeap',['../class_file_reader.html#a4c79ace65a94ca784b0824c909277fce',1,'FileReader']]],
+  ['readtorbtree_166',['readToRBTree',['../class_file_reader.html#acce97b9379c4914f67d1c04629ba8c1c',1,'FileReader']]],
+  ['remove_167',['remove',['../class_dynamic_array.html#a76110290a0b71a5db9a9735a0c95cc19',1,'DynamicArray::remove()'],['../class_r_b_tree.html#a004958415e254e8a7b96590fd78060cb',1,'RBTree::remove(int value)'],['../class_r_b_tree.html#a211472385012fb8203521d3602b1f2c3',1,'RBTree::remove(RBNode *node)'],['../class_heap.html#a5a4e469500a45db64a66d1e76a79e997',1,'Heap::remove()'],['../class_b_s_t.html#ac23277c7b230dd26ea2993463e2c010a',1,'BST::remove()']]],
+  ['removeelement_168',['removeElement',['../class_doubly_linked_list.html#a15f961ce2e5fab079380f7f15a8c637e',1,'DoublyLinkedList']]],
+  ['restoredelete_169',['restoreDelete',['../class_r_b_tree.html#a0531e89de0537d6f65d53583c1364319',1,'RBTree']]],
+  ['rotateleft_170',['rotateLeft',['../class_b_s_t.html#aa6c0f438c13c706fe261ce57fa2cf7b2',1,'BST::rotateLeft()'],['../class_r_b_tree.html#ab640a2a29ca4b5b932a4f16f7ec3051d',1,'RBTree::rotateLeft()']]],
+  ['rotateright_171',['rotateRight',['../class_b_s_t.html#afca1bc3432a9d9a62f1616c6862c2a3d',1,'BST::rotateRight()'],['../class_r_b_tree.html#ad5aba59c82cae550cade16ae66c3b7db',1,'RBTree::rotateRight()']]]
 ];

@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['filereader_118',['FileReader',['../class_file_reader.html#a4ff56fe7ddb4697eb47bcc09346b137a',1,'FileReader']]],
-  ['fixdoubleblack_119',['fixDoubleBlack',['../class_r_b_tree.html#aa49c1467defca746738a7f67309000d6',1,'RBTree']]],
-  ['fixdsw_120',['fixDSW',['../class_b_s_t.html#aa0fd754d65cb96588d87c4db6c21db4d',1,'BST']]],
-  ['fixtree_121',['fixTree',['../class_r_b_tree.html#a2e3cd1a2d9fadd0cce890046494cb208',1,'RBTree']]]
+  ['doublylinkednode_126',['DoublyLinkedNode',['../class_doubly_linked_node.html#a626044c17d4e87788c72f109924efde7',1,'DoublyLinkedNode']]]
 ];
