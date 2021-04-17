@@ -1,6 +1,6 @@
 var class_benchmark =
 [
-    [ "Benchmark", "class_benchmark.html#a5a6f1a0a53daf9e32f72ede917cde14a", null ],
+    [ "Benchmark", "class_benchmark.html#a03602d8bcde0d8384f21e9baa5066195", null ],
     [ "calcIterationNumber", "class_benchmark.html#a45b8e490388f8f7576efd654a4f09ac5", null ],
     [ "generatePopulation", "class_benchmark.html#a266b498e75d29a2a7e8f305d113d479f", null ],
     [ "getNextRandom", "class_benchmark.html#a071cd8da5930c68c9ff5a3261769d2bc", null ],
@@ -17,11 +17,11 @@ var class_benchmark =
     [ "isWriteToFile", "class_benchmark.html#af811297cfc087ea806e73fbebd975139", null ],
     [ "iterationNumber", "class_benchmark.html#a4fc4c450b5df91e2729d9e39b38fa303", null ],
     [ "maxSize", "class_benchmark.html#a01244b7e475d396823e0a370d15cc08f", null ],
-    [ "multiplier", "class_benchmark.html#a30e26684d995b30a9c6859e27f5da75f", null ],
+    [ "multiplier", "class_benchmark.html#a92fc159d2fd4ad41629207fd64b7e61d", null ],
     [ "numberDistribution", "class_benchmark.html#a83dfa570b19da2925a8d3f304d0343b7", null ],
     [ "performanceCounter", "class_benchmark.html#ab27e5599c0c65ba8d9c2f01a2725881f", null ],
     [ "randNumGen", "class_benchmark.html#a5079fbe7893cf9f34fd3c478be6a68a0", null ],
     [ "step", "class_benchmark.html#a2263963b831d6c515ea5d24477f37e1e", null ],
     [ "testNumber", "class_benchmark.html#acdbcc4811ac2981be2032cb3da7aa132", null ],
-    [ "type", "class_benchmark.html#ad67e151d0e81d5bc0a7acc3b00712c66", null ]
+    [ "type", "class_benchmark.html#aae35341b209e7432d6602524046ed248", null ]
 ];

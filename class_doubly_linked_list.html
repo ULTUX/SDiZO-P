@@ -111,13 +111,17 @@ Metody publiczne</h2></td></tr>
 <tr class="separator:a32e50ea0e12ae0c7efa0b8bf0b748acc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe3231c8ee3dd956b5261c4148102967"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doubly_linked_list.html#abe3231c8ee3dd956b5261c4148102967">~DoublyLinkedList</a> ()</td></tr>
 <tr class="separator:abe3231c8ee3dd956b5261c4148102967"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba908e236aa69647aeecd94aad120357"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doubly_linked_list.html#aba908e236aa69647aeecd94aad120357">printFromStart</a> ()</td></tr>
+<tr class="separator:aba908e236aa69647aeecd94aad120357"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe46632c1598e809b00e85beafd03833"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doubly_linked_list.html#abe46632c1598e809b00e85beafd03833">printFromEnd</a> ()</td></tr>
+<tr class="separator:abe46632c1598e809b00e85beafd03833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae864bc782a72aaccb8942f381975e556"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_doubly_linked_node.html">DoublyLinkedNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doubly_linked_list.html#ae864bc782a72aaccb8942f381975e556">getNodeAt</a> (int i)</td></tr>
+<tr class="separator:ae864bc782a72aaccb8942f381975e556"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Metody prywatne</h2></td></tr>
 <tr class="memitem:ad68a5bf664da47c3320f11d8c5314fbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_doubly_linked_node.html">DoublyLinkedNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doubly_linked_list.html#ad68a5bf664da47c3320f11d8c5314fbc">getLastElement</a> ()</td></tr>
 <tr class="separator:ad68a5bf664da47c3320f11d8c5314fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae864bc782a72aaccb8942f381975e556"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_doubly_linked_node.html">DoublyLinkedNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doubly_linked_list.html#ae864bc782a72aaccb8942f381975e556">getNodeAt</a> (int i)</td></tr>
-<tr class="separator:ae864bc782a72aaccb8942f381975e556"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a269f5561a7705e5f7e93bdda72b4602a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doubly_linked_list.html#a269f5561a7705e5f7e93bdda72b4602a">hardDelete</a> (<a class="el" href="class_doubly_linked_node.html">DoublyLinkedNode</a> *node)</td></tr>
 <tr class="separator:a269f5561a7705e5f7e93bdda72b4602a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -288,9 +292,6 @@ Atrybuty prywatne</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_doubly_linked_node.html">DoublyLinkedNode</a> * DoublyLinkedList::getNodeAt </td>
@@ -300,11 +301,6 @@ Atrybuty prywatne</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Get address of a node located at index. </p><dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
@@ -388,6 +384,42 @@ Atrybuty prywatne</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Zwraca</dt><dd>Index of this element, -1 if element is not present. </dd></dl>
+
+</div>
+</div>
+<a id="abe46632c1598e809b00e85beafd03833"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe46632c1598e809b00e85beafd03833">&#9670;&nbsp;</a></span>printFromEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DoublyLinkedList::printFromEnd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Print file from end to start. </p>
+
+</div>
+</div>
+<a id="aba908e236aa69647aeecd94aad120357"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba908e236aa69647aeecd94aad120357">&#9670;&nbsp;</a></span>printFromStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DoublyLinkedList::printFromStart </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Print file from start to end. </p>
 
 </div>
 </div>

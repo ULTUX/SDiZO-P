@@ -1,6 +1,6 @@
 var class_file_reader =
 [
-    [ "FileReader", "class_file_reader.html#a4ff56fe7ddb4697eb47bcc09346b137a", null ],
+    [ "FileReader", "class_file_reader.html#aba07a06e04d521fa5efd4a88eb79cac3", null ],
     [ "getStructureSize", "class_file_reader.html#a9eadccc08b92f36e28bc3324426eb815", null ],
     [ "readNextVal", "class_file_reader.html#a9177d4bed35585a5545cb3658791d940", null ],
     [ "readToBST", "class_file_reader.html#add8e1102ae959d838878e6d8bea1818a", null ],

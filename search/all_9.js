@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['maxsize_54',['maxSize',['../class_benchmark.html#a01244b7e475d396823e0a370d15cc08f',1,'Benchmark']]],
-  ['multiplier_55',['multiplier',['../class_benchmark.html#a30e26684d995b30a9c6859e27f5da75f',1,'Benchmark']]]
+  ['maxsize_55',['maxSize',['../class_benchmark.html#a01244b7e475d396823e0a370d15cc08f',1,'Benchmark']]],
+  ['menu_56',['Menu',['../class_menu.html',1,'']]],
+  ['multiplier_57',['multiplier',['../class_benchmark.html#a92fc159d2fd4ad41629207fd64b7e61d',1,'Benchmark']]]
 ];

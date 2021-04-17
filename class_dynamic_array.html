@@ -109,12 +109,18 @@ Metody publiczne</h2></td></tr>
 <tr class="separator:a1c36d79e4a8b01d435097ff7cffaebb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a993c515298c9519c82e9b5e117596be3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_array.html#a993c515298c9519c82e9b5e117596be3">set</a> (int index, int val)</td></tr>
 <tr class="separator:a993c515298c9519c82e9b5e117596be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a217ad9e0a064a4e8a839011448ffd649"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_array.html#a217ad9e0a064a4e8a839011448ffd649">print</a> ()</td></tr>
-<tr class="separator:a217ad9e0a064a4e8a839011448ffd649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a081c13e42c27ee02738ca80d60e8ffb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_array.html#a081c13e42c27ee02738ca80d60e8ffb9">printFromBeginning</a> ()</td></tr>
+<tr class="separator:a081c13e42c27ee02738ca80d60e8ffb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ae41cbf280cb33f524ee19d3f059550"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_array.html#a0ae41cbf280cb33f524ee19d3f059550">printFromEnd</a> ()</td></tr>
+<tr class="separator:a0ae41cbf280cb33f524ee19d3f059550"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af32422b7298c1a8aa47abf1220cff95c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_array.html#af32422b7298c1a8aa47abf1220cff95c">swap</a> (int i1, int i2)</td></tr>
 <tr class="separator:af32422b7298c1a8aa47abf1220cff95c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebf8ac62282dc5c9e2800c1f13ab68ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_array.html#aebf8ac62282dc5c9e2800c1f13ab68ec">~DynamicArray</a> ()</td></tr>
 <tr class="separator:aebf8ac62282dc5c9e2800c1f13ab68ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addfb1a2e7c352e4fd87e5bc03a1cb0f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_array.html#addfb1a2e7c352e4fd87e5bc03a1cb0f5">contains</a> (int val)</td></tr>
+<tr class="separator:addfb1a2e7c352e4fd87e5bc03a1cb0f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fd1d58869b2e92555c03395ec92f143"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_array.html#a2fd1d58869b2e92555c03395ec92f143">indexOf</a> (int val)</td></tr>
+<tr class="separator:a2fd1d58869b2e92555c03395ec92f143"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Metody prywatne</h2></td></tr>
@@ -231,6 +237,31 @@ Atrybuty prywatne</h2></td></tr>
 
 </div>
 </div>
+<a id="addfb1a2e7c352e4fd87e5bc03a1cb0f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addfb1a2e7c352e4fd87e5bc03a1cb0f5">&#9670;&nbsp;</a></span>contains()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DynamicArray::contains </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if this array contains given element. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>Element to be checked for existence. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>True - element exists, false - doesn't exist </dd></dl>
+
+</div>
+</div>
 <a id="a1c36d79e4a8b01d435097ff7cffaebb2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1c36d79e4a8b01d435097ff7cffaebb2">&#9670;&nbsp;</a></span>get()</h2>
 
@@ -274,6 +305,31 @@ Atrybuty prywatne</h2></td></tr>
 
 </div>
 </div>
+<a id="a2fd1d58869b2e92555c03395ec92f143"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fd1d58869b2e92555c03395ec92f143">&#9670;&nbsp;</a></span>indexOf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DynamicArray::indexOf </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get index of given value. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>Value to be found. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Index of this value. If multiple equal values exist, return first one. If value doesn't exit, return -1; </dd></dl>
+
+</div>
+</div>
 <a id="aba4cecef3453f072a9431e9b89e03a35"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aba4cecef3453f072a9431e9b89e03a35">&#9670;&nbsp;</a></span>initArray()</h2>
 
@@ -306,21 +362,39 @@ Atrybuty prywatne</h2></td></tr>
 
 </div>
 </div>
-<a id="a217ad9e0a064a4e8a839011448ffd649"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a217ad9e0a064a4e8a839011448ffd649">&#9670;&nbsp;</a></span>print()</h2>
+<a id="a081c13e42c27ee02738ca80d60e8ffb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a081c13e42c27ee02738ca80d60e8ffb9">&#9670;&nbsp;</a></span>printFromBeginning()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void DynamicArray::print </td>
+          <td class="memname">void DynamicArray::printFromBeginning </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Helper function used for debugging. Prints contents of array to stdout. </p>
+<p>Print contents of array from start to end to stdout . </p>
+
+</div>
+</div>
+<a id="a0ae41cbf280cb33f524ee19d3f059550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ae41cbf280cb33f524ee19d3f059550">&#9670;&nbsp;</a></span>printFromEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DynamicArray::printFromEnd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Print contents of this array from end to start to stdout. </p>
 
 </div>
 </div>

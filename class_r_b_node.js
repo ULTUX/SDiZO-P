@@ -6,6 +6,7 @@ var class_r_b_node =
     [ "getLeft", "class_r_b_node.html#acbd80daf17e338af60dd53a09a040b5e", null ],
     [ "getParent", "class_r_b_node.html#a681463c4221ff34ba43bb59b89220429", null ],
     [ "getRight", "class_r_b_node.html#add1221b3f05dd9ec6b8c53f05216cf83", null ],
+    [ "printInOrder", "class_r_b_node.html#a07336bfbdc7ca994c3850509d9a9e2d1", null ],
     [ "setColor", "class_r_b_node.html#ac05b37565a45578702c27c28702c6e44", null ],
     [ "setData", "class_r_b_node.html#abf3e88a7bfebf9d661f15954026909d3", null ],
     [ "setLeft", "class_r_b_node.html#a06cf9109f051274c6581a31d998811f0", null ],

@@ -9,6 +9,7 @@ var annotated_dup =
     [ "DynamicArray", "class_dynamic_array.html", "class_dynamic_array" ],
     [ "FileReader", "class_file_reader.html", "class_file_reader" ],
     [ "Heap", "class_heap.html", "class_heap" ],
+    [ "Menu", "class_menu.html", "class_menu" ],
     [ "RBNode", "class_r_b_node.html", "class_r_b_node" ],
     [ "RBTree", "class_r_b_tree.html", "class_r_b_tree" ]
 ];
