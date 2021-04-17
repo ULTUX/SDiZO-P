@@ -2,6 +2,7 @@
 // Created by Władysław Nowak on 08/04/2021.
 //
 
+#include <iostream>
 #include "RBNode.h"
 
 Color RBNode::getColor() const {
@@ -42,4 +43,10 @@ int RBNode::getData() const {
 
 void RBNode::setData(int data) {
     RBNode::data = data;
+}
+
+void RBNode::printInOrder() {
+    if (this->left != nullptr) this->left->printInOrder();
+    std::cout<<this->data<<" ";
+    if (this->right != nullptr) this->right->printInOrder();
 }

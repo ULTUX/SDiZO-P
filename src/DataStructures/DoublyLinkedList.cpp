@@ -74,7 +74,6 @@ DoublyLinkedNode *DoublyLinkedList::getLastElement() {
     return node;
 }
 
-//To fix
 int DoublyLinkedList::get(int index){
     DoublyLinkedNode* node = getNodeAt(index);
     return node->getVal();
@@ -128,4 +127,24 @@ void DoublyLinkedList::hardDelete(DoublyLinkedNode *node) {
     if (node == nullptr) return;
     hardDelete(node->getNext());
     delete node;
+}
+
+void DoublyLinkedList::printFromStart() {
+    DoublyLinkedNode * node = head;
+
+    while (node->getNext() != nullptr){
+        cout<<node->getVal()<<" ";
+        node = node->getNext();
+    }
+    cout<<endl;
+}
+
+void DoublyLinkedList::printFromEnd() {
+    DoublyLinkedNode * node = getLastElement();
+
+    while (node->getPrev() != nullptr){
+        cout<<node->getVal()<<" ";
+        node = node->getPrev();
+    }
+    cout<<endl;
 }

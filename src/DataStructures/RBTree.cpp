@@ -344,3 +344,6 @@ void RBTree::hardDelete(RBNode *node) {
     hardDelete(node->getRight());
     delete node;
 }
+void RBTree::printInOrder() {
+    root->printInOrder();
+}

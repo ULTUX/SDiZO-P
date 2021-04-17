@@ -30,7 +30,7 @@ public:
     int getSize();
 
     /**
-     * Nicely print the heap.
+     * Nicely printFromBeginning the heap.
      */
     void printHeap();
 

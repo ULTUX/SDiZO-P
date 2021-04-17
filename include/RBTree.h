@@ -133,6 +133,11 @@ public:
      */
     void rotateRight(RBNode *node);
 
+    /**
+     * Print the tree in-order (non-descending).
+     */
+    void printInOrder();
+
 };
 
 

@@ -53,23 +53,21 @@ int FileReader::readNextVal() {
     if (input.is_open()){
         input>>nextVal;
         if (input.fail()) {
-            cerr<<"File error - stopping program"<<endl;
-            exit(-1);
+            throw runtime_error("File error - stopping program");
         }
         if (input.eof()) {
             input.close();
         }
         return nextVal;
     }
-    cout<<"File not opened - maybe it was already closed?"<<endl;
+    throw runtime_error("File not opened - maybe it was already closed?");
     return 0;
 }
 
-FileReader::FileReader(std::string fileName):fileName(fileName), input(fileName){
+FileReader::FileReader(const std::string& fileName):fileName(fileName), input(fileName){
     input>>structureSize;
     if (!input.is_open()){
-        cerr<<"Could not open the file.";
-        exit(-200);
+        throw runtime_error("Could not read the file");
     }
     cout<<"Structure size is: "<<structureSize<<endl;
 }

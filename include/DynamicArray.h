@@ -63,9 +63,14 @@ public:
     void set(int index, int val);
 
     /**
-     * Helper function used for debugging. Prints contents of array to stdout.
+     * Print contents of array from start to end to stdout .
      */
-    void print();
+    void printFromBeginning();
+
+    /**
+     * Print contents of this array from end to start to stdout.
+     */
+    void printFromEnd();
 
     /**
      * Swap two array elements with each other.
@@ -78,6 +83,20 @@ public:
      * Unallocate all space taken up by this object.
      */
     ~DynamicArray();
+
+    /**
+     * Check if this array contains given element.
+     * @param val Element to be checked for existence.
+     * @return True - element exists, false - doesn't exist
+     */
+    bool contains(int val);
+
+    /**
+     * Get index of given value.
+     * @param val Value to be found.
+     * @return Index of this value. If multiple equal values exist, return first one. If value doesn't exit, return -1;
+     */
+    int indexOf(int val);
 
 };
 

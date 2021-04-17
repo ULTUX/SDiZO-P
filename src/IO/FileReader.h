@@ -60,7 +60,7 @@ public:
      * This class also performs first read from file - it reads and stores first value representing amount of data in this file.
      * @param fileName Name of file to read from.
      */
-    explicit FileReader(std::string fileName);
+    explicit FileReader(const std::string& fileName);
 
     /**
      * Read data stored in this file into BST tree.

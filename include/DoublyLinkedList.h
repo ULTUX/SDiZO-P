@@ -68,6 +68,23 @@ public:
      */
     ~DoublyLinkedList();
 
+    /**
+     * Print file from start to end.
+     */
+    void printFromStart();
+
+    /**
+     * Print file from end to start.
+     */
+    void printFromEnd();
+
+    /**
+     * Get address of a node located at index.
+     * @param i Index of this node.
+     * @return The node located at this index.
+     */
+    DoublyLinkedNode* getNodeAt(int i);
+
 private:
     /**
      * First element of this list.
@@ -79,12 +96,6 @@ private:
      */
      DoublyLinkedNode* getLastElement();
 
-     /**
-      * Get address of a node located at index.
-      * @param i Index of this node.
-      * @return The node located at this index.
-      */
-     DoublyLinkedNode* getNodeAt(int i);
 
      /**
       * Delete all nodes starting from this one.

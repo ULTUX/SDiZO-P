@@ -5,11 +5,19 @@
 #include "Benchmark.h"
 #include "IO/CSVWriter.h"
 
-Benchmark::Benchmark(BenchmarkType type, bool writeToFile, int initialSize, int step, int multiplier, int testNumber,
+Benchmark::Benchmark(StructureType type, bool writeToFile, int initialSize, int step, float multiplier, int testNumber,
                      int maxSize)
         : type(type), isWriteToFile(writeToFile), initialSize(initialSize),
           step(step), multiplier(multiplier), testNumber(testNumber), maxSize(maxSize) {
-    cout << "Starting benchmark..." << endl;
+    cout << "Starting benchmark:" << endl;
+    cout<<"\ttype: "<<type<<endl;
+    cout<<"\twrite to file: "<<writeToFile<<endl;
+    cout<<"\tinitial size: "<<initialSize<<endl;
+    cout<<"\tstep: "<<step<<endl;
+    cout<<"\tmultiplier: "<<multiplier<<endl;
+    cout<<"\ttest number: "<<testNumber<<endl;
+    cout<<"\tmax size: "<<maxSize<<endl;
+
     performanceCounter = new LARGE_INTEGER;
     random_device rd;
     mt19937 mt(rd());

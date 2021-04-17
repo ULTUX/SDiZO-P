@@ -11,6 +11,7 @@
 #include "../include/DynamicArray.h"
 #include "../include/Heap.h"
 #include "../include/RBTree.h"
+#include "StructureType.h"
 #include <windows.h>
 #include <functional>
 #include <cstdlib>
@@ -18,13 +19,6 @@
 #include <algorithm>
 #include <random>
 
-enum BenchmarkType {
-    BST_T,
-    DoublyLinkedList_T,
-    DynamicArray_T,
-    Heap_T,
-    RBTree_T
-};
 
 /**
  * Benchmark given data structure and write output to stdout and csv file.
@@ -34,7 +28,7 @@ private:
     /**
      * Data structure type to be benchmarked.
      */
-    BenchmarkType type;
+    StructureType type;
 
     /**
      * Class-specific performance counter.
@@ -63,7 +57,7 @@ private:
     /**
      * Multiplier to multiply size by every iteration.
      */
-    int multiplier;
+    float multiplier;
 
     /**
      * Max size to be reached.
@@ -154,9 +148,14 @@ public:
      * Begin benchmarking. Perform all selected tests depending on specified data structure type.
      * @param type Which data structure should be tested.
      * @param writeToFile Should benchmark produce output to csv file.
+     * @param initialSize Starting size of this structure.
+     * @param step Value to increase the size every iteration.
+     * @param multiplier Value to multiply the size every iteration.
+     * @param testNumber Amount of repetitions on every size iterations.
+     * @param maxSize Max size to be reached.
      */
-    explicit Benchmark(BenchmarkType type, bool writeToFile,
-                       int initialSize, int step, int multiplier, int testNumber, int maxSize);
+    explicit Benchmark(StructureType type, bool writeToFile,
+                       int initialSize, int step, float multiplier, int testNumber, int maxSize);
 
 };
 

@@ -100,6 +100,11 @@ public:
      * @param data Ine value.
      */
     void setData(int data);
+
+    /**
+     * Recursive function to print in-order (non-descending).
+     */
+    void printInOrder();
 };
 
 

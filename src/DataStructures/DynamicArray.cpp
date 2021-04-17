@@ -20,7 +20,7 @@ void DynamicArray::addFront(int element) {
         replacement[i] = this->arrayPointer[i-1];
     }
     //Free up space taken by old array
-    delete this->arrayPointer;
+    delete[] this->arrayPointer;
     this->arrayPointer = replacement;
     size++;
 }
@@ -38,7 +38,7 @@ int DynamicArray::remove(int index) {
         replacement[j++] = this->arrayPointer[i];
     }
     //Free up space taken by old array
-    delete this->arrayPointer;
+    delete[] this->arrayPointer;
     this->arrayPointer = replacement;
     size--;
     return size;
@@ -60,7 +60,7 @@ void DynamicArray::addBack(int element) {
     //Assign last element at the end of this array
     replacement[size] = element;
     //Free up space taken by old array
-    delete this->arrayPointer;
+    delete[] this->arrayPointer;
     this->arrayPointer = replacement;
     size++;
 }
@@ -92,9 +92,8 @@ void DynamicArray::addAtIndex(int element, int index) {
         replacement[i] = this->arrayPointer[j++];
     }
     size++;
-    delete this->arrayPointer;
+    delete[] this->arrayPointer;
     this->arrayPointer = replacement;
-
 }
 
 void DynamicArray::initArray(int element) {
@@ -116,7 +115,7 @@ void DynamicArray::set(int index, int val) {
     if (index < size) arrayPointer[index] = val;
 }
 
-void DynamicArray::print() {
+void DynamicArray::printFromBeginning() {
     for (int i = 0; i < size; i++){
         std::cout<<arrayPointer[i]<<" ";
     }
@@ -130,5 +129,25 @@ void DynamicArray::swap(int i1, int i2) {
 }
 
 DynamicArray::~DynamicArray() {
-    delete arrayPointer;
+    delete[] arrayPointer;
+}
+
+void DynamicArray::printFromEnd() {
+    for (int i = size-1; i >= 0; i--){
+        std::cout<<arrayPointer[i]<<" ";
+    }
+    std::cout<<std::endl;
+}
+
+bool DynamicArray::contains(int val) {
+    for (int i = 0; i < size; i++){
+        if (arrayPointer[i] == val) return true;
+    }
+    return false;
+}
+int DynamicArray::indexOf(int val) {
+    for (int i = 0; i < size; i++){
+        if (arrayPointer[i] == val) return i;
+    }
+    return -1;
 }
