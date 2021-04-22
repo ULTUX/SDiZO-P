@@ -6,11 +6,11 @@
 #define SDIZO1_BENCHMARK_H
 
 
-#include "../include/BST.h"
-#include "../include/DoublyLinkedList.h"
-#include "../include/DynamicArray.h"
-#include "../include/Heap.h"
-#include "../include/RBTree.h"
+#include "BST.h"
+#include "DoublyLinkedList.h"
+#include "DynamicArray.h"
+#include "Heap.h"
+#include "RBTree.h"
 #include "StructureType.h"
 #include <windows.h>
 #include <functional>

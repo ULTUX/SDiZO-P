@@ -97,7 +97,7 @@ void DynamicArray::addAtIndex(int element, int index) {
 }
 
 void DynamicArray::initArray(int element) {
-     this->arrayPointer = new int[0];
+     this->arrayPointer = new int[1];
      *arrayPointer = element;
      size = 1;
 }

@@ -48,7 +48,6 @@ void Heap::printHeap() {
             std::cout<<array->get(j+(int)pow(2, i)-1)<<" ";
         }
         std::cout<<std::endl;
-
     }
 }
 

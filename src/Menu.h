@@ -6,12 +6,12 @@
 #define SDIZO1_MENU_H
 
 
-#include "../StructureType.h"
-#include "../../include/BST.h"
-#include "../../include/DoublyLinkedList.h"
-#include "../../include/DynamicArray.h"
-#include "../../include/Heap.h"
-#include "../../include/RBTree.h"
+#include "../include/StructureType.h"
+#include "../include/BST.h"
+#include "../include/DoublyLinkedList.h"
+#include "../include/DynamicArray.h"
+#include "../include/Heap.h"
+#include "../include/RBTree.h"
 
 class Menu {
 private:
@@ -40,8 +40,13 @@ private:
     void initHeap();
     void initRBTree();
 
+    static int getIntegerInput(string message);
+    static float getFloatInput(string message);
+
+
 public:
     Menu();
+
 };
 
 

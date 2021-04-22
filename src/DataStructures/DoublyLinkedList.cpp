@@ -9,8 +9,11 @@ DoublyLinkedList *DoublyLinkedList::removeElement(int val) {
     DoublyLinkedNode* curr = head;
 
     if (head->getVal() == val){
-        head->getNext()->setPrev(nullptr);
-        head = head->getNext();
+        if (head->getNext() != nullptr) {
+            head->getNext()->setPrev(nullptr);
+            head = head->getNext();
+        }
+        else head = nullptr;
         delete curr;
     }
     else {
@@ -92,18 +95,34 @@ int DoublyLinkedList::getSize() {
 
 DoublyLinkedList *DoublyLinkedList::addAtIndex(int index, int val) {
     auto* newElement = new DoublyLinkedNode(val);
-    DoublyLinkedNode* nodeAtIndex = getNodeAt(index);
-    if (nodeAtIndex == head) {
-        newElement->setNext(head->getNext());
-        head->setPrev(newElement);
-        head = newElement;
+    if (head == nullptr){
+        addBack(val);
         return this;
     }
-    newElement->setPrev(nodeAtIndex->getPrev());
-    newElement->setNext(nodeAtIndex);
-    nodeAtIndex->getPrev()->setNext(newElement);
-    nodeAtIndex->setPrev(newElement);
-    return this;
+    DoublyLinkedNode* prev = head;
+    prev = getNodeAt(index-1);
+    if (prev != nullptr) {
+        DoublyLinkedNode* nodeAtIndex = prev->getNext();
+        if (nodeAtIndex == nullptr) {
+            prev->setNext(newElement);
+            newElement->setPrev(prev);
+            return this;
+        }
+        else {
+            if (nodeAtIndex == head) {
+                newElement->setNext(head->getNext());
+                head->setPrev(newElement);
+                head = newElement;
+                return this;
+            }
+            newElement->setPrev(nodeAtIndex->getPrev());
+            newElement->setNext(nodeAtIndex);
+            nodeAtIndex->getPrev()->setNext(newElement);
+            nodeAtIndex->setPrev(newElement);
+            return this;
+        }
+    }
+    return nullptr;
 }
 
 DoublyLinkedNode *DoublyLinkedList::getNodeAt(int i) {
@@ -125,8 +144,13 @@ DoublyLinkedList::~DoublyLinkedList() {
 
 void DoublyLinkedList::hardDelete(DoublyLinkedNode *node) {
     if (node == nullptr) return;
-    hardDelete(node->getNext());
-    delete node;
+    DoublyLinkedNode *element = getLastElement();
+    while (element != head) {
+        element->getPrev()->setNext(nullptr);
+        delete element;
+        element = getLastElement();
+    }
+    delete head;
 }
 
 void DoublyLinkedList::printFromStart() {

@@ -5,6 +5,8 @@
 
 #include "../../include/RBTree.h"
 #include <iostream>
+#include <iomanip>
+
 RBTree::RBTree(int value) {
     this->root = new RBNode(value, BLACK);
 }
@@ -346,4 +348,22 @@ void RBTree::hardDelete(RBNode *node) {
 }
 void RBTree::printInOrder() {
     root->printInOrder();
+}
+
+//Function created based on: https://stackoverflow.com/a/26699993
+void RBTree::postOrder(RBNode* node, int indent){
+    if(node != nullptr) {
+        if(node->getRight()) {
+            postOrder(node->getRight(), indent+4);
+        }
+        if (indent) {
+            std::cout << std::setw(indent) << ' ';
+        }
+        if (node->getRight()) std::cout<<" /\n" << std::setw(indent) << ' ';
+        std::cout<< node->getData() << "\n ";
+        if(node->getLeft()) {
+            std::cout << std::setw(indent) << ' ' <<" \\\n";
+            postOrder(node->getLeft(), indent+4);
+        }
+    }
 }

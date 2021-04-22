@@ -3,8 +3,8 @@
 //
 
 #include "Menu.h"
-#include "../IO/FileReader.h"
-#include "../Benchmark.h"
+#include "IO/FileReader.h"
+#include "../include/Benchmark.h"
 
 Menu::Menu() {
     printMainMenu();
@@ -14,11 +14,10 @@ void Menu::printMainMenu() {
 
     while (true){
         cout<<"Wybierz polecenie: "<<endl;
-        cout<<"1. Uruchom testy"<<endl;
-        cout<<"2. Zaladuj strukture z pliku"<<endl;
-        cout<<"0. Wylacz program"<<endl;
-        int input;
-        cin>>input;
+        cout<<"\t1. Uruchom testy"<<endl;
+        cout<<"\t2. Zaladuj strukture z pliku"<<endl;
+        cout<<"\t0. Wylacz program"<<endl;
+        int input = getIntegerInput("Wybor: ");
         switch (input) {
             case 1: {
                 printBenchmarkMenu();
@@ -48,8 +47,7 @@ void Menu::printFileLoadMenu() {
     cout<<"\t3. DynamicArray"<<endl;
     cout<<"\t4. Heap"<<endl;
     cout<<"\t5. RBTree"<<endl;
-    int input;
-    cin>>input;
+    int input = getIntegerInput("Wybor: ");
     switch (input) {
         case 1: {
             type = BST_T;
@@ -178,30 +176,26 @@ void Menu::initRBTree() {
 void Menu::printBSTMenu() {
     bool goBack = false;
     while (!goBack){
-        cout<<"Drzewo BST in-order: "<<endl;
+        cout<<"Drzewo BST: "<<endl;
+        bst->postOrder(bst->getRoot(), 0);
+        cout<<"\nIn-order: "<<endl;
         bst->printInOrder();
-        cout<<"Co chcesz zrobic? "<<endl;
+        cout<<"\nCo chcesz zrobic? "<<endl;
         cout<<"\t1. Dodaj element"<<endl;
         cout<<"\t2. Usun element"<<endl;
-        cout<<"\t3. Znajdź element"<<endl;
+        cout<<"\t3. Znajdz element"<<endl;
         cout<<"\t4. Napraw DSW"<<endl;
         cout<<"\t0. Wroc do menu glownego"<<endl;
-        cout<<"\t-1 Wyjdź"<<endl;
-        int input;
-        cout<<"Wybor: ";
-        cin>>input;
+        cout<<"\t-1 Wyjdz"<<endl;
+        int input = getIntegerInput("Wybor: ");
         switch (input) {
             case 1: {
-                cout<<"Podaj element do dodania: ";
-                int input2;
-                cin>>input;
+                int input2 = getIntegerInput("Podaj element do dodania: ");
                 bst->add(input2);
                 break;
             }
             case 2: {
-                cout<<"Podaj element do usuniecia: ";
-                int input2;
-                cin>>input;
+                int input2 = getIntegerInput("Podaj element do usuniecia: ");
                 if (bst->search(input2) != nullptr){
                     bst->remove(input2);
                 }
@@ -209,15 +203,15 @@ void Menu::printBSTMenu() {
                 break;
             }
             case 3: {
-                cout<<"Podaj element do znalezienia: ";
                 int input2;
-                cin>>input2;
+                input2 = getIntegerInput("Podaj element do znalezienia: ");
                 BSTNode* found = bst->search(input2);
                 if (found != nullptr){
                     cout<<"Znaleziono taki element.";
-                    if (found->getParent() != nullptr) cout<<"Jego ojciec: "<<found->getParent()->getValue()<<".";
-                    if (found->getLeft() != nullptr) cout<<"Dziecko lewe: "<<found->getLeft()->getValue();
-                    if (found->getRight() != nullptr) cout<<"Dziecko prawe: "<<found->getRight()->getValue();
+                    if (found->getParent() != nullptr) cout<<"\n\tJego ojciec: "<<found->getParent()->getValue()<<".";
+                    if (found->getLeft() != nullptr) cout<<"\n\tDziecko lewe: "<<found->getLeft()->getValue();
+                    if (found->getRight() != nullptr) cout<<"\n\tDziecko prawe: "<<found->getRight()->getValue();
+                    cout<<"\n";
 
                 }
                 else cout<<"Ten element nie istnieje.";
@@ -254,42 +248,36 @@ void Menu::printDoublyLinkedListMenu() {
         cout<<"\t2. Dodaj element na koncu"<<endl;
         cout<<"\t3. Dodaj element na indeksie"<<endl;
         cout<<"\t4. Usun element"<<endl;
-        cout<<"\t5. Znajdź element"<<endl;
+        cout<<"\t5. Znajdz element"<<endl;
         cout<<"\t0. Wroc do menu glownego"<<endl;
-        cout<<"\t-1 Wyjdź"<<endl;
+        cout<<"\t-1 Wyjdz"<<endl;
         int input;
-        cout<<"Wybor: ";
-        cin>>input;
+        input = getIntegerInput("Wybor: ");
         switch (input) {
             case 1: {
-                cout<<"Podaj element do dodania: ";
                 int input2;
-                cin>>input;
+                input2 = getIntegerInput("Podaj element do dodania: ");
                 doublyLinkedList->addFront(input2);
                 break;
             }
             case 2: {
-                cout<<"Podaj element do dodania: ";
                 int input2;
-                cin>>input;
+                input2 = getIntegerInput("Podaj element do dodania: ");
                 doublyLinkedList->addBack(input2);
                 break;
             }
             case 3: {
-                cout<<"Podaj element do dodania: ";
                 int input2;
-                cin>>input;
-                cout<<"Podaj indeks: ";
+                input2 = getIntegerInput("Podaj element do dodania: ");
                 int input3;
-                cin>>input3;
+                input3 = getIntegerInput("Podaj indeks: ");
                 doublyLinkedList->addAtIndex(input3, input2);
                 break;
             }
             case 4: {
                 cout<<"Usuwanie elementu."<<endl;
-                cout<<"Element do usuniecia: ";
                 int input2;
-                cin>>input2;
+                input2 = getIntegerInput("Element do usuniecia: ");
                 if (doublyLinkedList->getNodeAt(input2) != nullptr){
                     doublyLinkedList->removeElement(input2);
                     cout<<"Usunieto element"<<endl;
@@ -300,9 +288,7 @@ void Menu::printDoublyLinkedListMenu() {
                 break;
             }
             case 5: {
-                cout<<"Podaj element to znalezienia: ";
-                int input2;
-                cin>>input2;
+                int input2 = getIntegerInput("Podaj element to znalezienia: ");
                 if (doublyLinkedList->indexOf(input2) != -1){
                     cout<<"Element istnieje. Sasiednie wartosci: ";
                     DoublyLinkedNode* node = doublyLinkedList->getNodeAt(doublyLinkedList->indexOf(input2));
@@ -322,7 +308,6 @@ void Menu::printDoublyLinkedListMenu() {
             case -1: {
                 cout<<"Zamykanie programu..."<<endl;
                 exit(0);
-                break;
             }
         }
     }
@@ -341,42 +326,31 @@ void Menu::printDynamicArrayMenu() {
         cout<<"\t2. Dodaj element na koncu"<<endl;
         cout<<"\t3. Dodaj element na indeksie"<<endl;
         cout<<"\t4. Usun element"<<endl;
-        cout<<"\t5. Znajdź element"<<endl;
+        cout<<"\t5. Znajdz element"<<endl;
         cout<<"\t0. Wroc do menu glownego"<<endl;
-        cout<<"\t-1 Wyjdź"<<endl;
+        cout<<"\t-1 Wyjdz"<<endl;
         int input;
-        cout<<"Wybor: ";
-        cin>>input;
+        input = getIntegerInput("Wybor: ");
         switch (input) {
             case 1: {
-                cout<<"Podaj element do dodania: ";
-                int input2;
-                cin>>input;
+                int input2 = getIntegerInput("Podaj element do dodania: ");
                 dynamicArray->addFront(input2);
                 break;
             }
             case 2: {
-                cout<<"Podaj element do dodania: ";
-                int input2;
-                cin>>input;
+                int input2 = getIntegerInput("Podaj element do dodania: ");
                 dynamicArray->addBack(input2);
                 break;
             }
             case 3: {
-                cout<<"Podaj element do dodania: ";
-                int input2;
-                cin>>input;
-                cout<<"Podaj indeks: ";
-                int input3;
-                cin>>input3;
+                int input2 = getIntegerInput("Podaj element do dodania: ");
+                int input3 = getIntegerInput("Podaj indeks: ");
                 dynamicArray->addAtIndex(input3, input2);
                 break;
             }
             case 4: {
                 cout<<"Usuwanie elementu."<<endl;
-                cout<<"Element do usuniecia: ";
-                int input2;
-                cin>>input2;
+                int input2 = getIntegerInput("Element do usuniecia: ");
                 if (dynamicArray->contains(input2)){
                     dynamicArray->remove(input2);
                     cout<<"Usunieto element"<<endl;
@@ -387,9 +361,7 @@ void Menu::printDynamicArrayMenu() {
                 break;
             }
             case 5: {
-                cout<<"Podaj element to znalezienia: ";
-                int input2;
-                cin>>input2;
+                int input2 = getIntegerInput("Podaj element to znalezienia: ");
                 if (dynamicArray->contains(input2)){
                     cout<<"Element istnieje. Jego indeks: "<<dynamicArray->indexOf(input2)<<endl;
                 }
@@ -420,22 +392,23 @@ void Menu::printHeapMenu() {
         cout<<"Co chcesz zrobic? "<<endl;
         cout<<"\t1. Dodaj element"<<endl;
         cout<<"\t2. Usun element"<<endl;
+        cout<<"\t3. Wyswietl kopiec"<<endl;
         cout<<"\t0. Wroc do menu glownego"<<endl;
-        cout<<"\t-1 Wyjdź"<<endl;
-        int input;
-        cout<<"Wybor: ";
-        cin>>input;
+        cout<<"\t-1 Wyjdz"<<endl;
+        int input = getIntegerInput("Wybor: ");
         switch (input) {
             case 1: {
-                cout<<"Podaj element do dodania: ";
-                int input2;
-                cin>>input;
+                int input2 = getIntegerInput("Podaj element do dodania: ");
                 heap->add(input2);
                 break;
             }
             case 2: {
                 cout<<"Usuwanie elementu bedacego korzeniem...";
                 heap->remove();
+                break;
+            }
+            case 3: {
+                heap->printHeap();
                 break;
             }
             case 0: {
@@ -454,29 +427,25 @@ void Menu::printHeapMenu() {
 void Menu::printRBTreeMenu() {
     bool goBack = false;
     while (!goBack){
-        cout<<"Drzewo czerwono-czarne in-order: "<<endl;
+        cout<<"Drzewo czerwono-czarne: "<<endl;
+        rBTree->postOrder(rBTree->getRoot(), 0);
+        cout<<"\nIn-order: "<<endl;
         rBTree->printInOrder();
-        cout<<"Co chcesz zrobic? "<<endl;
+        cout<<"\nCo chcesz zrobic? "<<endl;
         cout<<"\t1. Dodaj element"<<endl;
         cout<<"\t2. Usun element"<<endl;
-        cout<<"\t3. Znajdź element"<<endl;
+        cout<<"\t3. Znajdz element"<<endl;
         cout<<"\t0. Wroc do menu glownego"<<endl;
-        cout<<"\t-1 Wyjdź"<<endl;
-        int input;
-        cout<<"Wybor: ";
-        cin>>input;
+        cout<<"\t-1 Wyjdz"<<endl;
+        int input = getIntegerInput("Wybor: ");
         switch (input) {
             case 1: {
-                cout<<"Podaj element do dodania: ";
-                int input2;
-                cin>>input;
+                int input2 = getIntegerInput("Podaj element do dodania: ");
                 rBTree->add(input2);
                 break;
             }
             case 2: {
-                cout<<"Podaj element do usuniecia: ";
-                int input2;
-                cin>>input;
+                int input2 = getIntegerInput("Podaj element do usuniecia: ");
                 if (rBTree->search(input2) != nullptr){
                     rBTree->remove(input2);
                 }
@@ -484,15 +453,14 @@ void Menu::printRBTreeMenu() {
                 break;
             }
             case 3: {
-                cout<<"Podaj element do znalezienia: ";
-                int input2;
-                cin>>input2;
+                int input2 = getIntegerInput("Podaj element do znalezienia: ");
                 RBNode* found = rBTree->search(input2);
                 if (found != nullptr){
                     cout<<"Znaleziono taki element.";
-                    if (found->getParent() != nullptr) cout<<"Jego ojciec: "<<found->getParent()->getData()<<".";
-                    if (found->getLeft() != nullptr) cout<<"Dziecko lewe: "<<found->getLeft()->getData();
-                    if (found->getRight() != nullptr) cout<<"Dziecko prawe: "<<found->getRight()->getData();
+                    if (found->getParent() != nullptr) cout<<"\n\tJego ojciec: "<<found->getParent()->getData()<<".";
+                    if (found->getLeft() != nullptr) cout<<"\n\tDziecko lewe: "<<found->getLeft()->getData();
+                    if (found->getRight() != nullptr) cout<<"\n\tDziecko prawe: "<<found->getRight()->getData();
+                    cout<<"\n";
 
                 }
                 else cout<<"Ten element nie istnieje.";
@@ -526,8 +494,7 @@ void Menu::printBenchmarkMenu() {
     cout<<"\t3. DynamicArray"<<endl;
     cout<<"\t4. Heap"<<endl;
     cout<<"\t5. RBTree"<<endl;
-    int input;
-    cin>>input;
+    int input = getIntegerInput("Wybor: ");
     switch (input) {
         case 1: {
             toTest = BST_T;
@@ -551,30 +518,25 @@ void Menu::printBenchmarkMenu() {
         }
     }
 
-    cout<<"Czy ma nastapic zapis danych do pliku .csv? (T/N)";
+    cout<<"Czy ma nastapic zapis danych do pliku .csv? (T/N): ";
     string odp;
     cin>>odp;
     if (odp[0] == 'T' || odp[0] == 't') writeToFile = true;
     else writeToFile = false;
 
-    cout<<"Poczatkowa wielkosc struktury: ";
-    cin>>initialSize;
+    initialSize= getIntegerInput("Poczatkowa wielkosc struktury: ");
 
-    cout<<"Mnoznik wielkosci (zalecane 1): ";
-    cin>>multiplier;
+    multiplier = getFloatInput("Mnoznik wielkosci (zalecane 1): ");
 
-    cout<<"Krok (wielkosc o jaka ma byc zwiekszona wielkosc po kazdej iteracji): ";
-    cin>>step;
+    step = getIntegerInput("Krok (wielkosc o jaka ma byc zwiekszona wielkosc po kazdej iteracji): ");
 
-    cout<<"Ile razy maja byc powtarzane testy: ";
-    cin>>testNumber;
+    testNumber = getIntegerInput("Ile razy maja byc powtarzane testy: ");
 
-    cout<<"Jaka ma byc maksymalna wielkosc strulktury: ";
-    cin>>maxSize;
+    maxSize = getIntegerInput("Jaka ma byc maksymalna wielkosc strulktury: ");
 
     Benchmark benchmark(toTest, writeToFile, initialSize, step, multiplier, testNumber, maxSize);
 
-    cout<<"Test ukończony"<<endl;
+    cout<<"Test ukonczony"<<endl;
     backToMainMenu();
 }
 
@@ -602,3 +564,51 @@ void Menu::backToMainMenu() {
         }
     }
 }
+
+int Menu::getIntegerInput(string message) {
+    bool isNum = false;
+    int val;
+    while (!isNum) {
+        cout << message;
+        string input;
+        cin.clear();
+        cin.sync();
+        getline(cin, input);
+        try {
+            val = stoi(input);
+            isNum = true;
+        } catch (invalid_argument &e) {
+            cout << "Wprowadzone dane nie sa liczba!" << endl;
+            continue;
+        }
+        catch (out_of_range &e) {
+            cout << "Wprowadzona liczba jest za duza!" << endl;
+            continue;
+        }
+    }
+    return val;
+}
+float Menu::getFloatInput(string message) {
+    bool isNum = false;
+    float val;
+    while (!isNum) {
+        cout << message;
+        string input;
+        cin.clear();
+        cin.sync();
+        getline(cin, input);
+        try {
+            val = stof(input);
+            isNum = true;
+        } catch (invalid_argument &e) {
+            cout << "Wprowadzone dane nie sa liczba!" << endl;
+            continue;
+        }
+        catch (out_of_range &e) {
+            cout << "Wprowadzona liczba jest za duza!" << endl;
+            continue;
+        }
+    }
+    return val;
+}
+

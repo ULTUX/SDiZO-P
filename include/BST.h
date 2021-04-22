@@ -87,7 +87,14 @@ public:
      */
     void fixDSW();
 
+    /**
+     * Remove not with given value from the tree starting from given node.
+     * @param val Value to be removed.
+     * @param node Node to start from.
+     */
     void remove(int val, BSTNode *node);
+
+    void postOrder(BSTNode *node, int indent);
 };
 
 

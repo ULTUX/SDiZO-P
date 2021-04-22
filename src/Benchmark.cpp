@@ -2,7 +2,7 @@
 // Created by Wladyslaw Nowak on 15.04.2021.
 //
 
-#include "Benchmark.h"
+#include "../include/Benchmark.h"
 #include "IO/CSVWriter.h"
 
 Benchmark::Benchmark(StructureType type, bool writeToFile, int initialSize, int step, float multiplier, int testNumber,
@@ -50,7 +50,7 @@ Benchmark::Benchmark(StructureType type, bool writeToFile, int initialSize, int 
 
 
 void Benchmark::testDoublyLinkedList() {
-    cout << "Testing dynamic array (max size: " << maxSize << ", iterations: " << iterationNumber << ", step: " << step
+    cout << "Testing doubly linked list (max size: " << maxSize << ", iterations: " << iterationNumber << ", step: " << step
          << ", multiplier: " << multiplier << ", starting size: " << initialSize << endl;
     Sleep(2000);
     //Test adding back
@@ -60,15 +60,14 @@ void Benchmark::testDoublyLinkedList() {
     int size = initialSize;
     for (int i = 0; i < iterationNumber; i++) {
         double avg = 0;
-        int* randomSet = new int[size+1];
+        int* randomSet = new int[size];
         for (int j = 0; j < testNumber; j++) {
             DoublyLinkedList* doublyLinkedList = new DoublyLinkedList();
-            generatePopulation(randomSet, size+1, numberDistribution);
+            generatePopulation(randomSet, size, numberDistribution);
+            startTimer();
             for (int k = 0; k < size; k++) {
                 doublyLinkedList->addBack(randomSet[k]);
             }
-            startTimer();
-            doublyLinkedList->addBack(randomSet[size]);
             avg += stopTimer();
             delete doublyLinkedList;
         }
@@ -76,10 +75,10 @@ void Benchmark::testDoublyLinkedList() {
         avg /= testNumber;
         sizeArray[i] = size;
         resultsArray[i] = avg;
+        cout << "Doubly linked list back insertion: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
+             << resultsArray[i] << "ms." << endl;
         size *= multiplier;
         size += step;
-        cout << "Doubly linked list back insertion: Done " << i << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "us." << endl;
     }
     if (isWriteToFile) {
         writeToFile("DOUBLY_LINKED_LIST_INSERT_BACK", resultsArray, sizeArray);
@@ -89,15 +88,12 @@ void Benchmark::testDoublyLinkedList() {
     size = initialSize;
     for (int i = 0; i < iterationNumber; i++) {
         double avg = 0;
-        int* randomSet = new int[size+1];
+        int* randomSet = new int[size];
         for (int j = 0; j < testNumber; j++) {
             DoublyLinkedList* doublyLinkedList = new DoublyLinkedList();
-            generatePopulation(randomSet, size+1, numberDistribution);
-            for (int k = 0; k < size; k++) {
-                doublyLinkedList->addFront(randomSet[k]);
-            }
+            generatePopulation(randomSet, size, numberDistribution);
             startTimer();
-            doublyLinkedList->addFront(randomSet[size]);
+            for (int k = 0; k < size; k++) doublyLinkedList->addFront(randomSet[k]);
             avg += stopTimer();
             delete doublyLinkedList;
         }
@@ -105,10 +101,10 @@ void Benchmark::testDoublyLinkedList() {
         avg /= testNumber;
         sizeArray[i] = size;
         resultsArray[i] = avg;
+        cout << "Doubly linked list front insertion: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
+             << resultsArray[i] << "ms." << endl;
         size *= multiplier;
         size += step;
-        cout << "Doubly linked list front insertion: Done " << i << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "us." << endl;
     }
     if (isWriteToFile) {
         writeToFile("DOUBLY_LINKED_LIST_INSERT_FRONT", resultsArray, sizeArray);
@@ -118,15 +114,12 @@ void Benchmark::testDoublyLinkedList() {
     size = initialSize;
     for (int i = 0; i < iterationNumber; i++) {
         double avg = 0;
-        int* randomSet = new int[size+1];
+        int* randomSet = new int[size];
         for (int j = 0; j < testNumber; j++) {
             DoublyLinkedList* doublyLinkedList = new DoublyLinkedList();
-            generatePopulation(randomSet, size+1, numberDistribution);
-            for (int k = 0; k < size; k++) {
-                doublyLinkedList->addAtIndex(k, randomSet[k]);
-            }
+            generatePopulation(randomSet, size, numberDistribution);
             startTimer();
-            doublyLinkedList->addAtIndex(size, randomSet[size]);
+            for (int k = 0; k < size; k++) doublyLinkedList->addAtIndex(k, randomSet[k]);
             avg += stopTimer();
             delete doublyLinkedList;
         }
@@ -134,10 +127,10 @@ void Benchmark::testDoublyLinkedList() {
         avg /= testNumber;
         sizeArray[i] = size;
         resultsArray[i] = avg;
+        cout << "Doubly linked list at index insertion: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
+             << resultsArray[i] << "ms." << endl;
         size *= multiplier;
         size += step;
-        cout << "Doubly linked list at index insertion: Done " << i << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "us." << endl;
     }
     if (isWriteToFile) {
         writeToFile("DOUBLY_LINKED_LIST_INSERT_INDEX", resultsArray, sizeArray);
@@ -156,7 +149,7 @@ void Benchmark::testDoublyLinkedList() {
             }
             shuffle(randomSet, &randomSet[size-1], std::mt19937(std::random_device()()));
             startTimer();
-            doublyLinkedList->removeElement(randomSet[size-1]);
+            for (int k = 0; k < size; k++) doublyLinkedList->removeElement(randomSet[k]);
             avg += stopTimer();
             delete doublyLinkedList;
         }
@@ -164,10 +157,10 @@ void Benchmark::testDoublyLinkedList() {
         avg /= testNumber;
         sizeArray[i] = size;
         resultsArray[i] = avg;
+        cout << "Doubly linked list removal: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
+             << resultsArray[i] << "ms." << endl;
         size *= multiplier;
         size += step;
-        cout << "Doubly linked list removal: Done " << i << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "us." << endl;
     }
     if (isWriteToFile) {
         writeToFile("DOUBLY_LINKED_LIST_REMOVE", resultsArray, sizeArray);
@@ -187,7 +180,7 @@ void Benchmark::testDoublyLinkedList() {
             }
             shuffle(randomSet, &randomSet[size-1], std::mt19937(std::random_device()()));
             startTimer();
-            doublyLinkedList->indexOf(randomSet[size-1]);
+            for (int k = 0; k < size; k++) doublyLinkedList->indexOf(randomSet[k]);
             avg += stopTimer();
             delete doublyLinkedList;
         }
@@ -195,10 +188,10 @@ void Benchmark::testDoublyLinkedList() {
         avg /= testNumber;
         sizeArray[i] = size;
         resultsArray[i] = avg;
+        cout << "Doubly linked list at index retrieval: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
+             << resultsArray[i] << "ms." << endl;
         size *= multiplier;
         size += step;
-        cout << "Doubly linked list at index retrieval: Done " << i << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "us." << endl;
     }
     if (isWriteToFile) {
         writeToFile("DOUBLY_LINKED_LIST_SEARCH", resultsArray, sizeArray);
@@ -216,16 +209,14 @@ void Benchmark::testDynamicArray() {
     int size = initialSize;
     for (int i = 0; i < iterationNumber; i++) {
         double avg = 0;
-        int* randomSet = new int[size+1];
+        int* randomSet = new int[size];
         for (int j = 0; j < testNumber; j++) {
             DynamicArray* dynamicArray = new DynamicArray();
-            generatePopulation(randomSet, size+1, numberDistribution);
-
+            generatePopulation(randomSet, size, numberDistribution);
+            startTimer();
             for (int k = 0; k < size; k++) {
                 dynamicArray->addBack(randomSet[k]);
             }
-            startTimer();
-            dynamicArray->addBack(randomSet[size]);
             avg += stopTimer();
             delete dynamicArray;
         }
@@ -233,10 +224,10 @@ void Benchmark::testDynamicArray() {
         avg /= testNumber;
         sizeArray[i] = size;
         resultsArray[i] = avg;
+        cout << "Dynamic array back insertion: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
+             << resultsArray[i] << "ms." << endl;
         size *= multiplier;
         size += step;
-        cout << "Dynamic array back insertion: Done " << i << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "us." << endl;
     }
     if (isWriteToFile) {
         writeToFile("DYNAMIC_ARRAY_INSERT_BACK", resultsArray, sizeArray);
@@ -246,15 +237,14 @@ void Benchmark::testDynamicArray() {
     size = initialSize;
     for (int i = 0; i < iterationNumber; i++) {
         double avg = 0;
-        int* randomSet = new int[size+1];
+        int* randomSet = new int[size];
         for (int j = 0; j < testNumber; j++) {
             DynamicArray* dynamicArray = new DynamicArray();
-            generatePopulation(randomSet, size+1, numberDistribution);
+            generatePopulation(randomSet, size, numberDistribution);
+            startTimer();
             for (int k = 0; k < size; k++) {
                 dynamicArray->addFront(randomSet[k]);
             }
-            startTimer();
-            dynamicArray->addFront(randomSet[size]);
             avg += stopTimer();
             delete dynamicArray;
         }
@@ -262,10 +252,10 @@ void Benchmark::testDynamicArray() {
         avg /= testNumber;
         sizeArray[i] = size;
         resultsArray[i] = avg;
+        cout << "Dynamic array front insertion: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
+             << resultsArray[i] << "ms." << endl;
         size *= multiplier;
         size += step;
-        cout << "Dynamic array front insertion: Done " << i << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "us." << endl;
     }
     if (isWriteToFile) {
         writeToFile("DYNAMIC_ARRAY_INSERT_FRONT", resultsArray, sizeArray);
@@ -276,26 +266,22 @@ void Benchmark::testDynamicArray() {
     size = initialSize;
     for (int i = 0; i < iterationNumber; i++) {
         double avg = 0;
-        int* randomSet = new int[size+1];
+        int* randomSet = new int[size];
         for (int j = 0; j < testNumber; j++) {
             DynamicArray* dynamicArray = new DynamicArray();
-            generatePopulation(randomSet, size+1, numberDistribution);
-            for (int k = 0; k < size; k++) {
-                dynamicArray->addAtIndex(randomSet[k], k);
-            }
+            generatePopulation(randomSet, size, numberDistribution);
             startTimer();
-            dynamicArray->addAtIndex(randomSet[size], size);
+            for (int k = 0; k < size; k++) dynamicArray->addAtIndex(randomSet[k], k);
             avg += stopTimer();
             delete dynamicArray;
         }
         delete[] randomSet;
         avg /= testNumber;
         sizeArray[i] = size;
-        resultsArray[i] = avg;
+        cout << "Dynamic array at index insertion: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
+             << resultsArray[i] << "ms." << endl;
         size *= multiplier;
         size += step;
-        cout << "Dynamic array at index insertion: Done " << i << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "us." << endl;
     }
     if (isWriteToFile) {
         writeToFile("DYNAMIC_ARRAY_INSERT_INDEX", resultsArray, sizeArray);
@@ -313,7 +299,7 @@ void Benchmark::testDynamicArray() {
             }
             shuffle(randomSet, &randomSet[size-1], std::mt19937(std::random_device()()));
             startTimer();
-            dynamicArray->remove(randomSet[size-1]);
+            for (int k = 0; k < size; k++) dynamicArray->remove(randomSet[0]);
             avg += stopTimer();
             delete dynamicArray;
         }
@@ -321,10 +307,10 @@ void Benchmark::testDynamicArray() {
         avg /= testNumber;
         sizeArray[i] = size;
         resultsArray[i] = avg;
+        cout << "Dynamic array removal: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
+             << resultsArray[i] << "ms." << endl;
         size *= multiplier;
         size += step;
-        cout << "Dynamic array removal: Done " << i << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "us." << endl;
     }
     if (isWriteToFile) {
         writeToFile("DYNAMIC_ARRAY_REMOVE", resultsArray, sizeArray);
@@ -341,16 +327,15 @@ void Benchmark::testHeap() {
     //Adding benchmark
     int size = initialSize;
     for (int i = 0; i < iterationNumber; i++) {
-        Heap* heap = new Heap();
         double avg = 0;
-        int* randomSet = new int[size+1];
+        int* randomSet = new int[size];
         for (int j = 0; j < testNumber; j++) {
-            generatePopulation(randomSet, size+1, numberDistribution);
+            Heap* heap = new Heap();
+            generatePopulation(randomSet, size, numberDistribution);
+            startTimer();
             for (int k = 0; k < size; k++) {
                 heap->add(randomSet[k]);
             }
-            startTimer();
-            heap->add(randomSet[size]);
             avg += stopTimer();
             delete heap;
         }
@@ -358,10 +343,10 @@ void Benchmark::testHeap() {
         avg /= testNumber;
         sizeArray[i] = size;
         resultsArray[i] = avg;
+        cout << "Heap insertion: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
+             << resultsArray[i] << "ms." << endl;
         size *= multiplier;
         size += step;
-        cout << "Hea.insertion: Done " << i << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "us." << endl;
     }
     if (isWriteToFile) {
         writeToFile("HEAP_ADD", resultsArray, sizeArray);
@@ -371,15 +356,15 @@ void Benchmark::testHeap() {
     size = initialSize;
     for (int i = 0; i < iterationNumber; i++) {
         double avg = 0;
-        int* randomSet = new int[size+1];
+        int* randomSet = new int[size];
         for (int j = 0; j < testNumber; j++) {
             Heap* heap = new Heap();
-            generatePopulation(randomSet, size+1, numberDistribution);
+            generatePopulation(randomSet, size, numberDistribution);
             for (int k = 0; k < size; k++){
                 heap->add(randomSet[k]);
             }
             startTimer();
-            heap->remove();
+            for (int k = 0 ; k < size; k++) heap->remove();
             avg += stopTimer();
             delete heap;
         }
@@ -387,13 +372,13 @@ void Benchmark::testHeap() {
         avg /= testNumber;
         sizeArray[i] = size;
         resultsArray[i] = avg;
+        cout << "Heap removal: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
+             << resultsArray[i] << "ms." << endl;
         size *= multiplier;
         size += step;
-        cout << "Heap insertion: Done " << i << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "us." << endl;
     }
     if (isWriteToFile) {
-        writeToFile("HEAP_ADD", resultsArray, sizeArray);
+        writeToFile("HEAP_REMOVE", resultsArray, sizeArray);
     }
 }
 
@@ -408,15 +393,14 @@ void Benchmark::testRBTree() {
     int size = initialSize;
     for (int i = 0; i < iterationNumber; i++) {
         double avg = 0;
-        int* randomSet = new int[size+1];
+        int* randomSet = new int[size];
         for (int j = 0; j < testNumber; j++) {
             RBTree* rbTree = new RBTree();
-            generatePopulation(randomSet, size+1, numberDistribution);
+            generatePopulation(randomSet, size, numberDistribution);
+            startTimer();
             for (int k = 0; k < size; k++) {
                 rbTree->add(randomSet[k]);
             }
-            startTimer();
-            rbTree->add(randomSet[size]);
             avg += stopTimer();
             delete rbTree;
         }
@@ -424,10 +408,10 @@ void Benchmark::testRBTree() {
         avg /= testNumber;
         sizeArray[i] = size;
         resultsArray[i] = avg;
+        cout << "RB tree insertion: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
+             << resultsArray[i] << "ms." << endl;
         size *= multiplier;
         size += step;
-        cout << "RB tree insertion: Done " << i << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "us." << endl;
     }
     if (isWriteToFile) {
         writeToFile("RB_TREE_ADD", resultsArray, sizeArray);
@@ -448,7 +432,7 @@ void Benchmark::testRBTree() {
             }
             shuffle(randomSet, &randomSet[size-1], std::mt19937(std::random_device()()));
             startTimer();
-            rbTree->remove(randomSet[size-1]);
+            for (int k = 0; k < size; k++) rbTree->remove(randomSet[k]);
             avg += stopTimer();
             delete rbTree;
         }
@@ -456,19 +440,16 @@ void Benchmark::testRBTree() {
         avg /= testNumber;
         sizeArray[i] = size;
         resultsArray[i] = avg;
+        cout << "RB tree deletion: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
+             << resultsArray[i] << "ms." << endl;
         size *= multiplier;
         size += step;
-        cout << "RB tree deletion: Done " << i << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "us." << endl;
     }
     if (isWriteToFile) {
         writeToFile("RB_TREE_REMOVE", resultsArray, sizeArray);
     }
 
     //searching
-    sizeArray[iterationNumber];
-    resultsArray[iterationNumber];
-    //Adding benchmark
     size = initialSize;
     for (int i = 0; i < iterationNumber; i++) {
         //Sizes
@@ -482,7 +463,7 @@ void Benchmark::testRBTree() {
             }
             shuffle(randomSet, &randomSet[size-1], std::mt19937(std::random_device()()));
             startTimer();
-            rbTree->search(randomSet[size-1]);
+            for (int k = 0; k < size; k++) rbTree->search(randomSet[k]);
             avg += stopTimer();
             delete rbTree;
         }
@@ -490,10 +471,10 @@ void Benchmark::testRBTree() {
         avg /= testNumber;
         sizeArray[i] = size;
         resultsArray[i] = avg;
+        cout << "RB tree search: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
+             << resultsArray[i] << "ms." << endl;
         size *= multiplier;
         size += step;
-        cout << "RB tree search: Done " << i << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "us." << endl;
     }
     if (isWriteToFile) {
         writeToFile("RB_TREE_SEARCH", resultsArray, sizeArray);
@@ -513,15 +494,14 @@ void Benchmark::testBST() {
     for (int i = 0; i < iterationNumber; i++) {
         //Sizes
         double avg = 0;
-        int *randomSet = new int[size+1];
+        int *randomSet = new int[size];
         for (int j = 0; j < testNumber; j++) {
             BST* bst = new BST();
-            generatePopulation(randomSet, size+1, numberDistribution);
+            startTimer();
+            generatePopulation(randomSet, size, numberDistribution);
             for (int k = 0; k < size; k++) {
                 bst->add(randomSet[k]);
             }
-            startTimer();
-            bst->add(randomSet[size]);
             avg += stopTimer();
             delete bst;
         }
@@ -529,10 +509,10 @@ void Benchmark::testBST() {
         avg /= testNumber;
         sizeArray[i] = size;
         resultsArray[i] = avg;
+        cout << "BST insertion: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
+             << resultsArray[i] << "ms." << endl;
         size *= multiplier;
         size += step;
-        cout << "BST insertion: Done " << i << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "us." << endl;
     }
     if (isWriteToFile) {
         writeToFile("BST_ADD", resultsArray, sizeArray);
@@ -548,13 +528,13 @@ void Benchmark::testBST() {
         for (int j = 0; j < testNumber; j++) {
             BST* bst = new BST();
             generatePopulation(randomSet, size, numberDistribution);
-            //Fill BSt with random data
+            //Fill BST with random data
             for (int k = 0; k < size; k++) {
                 bst->add(randomSet[k]);
             }
             shuffle(randomSet, &randomSet[size-1], std::mt19937(std::random_device()()));
             startTimer();
-            bst->remove(randomSet[size-1]);
+            for (int k = 0; k < size; k++) bst->remove(randomSet[k]);
             avg += stopTimer();
             delete bst;
         }
@@ -562,10 +542,10 @@ void Benchmark::testBST() {
         avg /= testNumber;
         sizeArray[i] = size;
         resultsArray[i] = avg;
+        cout << "BST deletion: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
+             << resultsArray[i] << "ms." << endl;
         size *= multiplier;
         size += step;
-        cout << "BST deletion: Done " << i << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "us." << endl;
     }
     if (isWriteToFile) {
         writeToFile("BST_REMOVE", resultsArray, sizeArray);
@@ -577,16 +557,17 @@ void Benchmark::testBST() {
     for (int i = 0; i < iterationNumber; i++) {
         //Sizes
         double avg = 0;
-        int * randomSet = new int[size+1];
+        int * randomSet = new int[size];
         for (int j = 0; j < testNumber; j++) {
             BST* bst = new BST();
-            generatePopulation(randomSet, size+1, numberDistribution);
+            generatePopulation(randomSet, size, numberDistribution);
             //Fill BSt with random data
-            for (int k = 0; k < size; k++) {
-                bst->add(randomSet[k]);
-            }
+            for (int k = 0; k < size; k++) bst->add(randomSet[k]);
+            shuffle(randomSet, &randomSet[size-1], std::mt19937(std::random_device()()));
             startTimer();
-            bst->search(randomSet[size]);
+            for (int k = 0; k < size; k++) {
+                bst->search(randomSet[k]);
+            }
             avg += stopTimer();
             delete bst;
 
@@ -595,10 +576,10 @@ void Benchmark::testBST() {
         avg /= testNumber;
         sizeArray[i] = size;
         resultsArray[i] = avg;
+        cout << "BST search: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
+             << resultsArray[i] << "ms." << endl;
         size *= multiplier;
         size += step;
-        cout << "BST search: Done " << i << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "us." << endl;
     }
     if (isWriteToFile) {
         writeToFile("BST_SEARCH", resultsArray, sizeArray);
@@ -609,10 +590,10 @@ void Benchmark::testBST() {
     for (int i = 0; i < iterationNumber; i++) {
         //Sizes
         double avg = 0;
-        int * randomSet = new int[size+1];
+        int * randomSet = new int[size];
         for (int j = 0; j < testNumber; j++) {
             BST* bst = new BST();
-            generatePopulation(randomSet, size+1, numberDistribution);
+            generatePopulation(randomSet, size, numberDistribution);
             //Fill BSt with random data
             for (int k = 0; k < size; k++) {
                 bst->add(randomSet[k]);
@@ -626,13 +607,13 @@ void Benchmark::testBST() {
         avg /= testNumber;
         sizeArray[i] = size;
         resultsArray[i] = avg;
+        cout << "BST fix DSW: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
+             << resultsArray[i] << "ms." << endl;
         size *= multiplier;
         size += step;
-        cout << "BST fix DSW: Done " << i << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "us." << endl;
     }
     if (isWriteToFile) {
-        writeToFile("BST_SEARCH", resultsArray, sizeArray);
+        writeToFile("BST_FIX", resultsArray, sizeArray);
     }
 }
 
@@ -691,7 +672,7 @@ double Benchmark::stopTimer() {
     LARGE_INTEGER freq;
     QueryPerformanceFrequency(&freq);
     uint64_t elapsed = count.QuadPart - (*performanceCounter).QuadPart;
-    double timeInNs = (1000000.0 * elapsed) / freq.QuadPart;
+    double timeInNs = (1000.0 * elapsed) / freq.QuadPart;
     return timeInNs;
 
 }

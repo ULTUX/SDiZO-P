@@ -85,6 +85,10 @@ private:
 
 public:
 
+    /**
+     * Get root of this tree.
+     * @return Node being root.
+     */
     RBNode *getRoot() const;
 
     ~RBTree();
@@ -138,6 +142,7 @@ public:
      */
     void printInOrder();
 
+    void postOrder(RBNode *node, int indent);
 };
 
 

@@ -3,6 +3,8 @@
 //
 
 #include <cmath>
+#include <iomanip>
+#include <iostream>
 #include "../../include/BST.h"
 
 void BST::add(int val) {
@@ -51,6 +53,7 @@ void BST::remove(int val, BSTNode* node){
         else if (node->getRight() == nullptr){
             BSTNode* oldNode = node->getLeft();
             if (node == root) root = oldNode;
+            oldNode->setParent(nullptr);
             if (node->getParent() != nullptr) {
                 oldNode->setParent(node->getParent());
                 if (node->isRightChild()) oldNode->getParent()->setRight(oldNode);
@@ -62,6 +65,7 @@ void BST::remove(int val, BSTNode* node){
         else if (node->getLeft() == nullptr){
             BSTNode* oldNode = node->getRight();
             if (node == root) root = oldNode;
+            oldNode->setParent(nullptr);
             if (node->getParent() != nullptr) {
                 oldNode->setParent(node->getParent());
                 if (node->isRightChild()) oldNode->getParent()->setRight(oldNode);
@@ -89,7 +93,6 @@ void BST::printInOrder() {
     if (this->root == nullptr) return;
     this->root->printInOrder();
 }
-
 void BST::rotateRight(BSTNode *node) {
     if (node != nullptr && node->getLeft() != nullptr){
         BSTNode* left = node->getLeft();
@@ -170,4 +173,22 @@ void BST::hardDelete(BSTNode* node) {
     hardDelete(node->getLeft());
     hardDelete(node->getRight());
     delete node;
+}
+
+//Function created based on: https://stackoverflow.com/a/26699993
+void BST::postOrder(BSTNode* node, int indent){
+    if(node != NULL) {
+        if(node->getRight()) {
+            postOrder(node->getRight(), indent+4);
+        }
+        if (indent) {
+            std::cout << std::setw(indent) << ' ';
+        }
+        if (node->getRight()) std::cout<<" /\n" << std::setw(indent) << ' ';
+        std::cout<< node->getValue() << "\n ";
+        if(node->getLeft()) {
+            std::cout << std::setw(indent) << ' ' <<" \\\n";
+            postOrder(node->getLeft(), indent+4);
+        }
+    }
 }
