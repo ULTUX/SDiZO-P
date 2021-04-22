@@ -49,31 +49,42 @@ void Menu::printFileLoadMenu() {
     cout<<"\t5. RBTree"<<endl;
     cout<<"\t0. Powrot"<<endl;
     int input = getIntegerInput("Wybor: ");
-    switch (input) {
-        case 1: {
-            type = BST_T;
-            initBST();
-            break;
-        }
-        case 2: {
-            type = DoublyLinkedList_T;
-            initDoublyLinkedList();
-            break;
-        }
-        case 3: {
-            type = DynamicArray_T;
-            initDynamicArray();
-            break;
-        }
-        case 4: {
-            type = Heap_T;
-            initHeap();
-            break;
-        }
-        case 5: {
-            type = RBTree_T;
-            initRBTree();
-            break;
+    bool isPicked = false;
+    while (!isPicked) {
+        switch (input) {
+            case 1: {
+                type = BST_T;
+                initBST();
+                isPicked = true;
+                break;
+            }
+            case 2: {
+                type = DoublyLinkedList_T;
+                initDoublyLinkedList();
+                isPicked = true;
+                break;
+            }
+            case 3: {
+                type = DynamicArray_T;
+                initDynamicArray();
+                isPicked = true;
+                break;
+            }
+            case 4: {
+                type = Heap_T;
+                initHeap();
+                isPicked = true;
+                break;
+            }
+            case 5: {
+                type = RBTree_T;
+                initRBTree();
+                isPicked = true;
+                break;
+            }
+            default: {
+                cout<<"Nieznany wybor."<<endl;
+            }
         }
     }
 
@@ -496,27 +507,38 @@ void Menu::printBenchmarkMenu() {
     cout<<"\t3. DynamicArray"<<endl;
     cout<<"\t4. Heap"<<endl;
     cout<<"\t5. RBTree"<<endl;
-    int input = getIntegerInput("Wybor: ");
-    switch (input) {
-        case 1: {
-            toTest = BST_T;
-            break;
-        }
-        case 2: {
-            toTest = DoublyLinkedList_T;
-            break;
-        }
-        case 3: {
-            toTest = DynamicArray_T;
-            break;
-        }
-        case 4: {
-            toTest = Heap_T;
-            break;
-        }
-        case 5: {
-            toTest = RBTree_T;
-            break;
+    bool isPicked = false;
+    while (!isPicked) {
+        int input = getIntegerInput("Wybor: ");
+        switch (input) {
+            case 1: {
+                toTest = BST_T;
+                isPicked = true;
+                break;
+            }
+            case 2: {
+                toTest = DoublyLinkedList_T;
+                isPicked = true;
+                break;
+            }
+            case 3: {
+                toTest = DynamicArray_T;
+                isPicked = true;
+                break;
+            }
+            case 4: {
+                toTest = Heap_T;
+                isPicked = true;
+                break;
+            }
+            case 5: {
+                toTest = RBTree_T;
+                isPicked = true;
+                break;
+            }
+            default: {
+                cout<<"Nieznany wybor."<<endl;
+            }
         }
     }
 
