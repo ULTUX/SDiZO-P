@@ -89,7 +89,7 @@ public:
     void fixDSW();
 
     /**
-     * Remove not with given value from the tree starting from given node.
+     * Remove node with given value from the tree starting from given node.
      * @param val Value to be removed.
      * @param node Node to start from.
      */
