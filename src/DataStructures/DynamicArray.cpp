@@ -19,6 +19,7 @@ void DynamicArray::addFront(int element) {
     for (int i = 1; i < size; i++){
         replacement[i] = this->arrayPointer[i-1];
     }
+    replacement[size] = this->arrayPointer[size-1];
     //Free up space taken by old array
     delete[] this->arrayPointer;
     this->arrayPointer = replacement;
@@ -116,6 +117,7 @@ void DynamicArray::set(int index, int val) {
 }
 
 void DynamicArray::printFromBeginning() {
+    if (this->size == 0) return;
     for (int i = 0; i < size; i++){
         std::cout<<arrayPointer[i]<<" ";
     }
@@ -133,6 +135,7 @@ DynamicArray::~DynamicArray() {
 }
 
 void DynamicArray::printFromEnd() {
+    if (size == 0) return;
     for (int i = size-1; i >= 0; i--){
         std::cout<<arrayPointer[i]<<" ";
     }

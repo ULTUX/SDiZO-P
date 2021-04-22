@@ -10,6 +10,5 @@ int main() {
 //    Benchmark bench4(Heap_T, true, 2, 5000, 1.0, 5, 100000);
 //    Benchmark bench5(DoublyLinkedList_T, true, 2, 5000, 1.0, 5, 100000);
     Menu menu;
-    system("pause");
     return 0;
 }

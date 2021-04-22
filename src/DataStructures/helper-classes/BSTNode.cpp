@@ -33,8 +33,10 @@ int BSTNode::getValue() const {
 BSTNode *BSTNode::search(int val) {
     if (this->value == val) return this;
     if (this->value > val){
+        if (this->left == nullptr) return nullptr;
         return this->left->search(val);
     }
+    if (this->right == nullptr) return nullptr;
     return this->right->search(val);
 }
 

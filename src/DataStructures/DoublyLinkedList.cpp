@@ -17,14 +17,17 @@ DoublyLinkedList *DoublyLinkedList::removeElement(int val) {
         delete curr;
     }
     else {
-        while (curr->getVal() != val && curr->getNext() != nullptr){
-            curr = curr->getNext();
+        while (curr != nullptr){
+            if (curr->getVal() == val){
+                curr->getPrev()->setNext(curr->getNext());
+                if (curr->getNext() != nullptr) curr->getNext()->setPrev(curr->getPrev());
+                delete curr;
+                return this;
+            }
+            if (curr->getNext() != nullptr) curr = curr->getNext();
+            else throw std::invalid_argument("Element does not exist in this list.");
         }
-        if (curr->getNext() != nullptr){
-            curr->getPrev()->setNext(curr->getNext());
-            curr->getNext()->setPrev(curr->getPrev());
-            delete curr;
-        }
+
     }
     return this;
 }
@@ -61,10 +64,11 @@ int DoublyLinkedList::indexOf(int element) {
     else {
         DoublyLinkedNode* nextPointer = head;
         int i = 0;
-        while (nextPointer->getVal() != element){
+        while (nextPointer != nullptr && nextPointer->getVal() != element){
             nextPointer = nextPointer->getNext();
             i++;
         }
+        if (nextPointer == nullptr) return -1;
         return i;
     }
 }
@@ -154,21 +158,25 @@ void DoublyLinkedList::hardDelete(DoublyLinkedNode *node) {
 }
 
 void DoublyLinkedList::printFromStart() {
+    if (this->head == nullptr) return;
     DoublyLinkedNode * node = head;
 
     while (node->getNext() != nullptr){
         cout<<node->getVal()<<" ";
         node = node->getNext();
     }
+    cout<<node->getVal()<<" ";
     cout<<endl;
 }
 
 void DoublyLinkedList::printFromEnd() {
+    if (this->head == nullptr) return;
     DoublyLinkedNode * node = getLastElement();
 
     while (node->getPrev() != nullptr){
         cout<<node->getVal()<<" ";
         node = node->getPrev();
     }
+    cout<<node->getVal()<<" ";
     cout<<endl;
 }

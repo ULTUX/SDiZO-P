@@ -47,36 +47,32 @@ void Menu::printFileLoadMenu() {
     cout<<"\t3. DynamicArray"<<endl;
     cout<<"\t4. Heap"<<endl;
     cout<<"\t5. RBTree"<<endl;
+    cout<<"\t0. Powrot"<<endl;
     int input = getIntegerInput("Wybor: ");
     switch (input) {
         case 1: {
             type = BST_T;
             initBST();
-            printBSTMenu();
             break;
         }
         case 2: {
             type = DoublyLinkedList_T;
             initDoublyLinkedList();
-            printDoublyLinkedListMenu();
             break;
         }
         case 3: {
             type = DynamicArray_T;
             initDynamicArray();
-            printDynamicArrayMenu();
             break;
         }
         case 4: {
             type = Heap_T;
             initHeap();
-            printHeapMenu();
             break;
         }
         case 5: {
             type = RBTree_T;
             initRBTree();
-            printRBTreeMenu();
             break;
         }
     }
@@ -94,26 +90,24 @@ void Menu::initBST() {
         reader.readToBST(bst);
         printBSTMenu();
     } catch (runtime_error& e){
-        cout<<"Wystapil blad: "<<endl;
-        cerr<<e.what()<<endl;
+        printException(e);
         initBST();
         return;
     }
 }
 
 void Menu::initDoublyLinkedList() {
-    cout<<"Podaj nazwe pliku, z ktorego chcesz pobrac dane do BST: ";
+    cout<<"Podaj nazwe pliku, z ktorego chcesz pobrac dane do listy dwukierunkowej: ";
     string input;
     cin>>input;
     cout<<"Wczytywanie danych..."<<endl;
     try {
         FileReader reader(input);
-        bst = new BST();
-        reader.readToBST(bst);
-        printBSTMenu();
+        doublyLinkedList = new DoublyLinkedList();
+        reader.readToDoublyLinkedList(doublyLinkedList, BACK);
+        printDoublyLinkedListMenu();
     } catch (runtime_error& e){
-        cout<<"Wystapil blad: "<<endl;
-        cerr<<e.what()<<endl;
+        printException(e);
         initBST();
         return;
     }
@@ -130,8 +124,7 @@ void Menu::initDynamicArray() {
         reader.readToDynamicArray(dynamicArray, BACK);
         printDynamicArrayMenu();
     } catch (runtime_error& e){
-        cout<<"Wystapil blad: "<<endl;
-        cerr<<e.what()<<endl;
+        printException(e);
         initDynamicArray();
         return;
     }
@@ -148,8 +141,7 @@ void Menu::initHeap() {
         reader.readToHeap(heap);
         printHeapMenu();
     } catch (runtime_error& e){
-        cout<<"Wystapil blad: "<<endl;
-        cerr<<e.what()<<endl;
+        printException(e);
         initHeap();
         return;
     }
@@ -166,8 +158,7 @@ void Menu::initRBTree() {
         reader.readToRBTree(rBTree);
         printRBTreeMenu();
     } catch (runtime_error& e){
-        cout<<"Wystapil blad: "<<endl;
-        cerr<<e.what()<<endl;
+        printException(e);
         initRBTree();
         return;
     }
@@ -197,9 +188,13 @@ void Menu::printBSTMenu() {
             case 2: {
                 int input2 = getIntegerInput("Podaj element do usuniecia: ");
                 if (bst->search(input2) != nullptr){
-                    bst->remove(input2);
+                    try {
+                        bst->remove(input2);
+                    } catch (invalid_argument& e) {
+                        printException(e);
+                    }
                 }
-                else cout<<"Ten element nie istnieje."<<endl;
+                else cout<<"Ten element nie istnieje.\n";
                 break;
             }
             case 3: {
@@ -214,7 +209,7 @@ void Menu::printBSTMenu() {
                     cout<<"\n";
 
                 }
-                else cout<<"Ten element nie istnieje.";
+                else cout<<"Ten element nie istnieje.\n";
                 break;
             }
             case 4: {
@@ -278,12 +273,12 @@ void Menu::printDoublyLinkedListMenu() {
                 cout<<"Usuwanie elementu."<<endl;
                 int input2;
                 input2 = getIntegerInput("Element do usuniecia: ");
-                if (doublyLinkedList->getNodeAt(input2) != nullptr){
+                if (doublyLinkedList->indexOf(input2) != -1){
                     doublyLinkedList->removeElement(input2);
                     cout<<"Usunieto element"<<endl;
                 }
                 else {
-                    cout<<"Element nie istnieje";
+                    cout<<"Element nie istnieje\n";
                 }
                 break;
             }
@@ -308,6 +303,9 @@ void Menu::printDoublyLinkedListMenu() {
             case -1: {
                 cout<<"Zamykanie programu..."<<endl;
                 exit(0);
+            }
+            default: {
+                cout<<"Nieznany argument"<<endl;
             }
         }
     }
@@ -345,18 +343,18 @@ void Menu::printDynamicArrayMenu() {
             case 3: {
                 int input2 = getIntegerInput("Podaj element do dodania: ");
                 int input3 = getIntegerInput("Podaj indeks: ");
-                dynamicArray->addAtIndex(input3, input2);
+                dynamicArray->addAtIndex(input2, input3);
                 break;
             }
             case 4: {
                 cout<<"Usuwanie elementu."<<endl;
-                int input2 = getIntegerInput("Element do usuniecia: ");
-                if (dynamicArray->contains(input2)){
+                int input2 = getIntegerInput("Indeks elementu do usuniecia: ");
+                if (dynamicArray->getSize() > input2){
                     dynamicArray->remove(input2);
                     cout<<"Usunieto element"<<endl;
                 }
                 else {
-                    cout<<"Element nie istnieje";
+                    cout<<"Element nie istnieje"<<endl;
                 }
                 break;
             }
@@ -388,7 +386,7 @@ void Menu::printHeapMenu() {
     bool goBack = false;
     while (!goBack){
         cout<<"Heap: "<<endl;
-        heap->printHeap();
+        heap->print();
         cout<<"Co chcesz zrobic? "<<endl;
         cout<<"\t1. Dodaj element"<<endl;
         cout<<"\t2. Usun element"<<endl;
@@ -403,12 +401,16 @@ void Menu::printHeapMenu() {
                 break;
             }
             case 2: {
-                cout<<"Usuwanie elementu bedacego korzeniem...";
-                heap->remove();
+                cout<<"Usuwanie elementu bedacego korzeniem...\n";
+                try {
+                    heap->remove();
+                } catch (length_error& e) {
+                    printException(e);
+                }
                 break;
             }
             case 3: {
-                heap->printHeap();
+                heap->print();
                 break;
             }
             case 0: {
@@ -610,5 +612,12 @@ float Menu::getFloatInput(string message) {
         }
     }
     return val;
+}
+
+void Menu::printException(exception &e) {
+    cout<<"-------------------------------"<<endl;
+    cout<<endl<<endl<<"UWAGA: Wystapil blad: ";
+    cerr<<e.what()<<endl<<endl<<endl;
+    cout<<"-------------------------------"<<endl;
 }
 

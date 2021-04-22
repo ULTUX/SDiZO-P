@@ -20,6 +20,7 @@ public:
     /**
      * Remove heap's root and return it. This function fixes the heap going down from the root.
      * @return Removed element.
+     * @throws length_error When heap is already empty.
      */
     int remove();
 
@@ -32,7 +33,7 @@ public:
     /**
      * Nicely printFromBeginning the heap.
      */
-    void printHeap();
+    void print();
 
     Heap();
 

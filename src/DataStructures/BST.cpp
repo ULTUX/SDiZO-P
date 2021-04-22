@@ -20,6 +20,7 @@ void BST::add(int val) {
 
 void BST::remove(int val) {
     if (this->root == nullptr) return;
+    if (search(val) == nullptr) throw std::invalid_argument("That value doesn't exist in this tree.");
     if (size == 1) {
         delete root;
         size = 0;

@@ -60,6 +60,7 @@ public:
     /**
      * Remove node with given value from this node's subtree.
      * @param val Value to be removed.
+     * @throws invalid_argument If given value doesn't exist in the tree.
      */
     void remove(int val);
 

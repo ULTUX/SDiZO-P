@@ -31,21 +31,27 @@ void Heap::heapifyDown(int index) {
 }
 
 int Heap::remove() {
-    int toReturn = array->get(0);
-    array->set(0, array->get(array->getSize()-1));
-    array->remove(array->getSize()-1);
-    heapifyDown(0);
-    return toReturn;
+    if (array->getSize() > 0){
+        int toReturn = array->get(0);
+        array->set(0, array->get(array->getSize()-1));
+        array->remove(array->getSize()-1);
+        heapifyDown(0);
+        return toReturn;
+    }
+    else throw std::length_error("Heap is empty.");
 }
 
 int Heap::getSize() {
     return array->getSize();
 }
 
-void Heap::printHeap() {
-    for (int i = 0; i < array->getSize(); i++){
-        for (int j = 0; j <pow(2, i) &&j+pow(2, i)< 10; j++){
-            std::cout<<array->get(j+(int)pow(2, i)-1)<<" ";
+//Based on: https://stackoverflow.com/a/64023669
+void Heap::print() {
+    if (array->getSize() == 0) return;
+    int height = (int) log2(array->getSize());
+    for (int i = 0; i <= height; i++) {
+        for (int j = 0; j < pow(2, i) && j + pow(2, i) <= array->getSize(); j++) {
+            std::cout<<array->get(j + (int) pow(2, i) - 1)<< " ";
         }
         std::cout<<std::endl;
     }

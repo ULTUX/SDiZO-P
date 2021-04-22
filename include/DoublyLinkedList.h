@@ -47,6 +47,7 @@ public:
      * Remove first occurrence of an element from the list.
      * @param val Element to get rid of.
      * @return Instance of this list.
+     * @throws invalid_argument If given element doesn't exist.
      */
     DoublyLinkedList* removeElement(int val);
 
