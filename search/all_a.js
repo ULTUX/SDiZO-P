@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['next_58',['next',['../class_doubly_linked_node.html#a05acac029823a005305722e51912106c',1,'DoublyLinkedNode']]]
+  ['next_65',['next',['../class_doubly_linked_node.html#a05acac029823a005305722e51912106c',1,'DoublyLinkedNode']]]
 ];

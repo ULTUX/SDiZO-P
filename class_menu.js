@@ -13,6 +13,7 @@ var class_menu =
     [ "printBSTMenu", "class_menu.html#a5e0427d2416ec43c14a5bc3f5ac19d4b", null ],
     [ "printDoublyLinkedListMenu", "class_menu.html#add449dd5e061020111af5bb4ac916f08", null ],
     [ "printDynamicArrayMenu", "class_menu.html#a7325f6e0c6a28a3d3b11e0f7394c9ae7", null ],
+    [ "printException", "class_menu.html#ad8c3f8bc35d2de0ab553ed059fb1d05e", null ],
     [ "printFileLoadMenu", "class_menu.html#a92973edd2ca90671d88d9f1f8d21120c", null ],
     [ "printHeapMenu", "class_menu.html#aa936dc8b4b261de3461a81535dfba479", null ],
     [ "printMainMenu", "class_menu.html#a331049e32d0e7b5ba154d050205643ca", null ],

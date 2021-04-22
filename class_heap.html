@@ -103,8 +103,8 @@ Metody publiczne</h2></td></tr>
 <tr class="separator:a5a4e469500a45db64a66d1e76a79e997"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf5436a4c28807bedc40c0014bb26ebb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heap.html#aaf5436a4c28807bedc40c0014bb26ebb">getSize</a> ()</td></tr>
 <tr class="separator:aaf5436a4c28807bedc40c0014bb26ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3933ae859e8e767317ff2f0c31110a6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heap.html#a3933ae859e8e767317ff2f0c31110a6c">printHeap</a> ()</td></tr>
-<tr class="separator:a3933ae859e8e767317ff2f0c31110a6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6072a1571e5f4dc98f50b6a382d7891d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heap.html#a6072a1571e5f4dc98f50b6a382d7891d">print</a> ()</td></tr>
+<tr class="separator:a6072a1571e5f4dc98f50b6a382d7891d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a734051272cbd0945d3916a1a89707ba2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heap.html#a734051272cbd0945d3916a1a89707ba2">~Heap</a> ()</td></tr>
 <tr class="separator:a734051272cbd0945d3916a1a89707ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -248,14 +248,14 @@ Atrybuty prywatne</h2></td></tr>
 
 </div>
 </div>
-<a id="a3933ae859e8e767317ff2f0c31110a6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3933ae859e8e767317ff2f0c31110a6c">&#9670;&nbsp;</a></span>printHeap()</h2>
+<a id="a6072a1571e5f4dc98f50b6a382d7891d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6072a1571e5f4dc98f50b6a382d7891d">&#9670;&nbsp;</a></span>print()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Heap::printHeap </td>
+          <td class="memname">void Heap::print </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -281,6 +281,12 @@ Atrybuty prywatne</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Remove heap's root and return it. This function fixes the heap going down from the root. </p><dl class="section return"><dt>Zwraca</dt><dd>Removed element. </dd></dl>
+<dl class="exception"><dt>Wyjątki</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">length_error</td><td>When heap is already empty. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
