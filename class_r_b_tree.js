@@ -14,6 +14,7 @@ var class_r_b_tree =
     [ "getUncle", "class_r_b_tree.html#a973fa7be1022beb69174bf0c688dd571", null ],
     [ "hardDelete", "class_r_b_tree.html#a3150266bdcd08b7da5ad795d838b580c", null ],
     [ "isRightChild", "class_r_b_tree.html#a65901f993afe74d268036466ddd4ac1e", null ],
+    [ "postOrder", "class_r_b_tree.html#a39dff720ada41b931ca265fc2f69a651", null ],
     [ "printInOrder", "class_r_b_tree.html#a12d58d24a67ebfcff9f2cfad2d0f369f", null ],
     [ "remove", "class_r_b_tree.html#a004958415e254e8a7b96590fd78060cb", null ],
     [ "remove", "class_r_b_tree.html#a211472385012fb8203521d3602b1f2c3", null ],

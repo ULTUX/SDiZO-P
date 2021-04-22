@@ -13,7 +13,7 @@ var searchData=
   ['getparent_147',['getParent',['../class_b_s_t_node.html#a8e7076edf3de0a4971baa19cb38bcf1d',1,'BSTNode::getParent()'],['../class_r_b_node.html#a681463c4221ff34ba43bb59b89220429',1,'RBNode::getParent()']]],
   ['getprev_148',['getPrev',['../class_doubly_linked_node.html#a855b5f64d5c1553ec592059af3057cec',1,'DoublyLinkedNode']]],
   ['getright_149',['getRight',['../class_b_s_t_node.html#a5e2867fb18661719b9753b3093257503',1,'BSTNode::getRight()'],['../class_r_b_node.html#add1221b3f05dd9ec6b8c53f05216cf83',1,'RBNode::getRight()']]],
-  ['getroot_150',['getRoot',['../class_b_s_t.html#a94b42c7cc07f271f1c61f02ea1d5ca13',1,'BST']]],
+  ['getroot_150',['getRoot',['../class_b_s_t.html#a94b42c7cc07f271f1c61f02ea1d5ca13',1,'BST::getRoot()'],['../class_r_b_tree.html#a49a04112552f66bfd81d46eaecc597a4',1,'RBTree::getRoot() const']]],
   ['getsibling_151',['getSibling',['../class_r_b_tree.html#a672f4b3427aeb3ad868bbf26729f10a4',1,'RBTree']]],
   ['getsize_152',['getSize',['../class_doubly_linked_list.html#a32e50ea0e12ae0c7efa0b8bf0b748acc',1,'DoublyLinkedList::getSize()'],['../class_dynamic_array.html#af6792df8b105fc5b4d461a8868cabda6',1,'DynamicArray::getSize()'],['../class_heap.html#aaf5436a4c28807bedc40c0014bb26ebb',1,'Heap::getSize()']]],
   ['getstructuresize_153',['getStructureSize',['../class_file_reader.html#a9eadccc08b92f36e28bc3324426eb815',1,'FileReader']]],

@@ -2,6 +2,8 @@ var class_menu =
 [
     [ "Menu", "class_menu.html#ad466dd83355124a6ed958430450bfe94", null ],
     [ "backToMainMenu", "class_menu.html#a14d5aeb0dbe31c4b0786c5cc442dd769", null ],
+    [ "getFloatInput", "class_menu.html#a732dbb54b1ef9c460209e19ed4a58c5a", null ],
+    [ "getIntegerInput", "class_menu.html#a11ec45c71b17569efc1ab7c25bd05630", null ],
     [ "initBST", "class_menu.html#a8d554107c9411af428ddd831f7bce67e", null ],
     [ "initDoublyLinkedList", "class_menu.html#ae46df5cc26f256cac114eaf0e5c69750", null ],
     [ "initDynamicArray", "class_menu.html#a5e295ba55802ca4054d1f53628106318", null ],

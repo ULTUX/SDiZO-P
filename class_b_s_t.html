@@ -117,9 +117,11 @@ Metody publiczne</h2></td></tr>
 <tr class="separator:a94b42c7cc07f271f1c61f02ea1d5ca13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0fd754d65cb96588d87c4db6c21db4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#aa0fd754d65cb96588d87c4db6c21db4d">fixDSW</a> ()</td></tr>
 <tr class="separator:aa0fd754d65cb96588d87c4db6c21db4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5107be2a7935e13567b2cc5172e608e5"><td class="memItemLeft" align="right" valign="top"><a id="a5107be2a7935e13567b2cc5172e608e5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>remove</b> (int val, <a class="el" href="class_b_s_t_node.html">BSTNode</a> *node)</td></tr>
+<tr class="memitem:a5107be2a7935e13567b2cc5172e608e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a5107be2a7935e13567b2cc5172e608e5">remove</a> (int val, <a class="el" href="class_b_s_t_node.html">BSTNode</a> *node)</td></tr>
 <tr class="separator:a5107be2a7935e13567b2cc5172e608e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a35cd326683c6003f6b0901a8af0111"><td class="memItemLeft" align="right" valign="top"><a id="a6a35cd326683c6003f6b0901a8af0111"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>postOrder</b> (<a class="el" href="class_b_s_t_node.html">BSTNode</a> *node, int indent)</td></tr>
+<tr class="separator:a6a35cd326683c6003f6b0901a8af0111"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Metody prywatne</h2></td></tr>
@@ -267,7 +269,7 @@ Atrybuty prywatne</h2></td></tr>
 </div>
 </div>
 <a id="ac23277c7b230dd26ea2993463e2c010a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac23277c7b230dd26ea2993463e2c010a">&#9670;&nbsp;</a></span>remove()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac23277c7b230dd26ea2993463e2c010a">&#9670;&nbsp;</a></span>remove() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -284,6 +286,41 @@ Atrybuty prywatne</h2></td></tr>
 <p>Remove node with given value from this node's subtree. </p><dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
     <tr><td class="paramname">val</td><td>Value to be removed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5107be2a7935e13567b2cc5172e608e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5107be2a7935e13567b2cc5172e608e5">&#9670;&nbsp;</a></span>remove() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BST::remove </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_b_s_t_node.html">BSTNode</a> *&#160;</td>
+          <td class="paramname"><em>node</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Remove not with given value from the tree starting from given node. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>Value to be removed. </td></tr>
+    <tr><td class="paramname">node</td><td>Node to start from. </td></tr>
   </table>
   </dd>
 </dl>
