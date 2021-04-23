@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['maxsize_62',['maxSize',['../class_benchmark.html#a01244b7e475d396823e0a370d15cc08f',1,'Benchmark']]],
-  ['menu_63',['Menu',['../class_menu.html',1,'']]],
-  ['multiplier_64',['multiplier',['../class_benchmark.html#a92fc159d2fd4ad41629207fd64b7e61d',1,'Benchmark']]]
+  ['left_63',['left',['../class_b_s_t_node.html#ad3749f519572d82177ea184efe84beb2',1,'BSTNode::left()'],['../class_r_b_node.html#a3345545f8a1678010bca11b5f7153a4a',1,'RBNode::left()']]]
 ];

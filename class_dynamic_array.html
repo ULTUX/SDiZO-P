@@ -123,17 +123,15 @@ Metody publiczne</h2></td></tr>
 <tr class="separator:addfb1a2e7c352e4fd87e5bc03a1cb0f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fd1d58869b2e92555c03395ec92f143"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_array.html#a2fd1d58869b2e92555c03395ec92f143">indexOf</a> (int val)</td></tr>
 <tr class="separator:a2fd1d58869b2e92555c03395ec92f143"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0e741e1c9adb68f900ed9e731697fc5"><td class="memItemLeft" align="right" valign="top"><a id="ab0e741e1c9adb68f900ed9e731697fc5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>extend</b> ()</td></tr>
-<tr class="separator:ab0e741e1c9adb68f900ed9e731697fc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a394cec6331c69240e8344d368408ce87"><td class="memItemLeft" align="right" valign="top"><a id="a394cec6331c69240e8344d368408ce87"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>collapse</b> ()</td></tr>
-<tr class="separator:a394cec6331c69240e8344d368408ce87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Metody prywatne</h2></td></tr>
 <tr class="memitem:ac19adf019f8cd58b44d0bf2aaac845f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_array.html#ac19adf019f8cd58b44d0bf2aaac845f6">initArray</a> ()</td></tr>
 <tr class="separator:ac19adf019f8cd58b44d0bf2aaac845f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0e741e1c9adb68f900ed9e731697fc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_array.html#ab0e741e1c9adb68f900ed9e731697fc5">extend</a> ()</td></tr>
+<tr class="separator:ab0e741e1c9adb68f900ed9e731697fc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a394cec6331c69240e8344d368408ce87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_array.html#a394cec6331c69240e8344d368408ce87">collapse</a> ()</td></tr>
+<tr class="separator:a394cec6331c69240e8344d368408ce87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Atrybuty prywatne</h2></td></tr>
@@ -265,6 +263,32 @@ Atrybuty prywatne</h2></td></tr>
 
 </div>
 </div>
+<a id="a394cec6331c69240e8344d368408ce87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a394cec6331c69240e8344d368408ce87">&#9670;&nbsp;</a></span>collapse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DynamicArray::collapse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Decrease size of internal array twice the previous size. This function is called during removal when amount of elements is smaller than half of array size. </p>
+
+</div>
+</div>
 <a id="addfb1a2e7c352e4fd87e5bc03a1cb0f5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#addfb1a2e7c352e4fd87e5bc03a1cb0f5">&#9670;&nbsp;</a></span>contains()</h2>
 
@@ -287,6 +311,32 @@ Atrybuty prywatne</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Zwraca</dt><dd>True - element exists, false - doesn't exist </dd></dl>
+
+</div>
+</div>
+<a id="ab0e741e1c9adb68f900ed9e731697fc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0e741e1c9adb68f900ed9e731697fc5">&#9670;&nbsp;</a></span>extend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DynamicArray::extend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Increase size of internal array twice the previous size. This function is called during insertion when there is no more space in array. </p>
 
 </div>
 </div>

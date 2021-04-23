@@ -1,9 +1,11 @@
 var searchData=
 [
-  ['print_179',['print',['../class_heap.html#a6072a1571e5f4dc98f50b6a382d7891d',1,'Heap']]],
-  ['printexception_180',['printException',['../class_menu.html#ad8c3f8bc35d2de0ab553ed059fb1d05e',1,'Menu']]],
-  ['printfrombeginning_181',['printFromBeginning',['../class_dynamic_array.html#a081c13e42c27ee02738ca80d60e8ffb9',1,'DynamicArray']]],
-  ['printfromend_182',['printFromEnd',['../class_doubly_linked_list.html#abe46632c1598e809b00e85beafd03833',1,'DoublyLinkedList::printFromEnd()'],['../class_dynamic_array.html#a0ae41cbf280cb33f524ee19d3f059550',1,'DynamicArray::printFromEnd()']]],
-  ['printfromstart_183',['printFromStart',['../class_doubly_linked_list.html#aba908e236aa69647aeecd94aad120357',1,'DoublyLinkedList']]],
-  ['printinorder_184',['printInOrder',['../class_b_s_t_node.html#ac3807af2cbc2e80f3998fd1240ddb0a5',1,'BSTNode::printInOrder()'],['../class_r_b_node.html#a07336bfbdc7ca994c3850509d9a9e2d1',1,'RBNode::printInOrder()'],['../class_b_s_t.html#a289b4cb4fa517ca432273f831f9eb62f',1,'BST::printInOrder()'],['../class_r_b_tree.html#a12d58d24a67ebfcff9f2cfad2d0f369f',1,'RBTree::printInOrder()']]]
+  ['indexof_175',['indexOf',['../class_doubly_linked_list.html#ae24e053b8cacc34a458adb348b0c9e08',1,'DoublyLinkedList::indexOf()'],['../class_dynamic_array.html#a2fd1d58869b2e92555c03395ec92f143',1,'DynamicArray::indexOf(int val)']]],
+  ['initarray_176',['initArray',['../class_dynamic_array.html#ac19adf019f8cd58b44d0bf2aaac845f6',1,'DynamicArray']]],
+  ['initbst_177',['initBST',['../class_menu.html#a8d554107c9411af428ddd831f7bce67e',1,'Menu']]],
+  ['initdoublylinkedlist_178',['initDoublyLinkedList',['../class_menu.html#ae46df5cc26f256cac114eaf0e5c69750',1,'Menu']]],
+  ['initdynamicarray_179',['initDynamicArray',['../class_menu.html#a5e295ba55802ca4054d1f53628106318',1,'Menu']]],
+  ['initheap_180',['initHeap',['../class_menu.html#a1d468dde1ce2ea35cd9a9c57ccb2790e',1,'Menu']]],
+  ['initrbtree_181',['initRBTree',['../class_menu.html#a0d63e17aded7db4efef58cfcb88af1c1',1,'Menu']]],
+  ['isrightchild_182',['isRightChild',['../class_r_b_tree.html#a65901f993afe74d268036466ddd4ac1e',1,'RBTree']]]
 ];
