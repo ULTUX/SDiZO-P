@@ -2,7 +2,7 @@
 // Created by bulio on 17.04.2021.
 //
 
-#include "Menu.h"
+#include "../include/Menu.h"
 #include "IO/FileReader.h"
 #include "../include/Benchmark.h"
 

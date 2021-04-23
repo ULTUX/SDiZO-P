@@ -6,12 +6,12 @@
 #define SDIZO1_MENU_H
 
 
-#include "../include/StructureType.h"
-#include "../include/BST.h"
-#include "../include/DoublyLinkedList.h"
-#include "../include/DynamicArray.h"
-#include "../include/Heap.h"
-#include "../include/RBTree.h"
+#include "StructureType.h"
+#include "BST.h"
+#include "DoublyLinkedList.h"
+#include "DynamicArray.h"
+#include "Heap.h"
+#include "RBTree.h"
 
 class Menu {
 private:

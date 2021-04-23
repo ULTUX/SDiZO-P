@@ -1,7 +1,7 @@
 #include "IO/FileReader.h"
 #include "IO/CSVWriter.h"
 #include "../include/Benchmark.h"
-#include "Menu.h"
+#include "../include/Menu.h"
 
 int main() {
 //    Benchmark bench(DynamicArray_T, true, 2, 5000, 1.0, 5, 100000);
