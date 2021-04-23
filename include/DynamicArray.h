@@ -26,6 +26,18 @@ private:
      * @param element Element to be added to new array.
      */
     void initArray();
+
+    /**
+     * Increase size of internal array twice the previous size.
+     * This function is called during insertion when there is no more space in array.
+     */
+    void extend();
+
+    /**
+     * Decrease size of internal array twice the previous size.
+     * This function is called during removal when amount of elements is smaller than half of array size.
+     */
+    void collapse();
 public:
     /**
      * Create new dynamic array object.
@@ -107,9 +119,6 @@ public:
      */
     int indexOf(int val);
 
-    void extend();
-
-    void collapse();
 };
 
 
