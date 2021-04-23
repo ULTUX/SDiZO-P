@@ -6,72 +6,47 @@
 #include "../../include/DynamicArray.h"
 
 void DynamicArray::addFront(int element) {
-    if (size == 0) {
-        //If array length is 0 create new array with size of 1
-        initArray(element);
-        return;
-    }
     //Create replacement array for array pointed by arrayPointer with size+1
-    int* replacement = new int[size+1];
+    if (numElements >= size) extend();
     //Add new element at the start of this array
-    replacement[0] = element;
     //Copy elements from old array to a new one
-    for (int i = 1; i < size; i++){
-        replacement[i] = this->arrayPointer[i-1];
+    for (int i = numElements; i >= 1; i--){
+        arrayPointer[i] = arrayPointer[i-1];
     }
-    replacement[size] = this->arrayPointer[size-1];
+    arrayPointer[0] = element;
     //Free up space taken by old array
-    delete[] this->arrayPointer;
-    this->arrayPointer = replacement;
-    size++;
+    numElements++;
 }
 
 int DynamicArray::remove(int index) {
     //Return -1 if wrong index was passed
     if (index >= size) return -1;
     //Create replacement array for array pointed by arrayPointer with size-1
-    int* replacement = new int[size-1];
     int j = 0;
     //Copy elements from old array to a new one
     for (int i = 0; i < size; i++) {
         //If current iteration points to element specified by index, skip it
         if (i == index) continue;
-        replacement[j++] = this->arrayPointer[i];
+        arrayPointer[j++] = arrayPointer[i];
     }
+    arrayPointer[numElements - 1] = 0;
+    numElements--;
+    if (numElements < size/2) collapse();
     //Free up space taken by old array
-    delete[] this->arrayPointer;
-    this->arrayPointer = replacement;
-    size--;
-    return size;
+    return numElements;
 
 }
 
 void DynamicArray::addBack(int element) {
     //If array size is 0, then create a new array with a size of 1
-    if (size == 0) {
-        initArray(element);
-        return;
-    }
-    //Create replacement array for array pointed by arrayPointer with size+1
-    int* replacement = new int[size+1];
-    //Copy elements from old array to a new one
-    for (int i = 0; i < size; i++){
-        replacement[i] = this->arrayPointer[i];
-    }
-    //Assign last element at the end of this array
-    replacement[size] = element;
-    //Free up space taken by old array
-    delete[] this->arrayPointer;
-    this->arrayPointer = replacement;
-    size++;
+    if (numElements >= size) extend();
+
+    arrayPointer[numElements] = element;
+    numElements++;
 }
 
 void DynamicArray::addAtIndex(int element, int index) {
     //If array is empty and index == 0, then create new array with element
-    if (index == 0 && size == 0) {
-        initArray(element);
-        return;
-    }
     if (index > size) return;
     if (index == size) {
         addBack(element);
@@ -81,30 +56,25 @@ void DynamicArray::addAtIndex(int element, int index) {
         addFront(element);
         return;
     }
-    int* replacement = new int[size+1];
+    if (numElements >= size) extend();
     int j = 0;
     //Start copying elements from old array
-    for (int i = 0; i < size+1; i++){
+    for (int i = numElements; i > index; i--){
         //If i == passed parameter, then put element at this index
-        if (i == index) {
-            replacement[i] = element;
-            continue;
-        }
-        replacement[i] = this->arrayPointer[j++];
+        arrayPointer[i] = arrayPointer[i-1];
     }
-    size++;
-    delete[] this->arrayPointer;
-    this->arrayPointer = replacement;
+    arrayPointer[index] = element;
+    numElements++;
 }
 
-void DynamicArray::initArray(int element) {
-     this->arrayPointer = new int[1];
-     *arrayPointer = element;
-     size = 1;
+void DynamicArray::initArray() {
+    this->arrayPointer = new int[1];
+    size = 1;
+    numElements = 0;
 }
 
 int DynamicArray::getSize() const {
-    return this->size;
+    return this->numElements;
 }
 
 int DynamicArray::get(int index) {
@@ -116,13 +86,6 @@ void DynamicArray::set(int index, int val) {
     if (index < size) arrayPointer[index] = val;
 }
 
-void DynamicArray::printFromBeginning() {
-    if (this->size == 0) return;
-    for (int i = 0; i < size; i++){
-        std::cout<<arrayPointer[i]<<" ";
-    }
-    std::cout<<std::endl;
-}
 
 void DynamicArray::swap(int i1, int i2) {
     int temp = get(i1);
@@ -134,9 +97,45 @@ DynamicArray::~DynamicArray() {
     delete[] arrayPointer;
 }
 
+void DynamicArray::extend() {
+    size *= 2;
+    int * temp = new int[size];
+
+    for (int i = 0; i < numElements; i++){
+        temp[i] = arrayPointer[i];
+    }
+    delete[] arrayPointer;
+
+    arrayPointer = temp;
+
+}
+
+void DynamicArray::collapse() {
+    if (numElements < size/2){
+        size /= 2;
+        int *temp = new int[size];
+
+        for (int i = 0; i < numElements; i++){
+            temp[i] = arrayPointer[i];
+        }
+    }
+}
+
+DynamicArray::DynamicArray() {
+    initArray();
+}
+
+void DynamicArray::printFromBeginning() {
+    if (this->size == 0) return;
+    for (int i = 0; i < numElements; i++){
+        std::cout<<arrayPointer[i]<<" ";
+    }
+    std::cout<<std::endl;
+}
+
 void DynamicArray::printFromEnd() {
     if (size == 0) return;
-    for (int i = size-1; i >= 0; i--){
+    for (int i = numElements-1; i >= 0; i--){
         std::cout<<arrayPointer[i]<<" ";
     }
     std::cout<<std::endl;

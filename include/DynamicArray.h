@@ -11,17 +11,26 @@ private:
     /**
      * Pointer to an array.
      */
-    int* arrayPointer;
+    int* arrayPointer = nullptr;
     /**
      * Current size of an array.
      */
     int size = 0;
+
+    /**
+     * Current amount of elements in the array.
+     */
+    int numElements = 0;
     /**
      * Initialize new array with an element.
      * @param element Element to be added to new array.
      */
-    void initArray(int element);
+    void initArray();
 public:
+    /**
+     * Create new dynamic array object.
+     */
+    DynamicArray();
     /**
      * Add new element to front of dynamic array.
      * @param element Element to be added.
@@ -98,6 +107,9 @@ public:
      */
     int indexOf(int val);
 
+    void extend();
+
+    void collapse();
 };
 
 

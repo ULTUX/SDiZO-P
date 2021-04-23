@@ -91,6 +91,7 @@ private:
      * First element of this list.
      */
     DoublyLinkedNode* head = nullptr;
+
     /**
      * Get last element in the list.
      * @return The element.
