@@ -60,14 +60,15 @@ void Benchmark::testDoublyLinkedList() {
     int size = initialSize;
     for (int i = 0; i < iterationNumber; i++) {
         double avg = 0;
-        int* randomSet = new int[size];
+        int* randomSet = new int[size+1];
         for (int j = 0; j < testNumber; j++) {
             DoublyLinkedList* doublyLinkedList = new DoublyLinkedList();
-            generatePopulation(randomSet, size, numberDistribution);
-            startTimer();
+            generatePopulation(randomSet, size+1, numberDistribution);
             for (int k = 0; k < size; k++) {
                 doublyLinkedList->addBack(randomSet[k]);
             }
+            startTimer();
+            doublyLinkedList->addBack(randomSet[size]);
             avg += stopTimer();
             delete doublyLinkedList;
         }
@@ -76,7 +77,7 @@ void Benchmark::testDoublyLinkedList() {
         sizeArray[i] = size;
         resultsArray[i] = avg;
         cout << "Doubly linked list back insertion: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "ms." << endl;
+             << resultsArray[i] << "us." << endl;
         size *= multiplier;
         size += step;
     }
@@ -88,12 +89,15 @@ void Benchmark::testDoublyLinkedList() {
     size = initialSize;
     for (int i = 0; i < iterationNumber; i++) {
         double avg = 0;
-        int* randomSet = new int[size];
+        int* randomSet = new int[size+1];
         for (int j = 0; j < testNumber; j++) {
             DoublyLinkedList* doublyLinkedList = new DoublyLinkedList();
-            generatePopulation(randomSet, size, numberDistribution);
+            generatePopulation(randomSet, size+1, numberDistribution);
+            for (int k = 0; k < size; k++) {
+                doublyLinkedList->addFront(randomSet[k]);
+            }
             startTimer();
-            for (int k = 0; k < size; k++) doublyLinkedList->addFront(randomSet[k]);
+            doublyLinkedList->addFront(randomSet[size]);
             avg += stopTimer();
             delete doublyLinkedList;
         }
@@ -102,7 +106,7 @@ void Benchmark::testDoublyLinkedList() {
         sizeArray[i] = size;
         resultsArray[i] = avg;
         cout << "Doubly linked list front insertion: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "ms." << endl;
+             << resultsArray[i] << "us." << endl;
         size *= multiplier;
         size += step;
     }
@@ -114,12 +118,15 @@ void Benchmark::testDoublyLinkedList() {
     size = initialSize;
     for (int i = 0; i < iterationNumber; i++) {
         double avg = 0;
-        int* randomSet = new int[size];
+        int* randomSet = new int[size+1];
         for (int j = 0; j < testNumber; j++) {
             DoublyLinkedList* doublyLinkedList = new DoublyLinkedList();
-            generatePopulation(randomSet, size, numberDistribution);
+            generatePopulation(randomSet, size+1, numberDistribution);
+            for (int k = 0; k < size; k++) {
+                doublyLinkedList->addAtIndex(k, randomSet[k]);
+            }
             startTimer();
-            for (int k = 0; k < size; k++) doublyLinkedList->addAtIndex(k, randomSet[k]);
+            doublyLinkedList->addAtIndex(size, randomSet[size]);
             avg += stopTimer();
             delete doublyLinkedList;
         }
@@ -128,7 +135,7 @@ void Benchmark::testDoublyLinkedList() {
         sizeArray[i] = size;
         resultsArray[i] = avg;
         cout << "Doubly linked list at index insertion: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "ms." << endl;
+             << resultsArray[i] << "us." << endl;
         size *= multiplier;
         size += step;
     }
@@ -149,7 +156,7 @@ void Benchmark::testDoublyLinkedList() {
             }
             shuffle(randomSet, &randomSet[size-1], std::mt19937(std::random_device()()));
             startTimer();
-            for (int k = 0; k < size; k++) doublyLinkedList->removeElement(randomSet[k]);
+            doublyLinkedList->removeElement(randomSet[size-1]);
             avg += stopTimer();
             delete doublyLinkedList;
         }
@@ -158,7 +165,7 @@ void Benchmark::testDoublyLinkedList() {
         sizeArray[i] = size;
         resultsArray[i] = avg;
         cout << "Doubly linked list removal: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "ms." << endl;
+             << resultsArray[i] << "us." << endl;
         size *= multiplier;
         size += step;
     }
@@ -180,7 +187,7 @@ void Benchmark::testDoublyLinkedList() {
             }
             shuffle(randomSet, &randomSet[size-1], std::mt19937(std::random_device()()));
             startTimer();
-            for (int k = 0; k < size; k++) doublyLinkedList->indexOf(randomSet[k]);
+            doublyLinkedList->indexOf(randomSet[size-1]);
             avg += stopTimer();
             delete doublyLinkedList;
         }
@@ -189,7 +196,7 @@ void Benchmark::testDoublyLinkedList() {
         sizeArray[i] = size;
         resultsArray[i] = avg;
         cout << "Doubly linked list at index retrieval: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "ms." << endl;
+             << resultsArray[i] << "us." << endl;
         size *= multiplier;
         size += step;
     }
@@ -209,14 +216,15 @@ void Benchmark::testDynamicArray() {
     int size = initialSize;
     for (int i = 0; i < iterationNumber; i++) {
         double avg = 0;
-        int* randomSet = new int[size];
+        int* randomSet = new int[size+1];
         for (int j = 0; j < testNumber; j++) {
             DynamicArray* dynamicArray = new DynamicArray();
-            generatePopulation(randomSet, size, numberDistribution);
-            startTimer();
+            generatePopulation(randomSet, size+1, numberDistribution);
             for (int k = 0; k < size; k++) {
                 dynamicArray->addBack(randomSet[k]);
             }
+            startTimer();
+            dynamicArray->addBack(randomSet[size]);
             avg += stopTimer();
             delete dynamicArray;
         }
@@ -225,7 +233,7 @@ void Benchmark::testDynamicArray() {
         sizeArray[i] = size;
         resultsArray[i] = avg;
         cout << "Dynamic array back insertion: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "ms." << endl;
+             << resultsArray[i] << "us." << endl;
         size *= multiplier;
         size += step;
     }
@@ -237,14 +245,15 @@ void Benchmark::testDynamicArray() {
     size = initialSize;
     for (int i = 0; i < iterationNumber; i++) {
         double avg = 0;
-        int* randomSet = new int[size];
+        int* randomSet = new int[size+1];
         for (int j = 0; j < testNumber; j++) {
             DynamicArray* dynamicArray = new DynamicArray();
-            generatePopulation(randomSet, size, numberDistribution);
-            startTimer();
+            generatePopulation(randomSet, size+1, numberDistribution);
             for (int k = 0; k < size; k++) {
                 dynamicArray->addFront(randomSet[k]);
             }
+            startTimer();
+            dynamicArray->addFront(randomSet[size]);
             avg += stopTimer();
             delete dynamicArray;
         }
@@ -253,7 +262,7 @@ void Benchmark::testDynamicArray() {
         sizeArray[i] = size;
         resultsArray[i] = avg;
         cout << "Dynamic array front insertion: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "ms." << endl;
+             << resultsArray[i] << "us." << endl;
         size *= multiplier;
         size += step;
     }
@@ -266,20 +275,24 @@ void Benchmark::testDynamicArray() {
     size = initialSize;
     for (int i = 0; i < iterationNumber; i++) {
         double avg = 0;
-        int* randomSet = new int[size];
+        int* randomSet = new int[size+1];
         for (int j = 0; j < testNumber; j++) {
             DynamicArray* dynamicArray = new DynamicArray();
-            generatePopulation(randomSet, size, numberDistribution);
+            generatePopulation(randomSet, size+1, numberDistribution);
+            for (int k = 0; k < size; k++) {
+                dynamicArray->addAtIndex(randomSet[k], k);
+            }
             startTimer();
-            for (int k = 0; k < size; k++) dynamicArray->addAtIndex(randomSet[k], k);
+            dynamicArray->addAtIndex(randomSet[size], size);
             avg += stopTimer();
             delete dynamicArray;
         }
         delete[] randomSet;
         avg /= testNumber;
+        resultsArray[i] = avg;
         sizeArray[i] = size;
         cout << "Dynamic array at index insertion: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "ms." << endl;
+             << resultsArray[i] << "us." << endl;
         size *= multiplier;
         size += step;
     }
@@ -299,7 +312,7 @@ void Benchmark::testDynamicArray() {
             }
             shuffle(randomSet, &randomSet[size-1], std::mt19937(std::random_device()()));
             startTimer();
-            for (int k = 0; k < size; k++) dynamicArray->remove(randomSet[0]);
+            dynamicArray->remove(randomSet[size-1]);
             avg += stopTimer();
             delete dynamicArray;
         }
@@ -308,7 +321,7 @@ void Benchmark::testDynamicArray() {
         sizeArray[i] = size;
         resultsArray[i] = avg;
         cout << "Dynamic array removal: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "ms." << endl;
+             << resultsArray[i] << "us." << endl;
         size *= multiplier;
         size += step;
     }
@@ -328,14 +341,15 @@ void Benchmark::testHeap() {
     int size = initialSize;
     for (int i = 0; i < iterationNumber; i++) {
         double avg = 0;
-        int* randomSet = new int[size];
+        int* randomSet = new int[size+1];
         for (int j = 0; j < testNumber; j++) {
             Heap* heap = new Heap();
-            generatePopulation(randomSet, size, numberDistribution);
-            startTimer();
+            generatePopulation(randomSet, size+1, numberDistribution);
             for (int k = 0; k < size; k++) {
                 heap->add(randomSet[k]);
             }
+            startTimer();
+            heap->add(randomSet[size]);
             avg += stopTimer();
             delete heap;
         }
@@ -344,7 +358,7 @@ void Benchmark::testHeap() {
         sizeArray[i] = size;
         resultsArray[i] = avg;
         cout << "Heap insertion: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "ms." << endl;
+             << resultsArray[i] << "us." << endl;
         size *= multiplier;
         size += step;
     }
@@ -356,15 +370,15 @@ void Benchmark::testHeap() {
     size = initialSize;
     for (int i = 0; i < iterationNumber; i++) {
         double avg = 0;
-        int* randomSet = new int[size];
+        int* randomSet = new int[size+1];
         for (int j = 0; j < testNumber; j++) {
             Heap* heap = new Heap();
-            generatePopulation(randomSet, size, numberDistribution);
+            generatePopulation(randomSet, size+1, numberDistribution);
             for (int k = 0; k < size; k++){
                 heap->add(randomSet[k]);
             }
             startTimer();
-            for (int k = 0 ; k < size; k++) heap->remove();
+            heap->remove();
             avg += stopTimer();
             delete heap;
         }
@@ -373,7 +387,7 @@ void Benchmark::testHeap() {
         sizeArray[i] = size;
         resultsArray[i] = avg;
         cout << "Heap removal: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "ms." << endl;
+             << resultsArray[i] << "us." << endl;
         size *= multiplier;
         size += step;
     }
@@ -393,14 +407,15 @@ void Benchmark::testRBTree() {
     int size = initialSize;
     for (int i = 0; i < iterationNumber; i++) {
         double avg = 0;
-        int* randomSet = new int[size];
+        int* randomSet = new int[size+1];
         for (int j = 0; j < testNumber; j++) {
             RBTree* rbTree = new RBTree();
-            generatePopulation(randomSet, size, numberDistribution);
-            startTimer();
+            generatePopulation(randomSet, size+1, numberDistribution);
             for (int k = 0; k < size; k++) {
                 rbTree->add(randomSet[k]);
             }
+            startTimer();
+            rbTree->add(randomSet[size]);
             avg += stopTimer();
             delete rbTree;
         }
@@ -409,7 +424,7 @@ void Benchmark::testRBTree() {
         sizeArray[i] = size;
         resultsArray[i] = avg;
         cout << "RB tree insertion: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "ms." << endl;
+             << resultsArray[i] << "us." << endl;
         size *= multiplier;
         size += step;
     }
@@ -432,7 +447,7 @@ void Benchmark::testRBTree() {
             }
             shuffle(randomSet, &randomSet[size-1], std::mt19937(std::random_device()()));
             startTimer();
-            for (int k = 0; k < size; k++) rbTree->remove(randomSet[k]);
+            rbTree->remove(randomSet[size-1]);
             avg += stopTimer();
             delete rbTree;
         }
@@ -441,7 +456,7 @@ void Benchmark::testRBTree() {
         sizeArray[i] = size;
         resultsArray[i] = avg;
         cout << "RB tree deletion: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "ms." << endl;
+             << resultsArray[i] << "us." << endl;
         size *= multiplier;
         size += step;
     }
@@ -463,7 +478,7 @@ void Benchmark::testRBTree() {
             }
             shuffle(randomSet, &randomSet[size-1], std::mt19937(std::random_device()()));
             startTimer();
-            for (int k = 0; k < size; k++) rbTree->search(randomSet[k]);
+            rbTree->search(randomSet[size-1]);
             avg += stopTimer();
             delete rbTree;
         }
@@ -472,7 +487,7 @@ void Benchmark::testRBTree() {
         sizeArray[i] = size;
         resultsArray[i] = avg;
         cout << "RB tree search: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "ms." << endl;
+             << resultsArray[i] << "us." << endl;
         size *= multiplier;
         size += step;
     }
@@ -494,14 +509,15 @@ void Benchmark::testBST() {
     for (int i = 0; i < iterationNumber; i++) {
         //Sizes
         double avg = 0;
-        int *randomSet = new int[size];
+        int *randomSet = new int[size+1];
         for (int j = 0; j < testNumber; j++) {
             BST* bst = new BST();
-            startTimer();
-            generatePopulation(randomSet, size, numberDistribution);
+            generatePopulation(randomSet, size+1, numberDistribution);
             for (int k = 0; k < size; k++) {
                 bst->add(randomSet[k]);
             }
+            startTimer();
+            bst->add(randomSet[size]);
             avg += stopTimer();
             delete bst;
         }
@@ -510,7 +526,7 @@ void Benchmark::testBST() {
         sizeArray[i] = size;
         resultsArray[i] = avg;
         cout << "BST insertion: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "ms." << endl;
+             << resultsArray[i] << "us." << endl;
         size *= multiplier;
         size += step;
     }
@@ -534,7 +550,7 @@ void Benchmark::testBST() {
             }
             shuffle(randomSet, &randomSet[size-1], std::mt19937(std::random_device()()));
             startTimer();
-            for (int k = 0; k < size; k++) bst->remove(randomSet[k]);
+            bst->remove(randomSet[size-1]);
             avg += stopTimer();
             delete bst;
         }
@@ -543,7 +559,7 @@ void Benchmark::testBST() {
         sizeArray[i] = size;
         resultsArray[i] = avg;
         cout << "BST deletion: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "ms." << endl;
+             << resultsArray[i] << "us." << endl;
         size *= multiplier;
         size += step;
     }
@@ -557,17 +573,15 @@ void Benchmark::testBST() {
     for (int i = 0; i < iterationNumber; i++) {
         //Sizes
         double avg = 0;
-        int * randomSet = new int[size];
+        int * randomSet = new int[size+1];
         for (int j = 0; j < testNumber; j++) {
             BST* bst = new BST();
-            generatePopulation(randomSet, size, numberDistribution);
+            generatePopulation(randomSet, size+1, numberDistribution);
             //Fill BSt with random data
             for (int k = 0; k < size; k++) bst->add(randomSet[k]);
-            shuffle(randomSet, &randomSet[size-1], std::mt19937(std::random_device()()));
+            shuffle(randomSet, &randomSet[size], std::mt19937(std::random_device()()));
             startTimer();
-            for (int k = 0; k < size; k++) {
-                bst->search(randomSet[k]);
-            }
+            bst->search(randomSet[size]);
             avg += stopTimer();
             delete bst;
 
@@ -577,7 +591,7 @@ void Benchmark::testBST() {
         sizeArray[i] = size;
         resultsArray[i] = avg;
         cout << "BST search: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "ms." << endl;
+             << resultsArray[i] << "us." << endl;
         size *= multiplier;
         size += step;
     }
@@ -608,7 +622,7 @@ void Benchmark::testBST() {
         sizeArray[i] = size;
         resultsArray[i] = avg;
         cout << "BST fix DSW: Done " << i+1 << " out of " << iterationNumber << " size: " << size << " took "
-             << resultsArray[i] << "ms." << endl;
+             << resultsArray[i] << "us." << endl;
         size *= multiplier;
         size += step;
     }
@@ -645,7 +659,7 @@ void Benchmark::writeToFile(string testName, double *data, int *size) const {
     }
     string headers[2];
     headers[0] = "Struc size";
-    headers[1] = "Time [ms]";
+    headers[1] = "Time [us]";
     CSVWriter writer(testName.append(".csv"), iterationNumber, 2, headers, toWrite);
 
 }
@@ -672,7 +686,7 @@ double Benchmark::stopTimer() {
     LARGE_INTEGER freq;
     QueryPerformanceFrequency(&freq);
     uint64_t elapsed = count.QuadPart - (*performanceCounter).QuadPart;
-    double timeInNs = (1000.0 * elapsed) / freq.QuadPart;
+    double timeInNs = (1000000.0 * elapsed) / freq.QuadPart;
     return timeInNs;
 
 }
