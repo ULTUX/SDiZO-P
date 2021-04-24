@@ -135,10 +135,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printBenchmarkMenu</b
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
 Statyczne metody prywatne</h2></td></tr>
-<tr class="memitem:a11ec45c71b17569efc1ab7c25bd05630"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a11ec45c71b17569efc1ab7c25bd05630">getIntegerInput</a> (string message)</td></tr>
-<tr class="separator:a11ec45c71b17569efc1ab7c25bd05630"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a732dbb54b1ef9c460209e19ed4a58c5a"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a732dbb54b1ef9c460209e19ed4a58c5a">getFloatInput</a> (string message)</td></tr>
-<tr class="separator:a732dbb54b1ef9c460209e19ed4a58c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8da201bf4c887e22eaf7416b7487de94"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a8da201bf4c887e22eaf7416b7487de94">getIntegerInput</a> (string message, bool mustPositive=false)</td></tr>
+<tr class="separator:a8da201bf4c887e22eaf7416b7487de94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0edc3442d4e0931d9f6990e77680a400"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a0edc3442d4e0931d9f6990e77680a400">getFloatInput</a> (string message, bool mustPositive=false)</td></tr>
+<tr class="separator:a0edc3442d4e0931d9f6990e77680a400"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8c3f8bc35d2de0ab553ed059fb1d05e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#ad8c3f8bc35d2de0ab553ed059fb1d05e">printException</a> (exception &amp;e)</td></tr>
 <tr class="separator:ad8c3f8bc35d2de0ab553ed059fb1d05e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -164,8 +164,8 @@ StructureType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td
 <tr class="separator:a2893b806cc4974f7b5c7f3f032eeec29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Dokumentacja funkcji składowych</h2>
-<a id="a732dbb54b1ef9c460209e19ed4a58c5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a732dbb54b1ef9c460209e19ed4a58c5a">&#9670;&nbsp;</a></span>getFloatInput()</h2>
+<a id="a0edc3442d4e0931d9f6990e77680a400"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0edc3442d4e0931d9f6990e77680a400">&#9670;&nbsp;</a></span>getFloatInput()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -177,8 +177,18 @@ StructureType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td
           <td class="memname">float Menu::getFloatInput </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>message</em></td><td>)</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>mustPositive</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -190,6 +200,7 @@ StructureType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td
 <p>Prompt user with message to input float value and return it. </p><dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
     <tr><td class="paramname">message</td><td>Message to be displayed. </td></tr>
+    <tr><td class="paramname">mustPositive</td><td>If it is required for the value to be positive. </td></tr>
   </table>
   </dd>
 </dl>
@@ -197,8 +208,8 @@ StructureType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td
 
 </div>
 </div>
-<a id="a11ec45c71b17569efc1ab7c25bd05630"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11ec45c71b17569efc1ab7c25bd05630">&#9670;&nbsp;</a></span>getIntegerInput()</h2>
+<a id="a8da201bf4c887e22eaf7416b7487de94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8da201bf4c887e22eaf7416b7487de94">&#9670;&nbsp;</a></span>getIntegerInput()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -210,8 +221,18 @@ StructureType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td
           <td class="memname">int Menu::getIntegerInput </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>message</em></td><td>)</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>mustPositive</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -223,6 +244,7 @@ StructureType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td
 <p>Prompt user with message to input integer value and return it. </p><dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
     <tr><td class="paramname">message</td><td>Message to be displayed. </td></tr>
+    <tr><td class="paramname">mustPositive</td><td>If it is required for the value to be positive. </td></tr>
   </table>
   </dd>
 </dl>
