@@ -548,15 +548,15 @@ void Menu::printBenchmarkMenu() {
     if (odp[0] == 'T' || odp[0] == 't') writeToFile = true;
     else writeToFile = false;
 
-    initialSize= getIntegerInput("Poczatkowa wielkosc struktury: ");
+    initialSize= getIntegerInput("Poczatkowa wielkosc struktury: ", true);
 
-    multiplier = getFloatInput("Mnoznik wielkosci (zalecane 1): ");
+    multiplier = getFloatInput("Mnoznik wielkosci (zalecane 1): ", true);
 
-    step = getIntegerInput("Krok (wielkosc o jaka ma byc zwiekszona wielkosc po kazdej iteracji): ");
+    step = getIntegerInput("Krok (wielkosc o jaka ma byc zwiekszona wielkosc po kazdej iteracji): ", true);
 
-    testNumber = getIntegerInput("Ile razy maja byc powtarzane testy: ");
+    testNumber = getIntegerInput("Ile razy maja byc powtarzane testy: ", true);
 
-    maxSize = getIntegerInput("Jaka ma byc maksymalna wielkosc strulktury: ");
+    maxSize = getIntegerInput("Jaka ma byc maksymalna wielkosc strulktury: ", true);
 
     Benchmark benchmark(toTest, writeToFile, initialSize, step, multiplier, testNumber, maxSize);
 
@@ -589,8 +589,9 @@ void Menu::backToMainMenu() {
     }
 }
 
-int Menu::getIntegerInput(string message) {
+int Menu::getIntegerInput(string message, bool mustPositive) {
     bool isNum = false;
+    bool isPositive = false;
     int val;
     while (!isNum) {
         cout << message;
@@ -600,7 +601,10 @@ int Menu::getIntegerInput(string message) {
         getline(cin, input);
         try {
             val = stoi(input);
-            isNum = true;
+            if (val > 0) isPositive = true;
+            if (!mustPositive) isNum = true;
+            else if (isPositive) isNum = true;
+            else isNum = false;
         } catch (invalid_argument &e) {
             cout << "Wprowadzone dane nie sa liczba!" << endl;
             continue;
@@ -612,8 +616,9 @@ int Menu::getIntegerInput(string message) {
     }
     return val;
 }
-float Menu::getFloatInput(string message) {
+float Menu::getFloatInput(string message, bool mustPositive) {
     bool isNum = false;
+    bool isPositive = false;
     float val;
     while (!isNum) {
         cout << message;
@@ -623,7 +628,10 @@ float Menu::getFloatInput(string message) {
         getline(cin, input);
         try {
             val = stof(input);
-            isNum = true;
+            if (val > 0) isPositive = true;
+            if (!mustPositive) isNum = true;
+            else if (isPositive) isNum = true;
+            else isNum = false;
         } catch (invalid_argument &e) {
             cout << "Wprowadzone dane nie sa liczba!" << endl;
             continue;

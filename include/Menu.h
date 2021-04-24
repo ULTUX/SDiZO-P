@@ -77,16 +77,18 @@ private:
     /**
      * Prompt user with message to input integer value and return it.
      * @param message Message to be displayed.
+     * @param mustPositive If it is required for the value to be positive.
      * @return Value inputted by user.
      */
-    static int getIntegerInput(string message);
+    static int getIntegerInput(string message, bool mustPositive = false);
 
     /**
      * Prompt user with message to input float value and return it.
      * @param message Message to be displayed.
+     * @param mustPositive If it is required for the value to be positive.
      * @return Value inputted by user.
      */
-    static float getFloatInput(string message);
+    static float getFloatInput(string message, bool mustPositive = false);
 
     /**
      * Nicely print thrown exception on stdout.
