@@ -1,5 +1,5 @@
 //
-// Created by bulio on 17.04.2021.
+// Created by Wladyslaw Nowak on 17.04.2021.
 //
 
 #ifndef SDIZO_P_STRUCTURETYPE_H
