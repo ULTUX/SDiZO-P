@@ -18,3 +18,5 @@ Autor: _Władysław Nowak_
 ## Dokumentacja
 Kompletna dokumentacja wygenerowana na podstawie komentarzy w kodzie znajduje się pod [**tym adresem**](https://ultux.github.io/SDiZO-P/).  
 W kodzie znajdują sie dodatkowe komentarze dotyczące logiki implementowanych algorytmów
+## Sprawozdanie
+Sprawozdanie znajduje się [**tutaj**](https://ultux.github.io/SDiZO-P/SDiZO1_SPRAWOZDANIE.pdf).
