@@ -28,7 +28,8 @@ var NAVTREE =
     [ "SDiZO Zadanie projektowe nr. 1", "index.html", [
       [ "Informacje", "index.html#autotoc_md1", null ],
       [ "Fukcje programu", "index.html#autotoc_md2", null ],
-      [ "Dokumentacja", "index.html#autotoc_md3", null ]
+      [ "Dokumentacja", "index.html#autotoc_md3", null ],
+      [ "Sprawozdanie", "index.html#autotoc_md4", null ]
     ] ],
     [ "Klasy", "annotated.html", [
       [ "Lista klas", "annotated.html", "annotated_dup" ],
