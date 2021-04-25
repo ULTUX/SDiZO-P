@@ -54,8 +54,8 @@ void Benchmark::testDoublyLinkedList() {
          << ", multiplier: " << multiplier << ", starting size: " << initialSize << endl;
     Sleep(2000);
     //Test adding back
-    int sizeArray[iterationNumber];
-    double resultsArray[iterationNumber];
+    int *sizeArray = new int[iterationNumber];
+    double *resultsArray = new double[iterationNumber];
     //Adding benchmark
     int size = initialSize;
     for (int i = 0; i < iterationNumber; i++) {
@@ -203,6 +203,8 @@ void Benchmark::testDoublyLinkedList() {
     if (isWriteToFile) {
         writeToFile("DOUBLY_LINKED_LIST_SEARCH", resultsArray, sizeArray);
     }
+    delete[] resultsArray;
+    delete[] sizeArray;
 }
 
 void Benchmark::testDynamicArray() {
@@ -210,8 +212,8 @@ void Benchmark::testDynamicArray() {
          << ", multiplier: " << multiplier << ", starting size: " << initialSize << endl;
     Sleep(2000);
 
-    int sizeArray[iterationNumber];
-    double resultsArray[iterationNumber];
+    int *sizeArray = new int[iterationNumber];
+    double *resultsArray = new double[iterationNumber];
     //Adding benchmark
     int size = initialSize;
     for (int i = 0; i < iterationNumber; i++) {
@@ -328,6 +330,8 @@ void Benchmark::testDynamicArray() {
     if (isWriteToFile) {
         writeToFile("DYNAMIC_ARRAY_REMOVE", resultsArray, sizeArray);
     }
+    delete[] resultsArray;
+    delete[] sizeArray;
 }
 
 void Benchmark::testHeap() {
@@ -335,8 +339,8 @@ void Benchmark::testHeap() {
          << ", multiplier: " << multiplier << ", starting size: " << initialSize << endl;
     Sleep(2000);
     //Test adding
-    int sizeArray[iterationNumber];
-    double resultsArray[iterationNumber];
+    int *sizeArray = new int[iterationNumber];
+    double *resultsArray = new double[iterationNumber];
     //Adding benchmark
     int size = initialSize;
     for (int i = 0; i < iterationNumber; i++) {
@@ -394,6 +398,8 @@ void Benchmark::testHeap() {
     if (isWriteToFile) {
         writeToFile("HEAP_REMOVE", resultsArray, sizeArray);
     }
+    delete[] resultsArray;
+    delete[] sizeArray;
 }
 
 void Benchmark::testRBTree() {
@@ -401,8 +407,8 @@ void Benchmark::testRBTree() {
          << ", multiplier: " << multiplier << ", starting size: " << initialSize << endl;
     Sleep(2000);
 
-    int sizeArray[iterationNumber];
-    double resultsArray[iterationNumber];
+    int *sizeArray = new int[iterationNumber];
+    double *resultsArray = new double[iterationNumber];
     //Adding benchmark
     int size = initialSize;
     for (int i = 0; i < iterationNumber; i++) {
@@ -494,6 +500,8 @@ void Benchmark::testRBTree() {
     if (isWriteToFile) {
         writeToFile("RB_TREE_SEARCH", resultsArray, sizeArray);
     }
+    delete[] resultsArray;
+    delete[] sizeArray;
 }
 
 
@@ -502,8 +510,8 @@ void Benchmark::testBST() {
          << ", multiplier: " << multiplier << ", starting size: " << initialSize << endl;
     Sleep(2000);
     //Test adding
-    int sizeArray[iterationNumber];
-    double resultsArray[iterationNumber];
+    int *sizeArray = new int[iterationNumber];
+    double *resultsArray = new double[iterationNumber];
     //Adding benchmark
     int size = initialSize;
     for (int i = 0; i < iterationNumber; i++) {
@@ -629,6 +637,8 @@ void Benchmark::testBST() {
     if (isWriteToFile) {
         writeToFile("BST_FIX", resultsArray, sizeArray);
     }
+    delete[] resultsArray;
+    delete[] sizeArray;
 }
 
 
