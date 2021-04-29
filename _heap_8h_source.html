@@ -108,20 +108,24 @@ $(document).ready(function(){initNavTree('_heap_8h_source.html',''); initResizab
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_heap.html">Heap</a>();</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_heap.html#a734051272cbd0945d3916a1a89707ba2">~Heap</a>();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_heap.html#a10f872f952534d5dbbfb36c0fe6aa293">   48</a></span>&#160;    <a class="code" href="class_dynamic_array.html">DynamicArray</a> * <a class="code" href="class_heap.html#a10f872f952534d5dbbfb36c0fe6aa293">array</a>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_heap.html#a692cce19ba18f8e709358d335bbd5691">heapifyUp</a>(<span class="keywordtype">int</span> index);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_heap.html#a1e77b23e735d8ef87753ae6ca2e11a39">heapifyDown</a>(<span class="keywordtype">int</span> index);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//SDIZO1_HEAP_H</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_heap.html#acea1624fba8d66158429854bba80b73e">search</a>(<span class="keywordtype">int</span> val);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_heap.html#a10f872f952534d5dbbfb36c0fe6aa293">   55</a></span>&#160;    <a class="code" href="class_dynamic_array.html">DynamicArray</a> * <a class="code" href="class_heap.html#a10f872f952534d5dbbfb36c0fe6aa293">array</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_heap.html#a692cce19ba18f8e709358d335bbd5691">heapifyUp</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_heap.html#a1e77b23e735d8ef87753ae6ca2e11a39">heapifyDown</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_heap.html#abecb467e2b165fd3cae0c8636a52601d">findElement</a>(<span class="keywordtype">int</span> val, <span class="keywordtype">int</span> index);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//SDIZO1_HEAP_H</span></div>
 <div class="ttc" id="aclass_dynamic_array_html"><div class="ttname"><a href="class_dynamic_array.html">DynamicArray</a></div><div class="ttdef"><b>Definition:</b> DynamicArray.h:9</div></div>
 <div class="ttc" id="aclass_heap_html"><div class="ttname"><a href="class_heap.html">Heap</a></div><div class="ttdef"><b>Definition:</b> Heap.h:12</div></div>
-<div class="ttc" id="aclass_heap_html_a10f872f952534d5dbbfb36c0fe6aa293"><div class="ttname"><a href="class_heap.html#a10f872f952534d5dbbfb36c0fe6aa293">Heap::array</a></div><div class="ttdeci">DynamicArray * array</div><div class="ttdef"><b>Definition:</b> Heap.h:48</div></div>
+<div class="ttc" id="aclass_heap_html_a10f872f952534d5dbbfb36c0fe6aa293"><div class="ttname"><a href="class_heap.html#a10f872f952534d5dbbfb36c0fe6aa293">Heap::array</a></div><div class="ttdeci">DynamicArray * array</div><div class="ttdef"><b>Definition:</b> Heap.h:55</div></div>
 <div class="ttc" id="aclass_heap_html_a1e77b23e735d8ef87753ae6ca2e11a39"><div class="ttname"><a href="class_heap.html#a1e77b23e735d8ef87753ae6ca2e11a39">Heap::heapifyDown</a></div><div class="ttdeci">void heapifyDown(int index)</div><div class="ttdef"><b>Definition:</b> Heap.cpp:22</div></div>
 <div class="ttc" id="aclass_heap_html_a1ef3664ef3f6c471b93a16c8a0d55626"><div class="ttname"><a href="class_heap.html#a1ef3664ef3f6c471b93a16c8a0d55626">Heap::add</a></div><div class="ttdeci">void add(int val)</div><div class="ttdef"><b>Definition:</b> Heap.cpp:9</div></div>
 <div class="ttc" id="aclass_heap_html_a5a4e469500a45db64a66d1e76a79e997"><div class="ttname"><a href="class_heap.html#a5a4e469500a45db64a66d1e76a79e997">Heap::remove</a></div><div class="ttdeci">int remove()</div><div class="ttdef"><b>Definition:</b> Heap.cpp:33</div></div>
@@ -129,6 +133,8 @@ $(document).ready(function(){initNavTree('_heap_8h_source.html',''); initResizab
 <div class="ttc" id="aclass_heap_html_a692cce19ba18f8e709358d335bbd5691"><div class="ttname"><a href="class_heap.html#a692cce19ba18f8e709358d335bbd5691">Heap::heapifyUp</a></div><div class="ttdeci">void heapifyUp(int index)</div><div class="ttdef"><b>Definition:</b> Heap.cpp:14</div></div>
 <div class="ttc" id="aclass_heap_html_a734051272cbd0945d3916a1a89707ba2"><div class="ttname"><a href="class_heap.html#a734051272cbd0945d3916a1a89707ba2">Heap::~Heap</a></div><div class="ttdeci">~Heap()</div><div class="ttdef"><b>Definition:</b> Heap.cpp:60</div></div>
 <div class="ttc" id="aclass_heap_html_aaf5436a4c28807bedc40c0014bb26ebb"><div class="ttname"><a href="class_heap.html#aaf5436a4c28807bedc40c0014bb26ebb">Heap::getSize</a></div><div class="ttdeci">int getSize()</div><div class="ttdef"><b>Definition:</b> Heap.cpp:44</div></div>
+<div class="ttc" id="aclass_heap_html_abecb467e2b165fd3cae0c8636a52601d"><div class="ttname"><a href="class_heap.html#abecb467e2b165fd3cae0c8636a52601d">Heap::findElement</a></div><div class="ttdeci">bool findElement(int val, int index)</div><div class="ttdef"><b>Definition:</b> Heap.cpp:72</div></div>
+<div class="ttc" id="aclass_heap_html_acea1624fba8d66158429854bba80b73e"><div class="ttname"><a href="class_heap.html#acea1624fba8d66158429854bba80b73e">Heap::search</a></div><div class="ttdeci">bool search(int val)</div><div class="ttdef"><b>Definition:</b> Heap.cpp:68</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

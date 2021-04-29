@@ -12,6 +12,8 @@ var class_doubly_linked_list =
     [ "indexOf", "class_doubly_linked_list.html#ae24e053b8cacc34a458adb348b0c9e08", null ],
     [ "printFromEnd", "class_doubly_linked_list.html#abe46632c1598e809b00e85beafd03833", null ],
     [ "printFromStart", "class_doubly_linked_list.html#aba908e236aa69647aeecd94aad120357", null ],
+    [ "removeAtIndex", "class_doubly_linked_list.html#ac47fb42dc1afdcc1593665661bee76d5", null ],
     [ "removeElement", "class_doubly_linked_list.html#a15f961ce2e5fab079380f7f15a8c637e", null ],
-    [ "head", "class_doubly_linked_list.html#a48d6daed9b29716381d5a518dc7945f0", null ]
+    [ "head", "class_doubly_linked_list.html#a48d6daed9b29716381d5a518dc7945f0", null ],
+    [ "tail", "class_doubly_linked_list.html#a82ceba1e288c1c5cb593509d33a242f3", null ]
 ];

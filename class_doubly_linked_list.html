@@ -117,6 +117,8 @@ Metody publiczne</h2></td></tr>
 <tr class="separator:abe46632c1598e809b00e85beafd03833"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae864bc782a72aaccb8942f381975e556"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_doubly_linked_node.html">DoublyLinkedNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doubly_linked_list.html#ae864bc782a72aaccb8942f381975e556">getNodeAt</a> (int i)</td></tr>
 <tr class="separator:ae864bc782a72aaccb8942f381975e556"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac47fb42dc1afdcc1593665661bee76d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doubly_linked_list.html#ac47fb42dc1afdcc1593665661bee76d5">removeAtIndex</a> (int index)</td></tr>
+<tr class="separator:ac47fb42dc1afdcc1593665661bee76d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Metody prywatne</h2></td></tr>
@@ -129,6 +131,8 @@ Metody prywatne</h2></td></tr>
 Atrybuty prywatne</h2></td></tr>
 <tr class="memitem:a48d6daed9b29716381d5a518dc7945f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_doubly_linked_node.html">DoublyLinkedNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doubly_linked_list.html#a48d6daed9b29716381d5a518dc7945f0">head</a> = nullptr</td></tr>
 <tr class="separator:a48d6daed9b29716381d5a518dc7945f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82ceba1e288c1c5cb593509d33a242f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_doubly_linked_node.html">DoublyLinkedNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doubly_linked_list.html#a82ceba1e288c1c5cb593509d33a242f3">tail</a> = nullptr</td></tr>
+<tr class="separator:a82ceba1e288c1c5cb593509d33a242f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a id="abe3231c8ee3dd956b5261c4148102967"></a>
@@ -175,7 +179,7 @@ Atrybuty prywatne</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Add new element to list at index passed as parameter. It causes all following elements to shift by one by index to give space for this element. </p><dl class="params"><dt>Parametry</dt><dd>
+<p>Add new element to list at index passed as parameter. It causes all following elements to shift by one by index to give space for new element. </p><dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
     <tr><td class="paramname">index</td><td></td></tr>
     <tr><td class="paramname">val</td><td></td></tr>
@@ -423,6 +427,30 @@ Atrybuty prywatne</h2></td></tr>
 
 </div>
 </div>
+<a id="ac47fb42dc1afdcc1593665661bee76d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac47fb42dc1afdcc1593665661bee76d5">&#9670;&nbsp;</a></span>removeAtIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DoublyLinkedList::removeAtIndex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Remove element located at given index. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Index from which element should be removed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a15f961ce2e5fab079380f7f15a8c637e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a15f961ce2e5fab079380f7f15a8c637e">&#9670;&nbsp;</a></span>removeElement()</h2>
 
@@ -475,6 +503,29 @@ Atrybuty prywatne</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>First element of this list. </p>
+
+</div>
+</div>
+<a id="a82ceba1e288c1c5cb593509d33a242f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82ceba1e288c1c5cb593509d33a242f3">&#9670;&nbsp;</a></span>tail</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_doubly_linked_node.html">DoublyLinkedNode</a>* DoublyLinkedList::tail = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Last element of this list. </p>
 
 </div>
 </div>

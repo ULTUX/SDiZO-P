@@ -107,6 +107,8 @@ Metody publiczne</h2></td></tr>
 <tr class="separator:a6072a1571e5f4dc98f50b6a382d7891d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a734051272cbd0945d3916a1a89707ba2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heap.html#a734051272cbd0945d3916a1a89707ba2">~Heap</a> ()</td></tr>
 <tr class="separator:a734051272cbd0945d3916a1a89707ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acea1624fba8d66158429854bba80b73e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heap.html#acea1624fba8d66158429854bba80b73e">search</a> (int val)</td></tr>
+<tr class="separator:acea1624fba8d66158429854bba80b73e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Metody prywatne</h2></td></tr>
@@ -114,6 +116,8 @@ Metody prywatne</h2></td></tr>
 <tr class="separator:a692cce19ba18f8e709358d335bbd5691"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e77b23e735d8ef87753ae6ca2e11a39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heap.html#a1e77b23e735d8ef87753ae6ca2e11a39">heapifyDown</a> (int index)</td></tr>
 <tr class="separator:a1e77b23e735d8ef87753ae6ca2e11a39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abecb467e2b165fd3cae0c8636a52601d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_heap.html#abecb467e2b165fd3cae0c8636a52601d">findElement</a> (int val, int index)</td></tr>
+<tr class="separator:abecb467e2b165fd3cae0c8636a52601d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Atrybuty prywatne</h2></td></tr>
@@ -163,6 +167,50 @@ Atrybuty prywatne</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="abecb467e2b165fd3cae0c8636a52601d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abecb467e2b165fd3cae0c8636a52601d">&#9670;&nbsp;</a></span>findElement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Heap::findElement </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Try to find element at this index's subtree. This function could be used recursively. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>Value to be found. </td></tr>
+    <tr><td class="paramname">index</td><td>Index to start search from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Whether this element is in this subtree. </dd></dl>
 
 </div>
 </div>
@@ -287,6 +335,31 @@ Atrybuty prywatne</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="acea1624fba8d66158429854bba80b73e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acea1624fba8d66158429854bba80b73e">&#9670;&nbsp;</a></span>search()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Heap::search </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Search of an element. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>Element to be searched. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Whether this heap contains given element. </dd></dl>
 
 </div>
 </div>

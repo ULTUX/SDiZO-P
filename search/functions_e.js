@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['_7edoublylinkedlist_220',['~DoublyLinkedList',['../class_doubly_linked_list.html#abe3231c8ee3dd956b5261c4148102967',1,'DoublyLinkedList']]],
-  ['_7edynamicarray_221',['~DynamicArray',['../class_dynamic_array.html#aebf8ac62282dc5c9e2800c1f13ab68ec',1,'DynamicArray']]],
-  ['_7eheap_222',['~Heap',['../class_heap.html#a734051272cbd0945d3916a1a89707ba2',1,'Heap']]]
+  ['_7edoublylinkedlist_227',['~DoublyLinkedList',['../class_doubly_linked_list.html#abe3231c8ee3dd956b5261c4148102967',1,'DoublyLinkedList']]],
+  ['_7edynamicarray_228',['~DynamicArray',['../class_dynamic_array.html#aebf8ac62282dc5c9e2800c1f13ab68ec',1,'DynamicArray']]],
+  ['_7eheap_229',['~Heap',['../class_heap.html#a734051272cbd0945d3916a1a89707ba2',1,'Heap']]]
 ];

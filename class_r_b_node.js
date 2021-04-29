@@ -12,6 +12,7 @@ var class_r_b_node =
     [ "setLeft", "class_r_b_node.html#a06cf9109f051274c6581a31d998811f0", null ],
     [ "setParent", "class_r_b_node.html#a51a4a4683bc62f72e09f629ad6909d32", null ],
     [ "setRight", "class_r_b_node.html#a2ab9aa19f8bc6d3bd3f4c9f52b78024a", null ],
+    [ "toString", "class_r_b_node.html#abbdded1567705dafe917b76b7aa033ad", null ],
     [ "color", "class_r_b_node.html#a0877ab978b0055833f3a5266491f1f2e", null ],
     [ "data", "class_r_b_node.html#a2028890965e94283429ea2256b2987f6", null ],
     [ "left", "class_r_b_node.html#a3345545f8a1678010bca11b5f7153a4a", null ],
