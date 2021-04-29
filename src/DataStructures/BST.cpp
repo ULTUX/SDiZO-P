@@ -178,6 +178,7 @@ void BST::hardDelete(BSTNode* node) {
 
 //Function created based on: https://stackoverflow.com/a/26699993
 void BST::postOrder(BSTNode* node, int indent){
+    //DRZEWO DRUKOWANE JEST OD LEWEJ DO PRAWEJ - NIE OD GORY W DOL
     if(node != NULL) {
         if(node->getRight()) {
             postOrder(node->getRight(), indent+4);

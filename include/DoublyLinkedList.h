@@ -36,7 +36,7 @@ public:
     /**
      * Add new element to list at index passed as parameter.
      * It causes all following elements to shift by one by index
-     * to give space for this element.
+     * to give space for new element.
      * @param index
      * @param val
      * @return Instance of this list.
@@ -86,11 +86,23 @@ public:
      */
     DoublyLinkedNode* getNodeAt(int i);
 
+    /**
+     * Remove element located at given index.
+     * @param index Index from which element should be removed.
+     */
+    void removeAtIndex(int index);
+
+
 private:
     /**
      * First element of this list.
      */
     DoublyLinkedNode* head = nullptr;
+
+    /**
+     * Last element of this list.
+     */
+    DoublyLinkedNode* tail = nullptr;
 
     /**
      * Get last element in the list.

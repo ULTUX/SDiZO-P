@@ -5,6 +5,9 @@
 #ifndef SDIZO1_RBNODE_H
 #define SDIZO1_RBNODE_H
 
+#include <iostream>
+#include <string>
+
 enum Color {RED, BLACK};
 
 class RBNode {
@@ -105,6 +108,12 @@ public:
      * Recursive function to print in-order (non-descending).
      */
     void printInOrder();
+
+    /**
+     *  Get node data as string.
+     * @return String representation of this node.
+     */
+    std::string toString();
 };
 
 

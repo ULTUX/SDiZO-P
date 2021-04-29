@@ -352,6 +352,7 @@ void RBTree::printInOrder() {
 
 //Function created based on: https://stackoverflow.com/a/26699993
 void RBTree::postOrder(RBNode* node, int indent){
+    //DRZEWO DRUKOWANE JEST OD LEWEJ DO PRAWEJ - NIE OD GORY W DOL
     if(node != nullptr) {
         if(node->getRight()) {
             postOrder(node->getRight(), indent+4);
@@ -360,7 +361,7 @@ void RBTree::postOrder(RBNode* node, int indent){
             std::cout << std::setw(indent) << ' ';
         }
         if (node->getRight()) std::cout<<" /\n" << std::setw(indent) << ' ';
-        std::cout<< node->getData() << "\n ";
+        std::cout<< node->toString() << "\n ";
         if(node->getLeft()) {
             std::cout << std::setw(indent) << ' ' <<" \\\n";
             postOrder(node->getLeft(), indent+4);

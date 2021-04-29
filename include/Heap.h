@@ -41,6 +41,13 @@ public:
      * Unallocate all space taken up by this object.
      */
     ~Heap();
+
+    /**
+     * Search of an element.
+     * @param val Element to be searched.
+     * @return Whether this heap contains given element.
+     */
+    bool search(int val);
 private:
     /**
      * Instance of array which stores all heap data.
@@ -58,6 +65,14 @@ private:
      * @param index Index to start fixing the heap from.
      */
     void heapifyDown(int index);
+
+    /**
+     * Try to find element at this index's subtree. This function could be used recursively.
+     * @param val Value to be found.
+     * @param index Index to start search from.
+     * @return Whether this element is in this subtree.
+     */
+    bool findElement(int val, int index);
 
 };
 

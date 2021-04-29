@@ -180,6 +180,7 @@ void Menu::printBSTMenu() {
     while (!goBack){
         cout<<"Drzewo BST: "<<endl;
         bst->postOrder(bst->getRoot(), 0);
+        cout<<"\n UWAGA: Drzewo drukowane jest od lewej do prawej - nie od gory w dol\n";
         cout<<"\nIn-order: "<<endl;
         bst->printInOrder();
         cout<<"\nCo chcesz zrobic? "<<endl;
@@ -254,7 +255,8 @@ void Menu::printDoublyLinkedListMenu() {
         cout<<"\t2. Dodaj element na koncu"<<endl;
         cout<<"\t3. Dodaj element na indeksie"<<endl;
         cout<<"\t4. Usun element"<<endl;
-        cout<<"\t5. Znajdz element"<<endl;
+        cout<<"\t5. Usun element wg. indeksu"<<endl;
+        cout<<"\t6. Znajdz element"<<endl;
         cout<<"\t0. Wroc do menu glownego"<<endl;
         cout<<"\t-1 Wyjdz"<<endl;
         int input;
@@ -277,7 +279,12 @@ void Menu::printDoublyLinkedListMenu() {
                 input2 = getIntegerInput("Podaj element do dodania: ");
                 int input3;
                 input3 = getIntegerInput("Podaj indeks: ");
-                doublyLinkedList->addAtIndex(input3, input2);
+                try {
+                    doublyLinkedList->addAtIndex(input3, input2);
+                }
+                catch (invalid_argument& e) {
+                    printException(e);
+                }
                 break;
             }
             case 4: {
@@ -294,6 +301,24 @@ void Menu::printDoublyLinkedListMenu() {
                 break;
             }
             case 5: {
+                cout<<"Usuwanie elementu wg. indeksu."<<endl;
+                int input2;
+                input2 = getIntegerInput("Indeks elementu do usuniecia: ");
+                if (input2 >= 0 && input2 < doublyLinkedList->getSize()){
+                    try {
+                        doublyLinkedList->removeAtIndex(input2);
+                        cout<<"Usunieto element"<<endl;
+                    }
+                    catch (invalid_argument& e) {
+                        printException(e);
+                    }
+                }
+                else {
+                    cout<<"Element nie istnieje\n";
+                }
+                break;
+            }
+            case 6: {
                 int input2 = getIntegerInput("Podaj element to znalezienia: ");
                 if (doublyLinkedList->indexOf(input2) != -1){
                     cout<<"Element istnieje. Sasiednie wartosci: ";
@@ -354,7 +379,12 @@ void Menu::printDynamicArrayMenu() {
             case 3: {
                 int input2 = getIntegerInput("Podaj element do dodania: ");
                 int input3 = getIntegerInput("Podaj indeks: ");
-                dynamicArray->addAtIndex(input2, input3);
+                try {
+                    dynamicArray->addAtIndex(input2, input3);
+                }
+                catch (invalid_argument& e){
+                    printException(e);
+                }
                 break;
             }
             case 4: {
@@ -401,7 +431,8 @@ void Menu::printHeapMenu() {
         cout<<"Co chcesz zrobic? "<<endl;
         cout<<"\t1. Dodaj element"<<endl;
         cout<<"\t2. Usun element"<<endl;
-        cout<<"\t3. Wyswietl kopiec"<<endl;
+        cout<<"\t3. Przeszukaj kopiec"<<endl;
+        cout<<"\t4. Wyswietl kopiec"<<endl;
         cout<<"\t0. Wroc do menu glownego"<<endl;
         cout<<"\t-1 Wyjdz"<<endl;
         int input = getIntegerInput("Wybor: ");
@@ -420,7 +451,14 @@ void Menu::printHeapMenu() {
                 }
                 break;
             }
-            case 3: {
+            case 3 : {
+                cout<<"Przeszukiwanie kopca...\n";
+                int input2 = getIntegerInput("Podaj element do znalezienia: ");
+                bool result = heap->search(input2);
+                if (result) cout<<"Ten element znajduje sie w tym kopcu."<<endl;
+                else cout<<"Ten element nie znajduje sie w tym kopcu."<<endl;
+            }
+            case 4: {
                 heap->print();
                 break;
             }
@@ -442,6 +480,7 @@ void Menu::printRBTreeMenu() {
     while (!goBack){
         cout<<"Drzewo czerwono-czarne: "<<endl;
         rBTree->postOrder(rBTree->getRoot(), 0);
+        cout<<"\n UWAGA: Drzewo drukowane jest od lewej do prawej - nie od gory w dol\n";
         cout<<"\nIn-order: "<<endl;
         rBTree->printInOrder();
         cout<<"\nCo chcesz zrobic? "<<endl;
@@ -645,9 +684,9 @@ float Menu::getFloatInput(string message, bool mustPositive) {
 }
 
 void Menu::printException(exception &e) {
-    cout<<"-------------------------------"<<endl;
+    cout<<"-------------------------------\n";
     cout<<endl<<endl<<"UWAGA: Wystapil blad: ";
-    cerr<<e.what()<<endl<<endl<<endl;
-    cout<<"-------------------------------"<<endl;
+    cerr<<e.what()<<"\n\n\n";
+    cout<<"-------------------------------\n";
 }
 

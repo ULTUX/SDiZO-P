@@ -64,3 +64,20 @@ Heap::~Heap() {
 Heap::Heap() {
     array = new DynamicArray();
 }
+
+bool Heap::search(int val) {
+    return findElement(val, 0);
+}
+
+bool Heap::findElement(int val, int index) {
+    if (val == array->get(index)) return true;
+    bool res = false;
+    bool res2 = false;
+    if (array->getSize() > 2*index + 1 && val <= array->get(2*index + 1)) {
+        res = findElement(val, 2*index+1);
+    }
+    if (array->getSize() > 2*index + 2 && val <= array->get(2*index + 2)){
+        res2 = findElement(val, 2*index+2);
+    }
+    return res || res2;
+}

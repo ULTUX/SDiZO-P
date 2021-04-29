@@ -2,8 +2,8 @@
 // Created by Władysław Nowak on 08/04/2021.
 //
 
-#include <iostream>
 #include "RBNode.h"
+
 
 Color RBNode::getColor() const {
     return color;
@@ -47,6 +47,22 @@ void RBNode::setData(int data) {
 
 void RBNode::printInOrder() {
     if (this->left != nullptr) this->left->printInOrder();
-    std::cout<<this->data<<" ";
+    std::cout<<this->toString()+" ";
     if (this->right != nullptr) this->right->printInOrder();
+}
+
+std::string RBNode::toString() {
+    std::string charColor;
+    switch (color){
+        case BLACK: {
+            charColor = "B";
+            break;
+        }
+        case RED: {
+            charColor = "R";
+            break;
+        }
+    }
+    std::string val = std::to_string(this->data)+"("+charColor+")";
+    return val;
 }

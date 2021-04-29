@@ -13,8 +13,21 @@ DoublyLinkedList *DoublyLinkedList::removeElement(int val) {
             head->getNext()->setPrev(nullptr);
             head = head->getNext();
         }
-        else head = nullptr;
+        else {
+            head = nullptr;
+            tail = nullptr;
+        }
         delete curr;
+    }
+    else if (tail->getVal() == val){
+        if (tail->getPrev() != nullptr){
+            tail->getPrev()->setNext(nullptr);
+            tail = tail->getPrev();
+        }
+        else {
+            head = nullptr;
+            tail = nullptr;
+        }
     }
     else {
         while (curr != nullptr){
@@ -37,8 +50,10 @@ DoublyLinkedList *DoublyLinkedList::addFront(int val) {
     auto* element = new DoublyLinkedNode(val);
     if (head == nullptr){
         head = element;
+        tail = element;
     }
     else {
+        DoublyLinkedNode* firstNode = head;
         head->setPrev(element);
         element->setNext(head);
         head = element;
@@ -50,11 +65,13 @@ DoublyLinkedList *DoublyLinkedList::addBack(int val) {
     auto* element = new DoublyLinkedNode(val);
     if (head == nullptr) {
         head = element;
+        tail = element;
     }
     else {
-        DoublyLinkedNode* tail = getLastElement();
-        tail->setNext(element);
-        element->setPrev(tail);
+        DoublyLinkedNode* lastNode = tail;
+        lastNode->setNext(element);
+        element->setPrev(lastNode);
+        tail = element;
     }
     return this;
 }
@@ -99,6 +116,15 @@ int DoublyLinkedList::getSize() {
 
 DoublyLinkedList *DoublyLinkedList::addAtIndex(int index, int val) {
     auto* newElement = new DoublyLinkedNode(val);
+    if (index < 0 || index > getSize()) throw invalid_argument("Wrong index given.");
+    if (index == 0) {
+        addFront(val);
+        return this;
+    }
+    if (index == getSize()){
+        addBack(val);
+        return this;
+    }
     if (head == nullptr){
         addBack(val);
         return this;
@@ -179,4 +205,22 @@ void DoublyLinkedList::printFromEnd() {
     }
     cout<<node->getVal()<<" ";
     cout<<endl;
+}
+
+void DoublyLinkedList::removeAtIndex(int index) {
+    if (index < 0 || index >= getSize()) throw invalid_argument("Invalid index given.");
+    int i = 0;
+
+    DoublyLinkedNode* node = head;
+
+    while (i < index){
+        if (node->getNext() == nullptr) return;
+        node = node->getNext();
+        i++;
+    }
+    if (node == head) head = node->getNext();
+    if (node == tail) tail = node->getPrev();
+    if (node->getPrev() != nullptr) node->getPrev()->setNext(node->getNext());
+    if (node->getNext() != nullptr) node->getNext()->setPrev(node->getPrev());
+    delete node;
 }

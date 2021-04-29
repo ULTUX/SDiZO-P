@@ -47,12 +47,14 @@ void DynamicArray::addBack(int element) {
 
 void DynamicArray::addAtIndex(int element, int index) {
     //If array is empty and index == 0, then create new array with element
-    if (index > size) return;
-    if (index == size) {
+    if (index > numElements || index < 0) {
+        throw std::invalid_argument("Wrong index passed.");
+    }
+    if (index == numElements) {
         addBack(element);
         return;
     }
-    if (element == 0 && size > 0){
+    if (index == 0 && numElements > 0){
         addFront(element);
         return;
     }
