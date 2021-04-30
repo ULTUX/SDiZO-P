@@ -98,12 +98,19 @@ void BST::rotateRight(BSTNode *node) {
     if (node != nullptr && node->getLeft() != nullptr){
         BSTNode* left = node->getLeft();
         if (node->getParent() != nullptr){
-            if (node->getParent()->getLeft() == node) node->getParent()->setLeft(left);
-            else node->getParent()->setRight(left);
+            if (node->getParent()->getLeft() == node) {
+                node->getParent()->setLeft(left);
+                left->setParent(node->getParent());
+            }
+            else {
+                node->getParent()->setRight(left);
+                left->setParent(node->getParent());
+            }
         }
+        else left->setParent(nullptr);
         node->setLeft(left->getRight());
+        if (left->getRight() != nullptr) left->getRight()->setParent(node);
         left->setRight(node);
-        left->setParent(node->getParent());
         if (node == root) {
             root = left;
         }
@@ -115,11 +122,20 @@ void BST::rotateLeft(BSTNode *node) {
     if (node != nullptr && node->getRight() != nullptr){
         BSTNode* right = node->getRight();
         if (node->getParent() != nullptr) {
-            if (node->getParent()->getLeft() == node) node->getParent()->setLeft(right);
-            else node->getParent()->setRight(right);
+            if (node->getParent()->getLeft() == node) {
+                node->getParent()->setLeft(right);
+                right->setParent(node->getParent());
+            }
+            else {
+                node->getParent()->setRight(right);
+                right->setParent(node->getParent());
+            }
         }
+        else right->setParent(nullptr);
+
         node->setRight(right->getLeft());
-        right->setParent(node->getParent());
+        if (right->getLeft() != nullptr) right->getLeft()->setParent(node);
+
         right->setLeft(node);
         if (node == root) {
             root = right;
